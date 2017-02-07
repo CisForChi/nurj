@@ -1,4 +1,5 @@
-// base.scss
+@import "reset.scss"
+@import "base.scss";
 
 .thesis {
   width: 100vw;
@@ -8,7 +9,7 @@
 }
 
 .department {
-  @include Cousine
+  @include Cousine;
   text-transform: uppercase;
   transform: rotate(-90deg);
   display: inline-block;
@@ -21,7 +22,7 @@
 }
 
 .author {
-  @include Noe
+  @include Noe;
   font-style: italic;
   font-size: 2rem;
 
@@ -31,7 +32,7 @@
 }
 
 .title {
-  @include Now
+  @include Noe;
   font-weight: 700;
   line-height: 2.9rem;
   font-size: 3rem;
