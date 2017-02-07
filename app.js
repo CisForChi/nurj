@@ -84,7 +84,7 @@ app.get('/thesis/:uid', function(req, res) {
        return api.getByUID('thesis', uid);
    }).then(function(pageContent) {
        // pageContent is a document, or null if there is no match
-       res.render('thesis', {
+       res.render('layouts/thesis', {
        // Where 'page' is the name of your pug template file (page.pug)
            pageContent: pageContent
        });

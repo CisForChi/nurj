@@ -1,0 +1,28 @@
+//- https://xd.adobe.com/view/88eab670-5b2f-4641-923d-23f14bba8c9a/screen/ec5fef01-2823-4be6-9b74-3e2d5a2bdb77/Web-1280-1/
+doctype html (lang='en')
+
+head
+    title
+      !=pageContent.getText('thesis.title')
+    link(rel="stylesheet", href="/stylesheets/reset.css")
+    link(rel="stylesheet", href="/stylesheets/thesis.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    // Required for Previews and Experiments
+    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+    script
+      = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+    script(src="//static.cdn.prismic.io/prismic.min.js")
+    script(src="/javascript/vendors/highlight.min.js")
+
+block body
+  article.thesis
+    div.department
+      !=pageContent.getText('thesis.department')
+    div.author
+      !=pageContent.getText('thesis.author')
+    div.title
+      !=pageContent.getText('thesis.title')
+    div.sidebar
+    div.body
+      !=pageContent.getStructuredText('thesis.body').asHtml(ctx.linkResolver)

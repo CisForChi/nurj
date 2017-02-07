@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.thesis {
+  width: 100vw;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10vh; }
+
+.department {
+  font-family: "Cousine", "Menlo", monospace;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  display: inline-block;
+  position: fixed;
+  left: -50vw;
+  text-align: center;
+  top: 50vh;
+  width: 100vh;
+  vertical-align: baseline; }
+
+.author {
+  font-family: "Noe Display";
+  font-style: italic;
+  font-size: 2rem; }
+  .author:after {
+    content: "—"; }
+
+.title {
+  font-family: "Noe Display";
+  font-weight: 700;
+  line-height: 2.9rem;
+  font-size: 3rem;
+  margin-bottom: 50px; }
+
+.sidebar {
+  display: inline-block;
+  width: 30%; }
+
+.body {
+  display: inline-block;
+  width: 70%; }

@@ -1,0 +1,49 @@
+// base.scss
+
+.thesis {
+  width: 100vw;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10vh;
+}
+
+.department {
+  @include Cousine
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  display: inline-block;
+  position: fixed;
+  left: -50vw;
+  text-align: center;
+  top: 50vh;
+  width: 100vh;
+  vertical-align: baseline;
+}
+
+.author {
+  @include Noe
+  font-style: italic;
+  font-size: 2rem;
+
+  &:after {
+    content: "—";
+  }
+}
+
+.title {
+  @include Now
+  font-weight: 700;
+  line-height: 2.9rem;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.sidebar {
+  display: inline-block;
+  width: 30%;
+}
+
+.body {
+  display: inline-block;
+  width: 70%;
+}
