@@ -170,5 +170,7 @@ table {
     .body p:first-child {
       font-size: 1.5rem;
       line-height: 2rem; }
-  .body h4 {
+  .body .subhead {
     font-family: "Cousine", "Menlo", monospace; }
+  .body img {
+    width: 100%; }

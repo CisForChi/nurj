@@ -25,12 +25,31 @@ block body
     div.title
       !=pageContent.getText('thesis.title')
     div.sidebar
-        ul
-          each item in pageContent.getGroup('thesis.advisors').toArray()
-            li
-              p Faculty Advisor
-              != item.getText('faculty-advisor')
+      ul
+        each item in pageContent.getGroup('thesis.advisors').toArray()
+          li
+            p Faculty Advisor
+            != item.getText('faculty-advisor')
+      div.publish-date
+        != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
     div.body
-      !=pageContent.getStructuredText('thesis.body').asHtml(ctx.linkResolver)
+      for slice in pageContent.getSliceZone('thesis.body').slices
+        case slice.sliceType
+          when 'subhead'
+            span.subhead !{slice.value.asHtml()}
+          when 'copy'
+            p !{slice.value.asHtml()}
+          when 'quote'
+            blockquote !{slice.value.asHtml()}
+          when 'pullquote'
+            blockquote !{slice.value.asHtml()}
+          when 'image-with-caption'
+            figure
+              each imageWithCaption in slice.value.toArray()
+                img(src=imageWithCaption.getImage('figure').url)
+                if imageWithCaption.get('caption')
+                  figcaption.image-caption !{imageWithCaption.get('caption').asText()}
+                if imageWithCaption.get('attribution')
+                  cite.image-attribution !{imageWithCaption.get('attribution').asText()}
 
 include ../partials/footer.pug
