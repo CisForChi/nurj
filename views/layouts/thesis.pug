@@ -14,6 +14,8 @@ head
     script(src="//static.cdn.prismic.io/prismic.min.js")
     script(src="/javascript/vendors/highlight.min.js")
 
+include ../partials/header.pug
+
 block body
   article.thesis
     div.department
@@ -23,5 +25,12 @@ block body
     div.title
       !=pageContent.getText('thesis.title')
     div.sidebar
+        ul
+          each item in pageContent.getGroup('thesis.advisors').toArray()
+            li
+              p Faculty Advisor
+              != item.getText('faculty-advisor')
     div.body
       !=pageContent.getStructuredText('thesis.body').asHtml(ctx.linkResolver)
+
+include ../partials/footer.pug

@@ -1,4 +1,58 @@
 @charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Lava";
+  src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
+
 @font-face {
   font-family: "Noe Display";
   src: url("../../assets/fonts/noe-display-regular.otf") format("otf"), url("../../assets/fonts/noe-display-regular-italic.otf") format("otf"), url("../../assets/fonts/noe-display-bold.otf") format("otf"), url("../../assets/fonts/noe-display-bold-italic.otf") format("otf"); }
@@ -7,18 +61,69 @@
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.header {
+  width: 100%;
+  padding-left: 60px; }
+
+.masthead img {
+  margin-top: 40px;
+  width: 150px; }
+
+.nav {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 20px; }
+
 @font-face {
   font-family: "Lava";
   src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
 
+@font-face {
+  font-family: "Noe Display";
+  src: url("../../assets/fonts/noe-display-regular.otf") format("otf"), url("../../assets/fonts/noe-display-regular-italic.otf") format("otf"), url("../../assets/fonts/noe-display-bold.otf") format("otf"), url("../../assets/fonts/noe-display-bold-italic.otf") format("otf"); }
+
+@font-face {
+  font-family: "Cousine";
+  src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.footer {
+  background-color: #111111;
+  padding: 100px;
+  color: #f1f1f1; }
+  .footer .about, .footer .links {
+    vertical-align: top;
+    display: inline-block; }
+
+.about {
+  font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5rem;
+  width: 20%; }
+  .about img {
+    width: 100%;
+    margin-bottom: 20px; }
+
+.links {
+  float: right; }
+  .links div {
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 40px; }
+  .links ul {
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 14px;
+    width: 150px; }
+    .links ul li {
+      margin-top: 10px;
+      font-size: 12px; }
+
 .thesis {
   width: 100vw;
   padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 10vh; }
+  padding-right: 20%; }
 
 .department {
-  font-family: "Cousing", "Menlo", monospace;
+  font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
   transform: rotate(-90deg);
   display: inline-block;
@@ -44,9 +149,26 @@
   margin-bottom: 50px; }
 
 .sidebar {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: .75rem;
   display: inline-block;
-  width: 30%; }
+  width: 30%;
+  vertical-align: top; }
 
 .body {
   display: inline-block;
   width: 70%; }
+  .body p, .body h3 {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    .body p:first-child, .body h3:first-child {
+      margin-top: 0; }
+  .body p {
+    font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+    line-height: 2rem; }
+    .body p:first-child {
+      font-size: 1.5rem;
+      line-height: 2rem; }
+  .body h4 {
+    font-family: "Cousine", "Menlo", monospace; }

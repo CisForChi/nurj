@@ -1,0 +1,44 @@
+@import "base.scss";
+
+.footer {
+  background-color: $black;
+  padding: 100px;
+  color: $white;
+
+  .about, .links {
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+
+.about {
+  @include Lava;
+  line-height: 1.5rem;
+  width: 20%;
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.links {
+  float: right;
+
+  div {
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 40px;
+  }
+
+  ul {
+    @include Cousine;
+    font-size: 14px;
+    width: 150px;
+
+    li {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
+}

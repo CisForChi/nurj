@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  padding-left: 60px;
+}
+
+.masthead img {
+  margin-top: 40px;
+  width: 150px;
+}
+
+.nav {
+  @include Cousine;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 20px;
+}

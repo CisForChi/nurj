@@ -1,11 +1,12 @@
-@import "reset.scss"
+@import "reset.scss";
 @import "base.scss";
+@import "header.scss";
+@import "footer.scss";
 
 .thesis {
   width: 100vw;
   padding-left: 20%;
   padding-right: 20%;
-  padding-top: 10vh;
 }
 
 .department {
@@ -40,11 +41,38 @@
 }
 
 .sidebar {
+  @include Cousine;
+  font-size: .75rem;
   display: inline-block;
   width: 30%;
+  vertical-align: top;
 }
 
 .body {
+  p, h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    @include Lava;
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    &:first-child {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  h4 {
+    @include Cousine;
+  }
+
   display: inline-block;
   width: 70%;
 }
