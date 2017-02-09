@@ -10,6 +10,9 @@
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.container {
+  width: 100%; }
+
 .footer {
   background-color: #111111;
   padding: 100px;

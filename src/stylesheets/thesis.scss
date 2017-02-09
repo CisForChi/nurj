@@ -3,29 +3,24 @@
 @import "header.scss";
 @import "footer.scss";
 
-.thesis {
-  width: 100vw;
-  padding-left: 20%;
-  padding-right: 20%;
+.content {
+  width: 90%;
+  margin-left: 5%;
+  @include past($break-small) {
+
+  }
 }
 
 .department {
   @include Cousine;
   text-transform: uppercase;
-  transform: rotate(-90deg);
-  display: inline-block;
-  position: fixed;
-  left: -50vw;
-  text-align: center;
-  top: 50vh;
-  width: 100vh;
-  vertical-align: baseline;
 }
 
 .author {
   @include Noe;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 
   &:after {
     content: "—";
@@ -35,48 +30,86 @@
 .title {
   @include Noe;
   font-weight: 700;
-  line-height: 2.9rem;
-  font-size: 3rem;
-  margin-bottom: 50px;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
 }
 
-.sidebar {
-  @include Cousine;
-  font-size: .75rem;
+.advisors-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:after {
+    content: "";
+    margin-top: 10px;
+    border-bottom: .5px solid $black;
+    display: block;
+    width: 30%;
+    max-width: 100px;
+  }
+}
+
+.advisor {
+  @include side-copy;
   display: inline-block;
-  width: 30%;
-  vertical-align: top;
-}
 
-.body {
-  p, h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    &:first-child {
-      margin-top: 0;
-    }
+  &:not(:first-child) {
+    margin-left: 10px;
   }
 
   p {
-    @include Lava;
-    font-size: 1.2rem;
-    line-height: 2rem;
+    margin: 0;
+  }
+}
 
-    &:first-child {
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
+.publish-date {
+  &:before {
+    content: "Published";
+    display: block;
   }
 
-  .subhead {
-    @include Cousine;
+  @include side-copy;
+  margin-bottom: 20px;
+}
+
+.body {
+  @include body-copy;
+
+  & > * {
+    padding-left: 10%;
   }
+}
+
+.subhead {
+  @include Cousine;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.figure-item {
+  width: 100%;
 
   img {
     width: 100%;
   }
 
-  display: inline-block;
-  width: 70%;
+  .image-attribution {
+    display: block;
+    margin-top: 4px;
+    @include attribution-copy;
+    text-align: right;
+  }
+
+  .image-caption {
+
+  }
+}
+
+.pull-left {
+  padding-left: 0;
 }

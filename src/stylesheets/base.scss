@@ -1,3 +1,12 @@
+$black: #111111;
+$white: #f1f1f1;
+
+$break-xsmall: 320px;
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+
 @font-face {
   font-family: "Lava";
   src: url("../../assets/fonts/lava-regular.otf") format("otf"),
@@ -31,5 +40,41 @@
   font-family: "Cousine", "Menlo", monospace;
 }
 
-$black: #111111;
-$white: #f1f1f1;
+@mixin body-copy {
+  @include Lava;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: .01rem;
+
+  @include past($break-medium) {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin side-copy {
+  @include Cousine;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+@mixin caption-copy {
+  @include Cousine;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+@mixin attribution-copy {
+  @include Cousine;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+@mixin past($media) {
+  @media screen and (min-width: $media) {
+    @content;
+  }
+}
+
+.container {
+  width: 100%;
+}

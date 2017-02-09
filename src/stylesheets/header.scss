@@ -1,16 +1,28 @@
+@import "base.scss";
+
 .header {
   width: 100%;
-  padding-left: 60px;
+  padding-left: 20px;
+  height: 200px;
+
+  @include past($break-medium) {
+    padding-left: 60px;
+  }
 }
 
-.masthead img {
-  margin-top: 40px;
-  width: 150px;
+.masthead {
+  display: inline-block;
+
+  img {
+    margin-top: 40px;
+    width: 100px;
+  }
 }
 
 .nav {
   @include Cousine;
-  font-size: 12px;
+  display: inline-block;
+  font-size: 10px;
   margin-top: 20px;
-  line-height: 20px;
+  line-height: 15px;
 }

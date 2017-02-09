@@ -9,3 +9,6 @@
 @font-face {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.container {
+  width: 100%; }

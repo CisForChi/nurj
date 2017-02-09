@@ -17,39 +17,40 @@ head
 include ../partials/header.pug
 
 block body
-  article.thesis
-    div.department
-      !=pageContent.getText('thesis.department')
-    div.author
-      !=pageContent.getText('thesis.author')
-    div.title
-      !=pageContent.getText('thesis.title')
-    div.sidebar
-      ul
-        each item in pageContent.getGroup('thesis.advisors').toArray()
-          li
-            p Faculty Advisor
-            != item.getText('faculty-advisor')
-      div.publish-date
-        != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
-    div.body
-      for slice in pageContent.getSliceZone('thesis.body').slices
-        case slice.sliceType
-          when 'subhead'
-            span.subhead !{slice.value.asHtml()}
-          when 'copy'
-            p !{slice.value.asHtml()}
-          when 'quote'
-            blockquote !{slice.value.asHtml()}
-          when 'pullquote'
-            blockquote !{slice.value.asHtml()}
-          when 'image-with-caption'
-            figure
-              each imageWithCaption in slice.value.toArray()
-                img(src=imageWithCaption.getImage('figure').url)
-                if imageWithCaption.get('caption')
-                  figcaption.image-caption !{imageWithCaption.get('caption').asText()}
-                if imageWithCaption.get('attribution')
-                  cite.image-attribution !{imageWithCaption.get('attribution').asText()}
+  section.container
+    article.thesis.content
+      div.department
+        !=pageContent.getText('thesis.department')
+      div.author
+        !=pageContent.getText('thesis.author')
+      div.title
+        !=pageContent.getText('thesis.title')
+      div.body
+        ul.advisors-container
+          each item in pageContent.getGroup('thesis.advisors').toArray()
+            li.advisor
+              p Faculty Advisor
+              p
+                != item.getText('faculty-advisor')
+        div.publish-date
+          != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        for slice in pageContent.getSliceZone('thesis.body').slices
+          case slice.sliceType
+            when 'subhead'
+              span.subhead.pull-left !{slice.value.asHtml()}
+            when 'copy'
+              p !{slice.value.asHtml()}
+            when 'quote'
+              blockquote !{slice.value.asHtml()}
+            when 'pullquote'
+              blockquote !{slice.value.asHtml()}
+            when 'image-with-caption'
+              figure.figure-item.pull-left
+                each imageWithCaption in slice.value.toArray()
+                  img(src=imageWithCaption.getImage('figure').url)
+                  if imageWithCaption.get('attribution')
+                    cite.image-attribution !{imageWithCaption.get('attribution').asText()}
+                  if imageWithCaption.get('caption')
+                    figcaption.image-caption !{imageWithCaption.get('caption').asText()}
 
 include ../partials/footer.pug

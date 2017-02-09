@@ -19,11 +19,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -31,11 +26,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
-body {
-  line-height: 1; }
-
 ol, ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
 
 blockquote, q {
   quotes: none; }
@@ -49,6 +42,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+figure {
+  margin: 0; }
+
 @font-face {
   font-family: "Lava";
   src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
@@ -60,20 +56,45 @@ table {
 @font-face {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.container {
+  width: 100%; }
+
+@font-face {
+  font-family: "Lava";
+  src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("../../assets/fonts/noe-display-regular.otf") format("otf"), url("../../assets/fonts/noe-display-regular-italic.otf") format("otf"), url("../../assets/fonts/noe-display-bold.otf") format("otf"), url("../../assets/fonts/noe-display-bold-italic.otf") format("otf"); }
+
+@font-face {
+  font-family: "Cousine";
+  src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.container {
+  width: 100%; }
 
 .header {
   width: 100%;
-  padding-left: 60px; }
+  padding-left: 20px;
+  height: 200px; }
+  @media screen and (min-width: 768px) {
+    .header {
+      padding-left: 60px; } }
 
-.masthead img {
-  margin-top: 40px;
-  width: 150px; }
+.masthead {
+  display: inline-block; }
+  .masthead img {
+    margin-top: 40px;
+    width: 100px; }
 
 .nav {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 12px;
+  display: inline-block;
+  font-size: 10px;
   margin-top: 20px;
-  line-height: 20px; }
+  line-height: 15px; }
 
 @font-face {
   font-family: "Lava";
@@ -86,6 +107,9 @@ table {
 @font-face {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.container {
+  width: 100%; }
 
 .footer {
   background-color: #111111;
@@ -117,60 +141,89 @@ table {
       margin-top: 10px;
       font-size: 12px; }
 
-.thesis {
-  width: 100vw;
-  padding-left: 20%;
-  padding-right: 20%; }
+.content {
+  width: 90%;
+  margin-left: 5%; }
 
 .department {
   font-family: "Cousine", "Menlo", monospace;
-  text-transform: uppercase;
-  transform: rotate(-90deg);
-  display: inline-block;
-  position: fixed;
-  left: -50vw;
-  text-align: center;
-  top: 50vh;
-  width: 100vh;
-  vertical-align: baseline; }
+  text-transform: uppercase; }
 
 .author {
   font-family: "Noe Display", serif;
   font-style: italic;
-  font-size: 2rem; }
+  font-size: 1.5rem;
+  margin-bottom: 10px; }
   .author:after {
     content: "—"; }
 
 .title {
   font-family: "Noe Display", serif;
   font-weight: 700;
-  line-height: 2.9rem;
-  font-size: 3rem;
-  margin-bottom: 50px; }
+  line-height: 2.5rem;
+  font-size: 2.5rem; }
 
-.sidebar {
+.advisors-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px; }
+  .advisors-container:after {
+    content: "";
+    margin-top: 10px;
+    border-bottom: 0.5px solid #111111;
+    display: block;
+    width: 30%;
+    max-width: 100px; }
+
+.advisor {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: .75rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: top; }
+  font-size: 9px;
+  line-height: 12px;
+  display: inline-block; }
+  .advisor:not(:first-child) {
+    margin-left: 10px; }
+  .advisor p {
+    margin: 0; }
+
+.publish-date {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  line-height: 12px;
+  margin-bottom: 20px; }
+  .publish-date:before {
+    content: "Published";
+    display: block; }
 
 .body {
-  display: inline-block;
-  width: 70%; }
-  .body p, .body h3 {
+  font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: .01rem; }
+  @media screen and (min-width: 768px) {
+    .body {
+      font-size: 1.25rem; } }
+  .body > * {
+    padding-left: 10%; }
+
+.subhead {
+  font-family: "Cousine", "Menlo", monospace;
+  text-transform: uppercase;
+  font-size: 14px; }
+  .subhead h3 {
     margin-top: 30px;
     margin-bottom: 30px; }
-    .body p:first-child, .body h3:first-child {
-      margin-top: 0; }
-  .body p {
-    font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 1.2rem;
-    line-height: 2rem; }
-    .body p:first-child {
-      font-size: 1.5rem;
-      line-height: 2rem; }
-  .body .subhead {
-    font-family: "Cousine", "Menlo", monospace; }
-  .body img {
+
+.figure-item {
+  width: 100%; }
+  .figure-item img {
     width: 100%; }
+  .figure-item .image-attribution {
+    display: block;
+    margin-top: 4px;
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 9px;
+    line-height: 12px;
+    text-align: right; }
+
+.pull-left {
+  padding-left: 0; }
