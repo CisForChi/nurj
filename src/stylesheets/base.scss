@@ -110,6 +110,17 @@ $break-xlarge: 1200px;
   }
 }
 
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
 .container {
   width: 100%;
+}
+
+body {
+  background-color: $white;
 }

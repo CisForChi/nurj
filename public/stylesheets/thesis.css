@@ -62,6 +62,9 @@ figure {
 .container {
   width: 100%; }
 
+body {
+  background-color: #f1f1f1; }
+
 @font-face {
   font-family: "Lava";
   src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
@@ -77,10 +80,13 @@ figure {
 .container {
   width: 100%; }
 
+body {
+  background-color: #f1f1f1; }
+
 .header {
   width: 100%;
   padding-left: 20px;
-  height: 200px; }
+  height: 150px; }
   @media screen and (min-width: 768px) {
     .header {
       padding-left: 60px; } }
@@ -92,11 +98,46 @@ figure {
     width: 100px; }
 
 .nav {
+  background-color: rgba(241, 241, 241, 0);
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: #111111;
+  padding: 20px;
+  z-index: -1; }
+  .nav .nav-list {
+    font-family: "Cousine", "Menlo", monospace; }
+    .nav .nav-list li a {
+      text-decoration: none;
+      line-height: 3rem;
+      color: #f1f1f1; }
+
+.nav-open {
+  position: relative;
+  clip: rect(0, 0, 0, 0);
+  z-index: 4;
+  display: none; }
+  .nav-open:checked ~ label:before {
+    content: "Close";
+    color: #f1f1f1; }
+  .nav-open:checked ~ .nav {
+    left: 10%;
+    z-index: 2; }
+
+label[for="nav-open"] {
   font-family: "Cousine", "Menlo", monospace;
-  display: inline-block;
-  font-size: 10px;
-  margin-top: 20px;
-  line-height: 15px; }
+  position: relative;
+  float: right;
+  vertical-align: bottom;
+  z-index: 4; }
+  label[for="nav-open"]:before {
+    content: "Menu"; }
 
 @font-face {
   font-family: "Lava";
@@ -112,6 +153,9 @@ figure {
 
 .container {
   width: 100%; }
+
+body {
+  background-color: #f1f1f1; }
 
 .footer {
   background-color: #111111;
@@ -166,7 +210,6 @@ figure {
   font-size: 2.5rem; }
 
 .advisors-container {
-  position: relative;
   width: 100%;
   margin-bottom: 10px; }
   .advisors-container:after {
