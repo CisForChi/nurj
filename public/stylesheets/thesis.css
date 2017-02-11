@@ -199,7 +199,7 @@ figure {
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   letter-spacing: .01rem; }
   @media screen and (min-width: 768px) {
     .body {
@@ -240,6 +240,21 @@ a[href^="http://["] {
     font-size: 9px;
     line-height: 12px;
     text-align: right; }
+
+.pullquote {
+  font-family: "Noe Display", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-left: 0; }
+  .pullquote:before {
+    content: "";
+    display: block;
+    width: 30%;
+    max-width: 200px;
+    height: 5px;
+    background-color: #111111;
+    margin-bottom: 20px; }
 
 .sidebar {
   padding-left: 0; }

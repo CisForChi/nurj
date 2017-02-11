@@ -43,9 +43,9 @@ block body
             when 'citation'
               p.citation !{slice.value.asText()}
             when 'quote'
-              blockquote.quote !{slice.value.asText()}
+              blockquote.inline-quote !{slice.value.asText()}
             when 'pullquote'
-              blockquote.blockquote !{slice.value.asText()}
+              blockquote.pullquote.sidebar !{slice.value.asText()}
             when 'image-with-caption'
               figure.figure-item.sidebar
                 each imageWithCaption in slice.value.toArray()

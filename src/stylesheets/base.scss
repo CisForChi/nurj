@@ -43,7 +43,7 @@ $break-xlarge: 1200px;
 @mixin body-copy {
   @include Lava;
   font-size: 1.125rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   letter-spacing: .01rem;
 
   @include past($break-medium) {
@@ -51,7 +51,7 @@ $break-xlarge: 1200px;
   }
 }
 
-@mixin side-copy {
+@mixin sidebar-copy {
   @include Cousine;
   font-size: 9px;
   line-height: 12px;
@@ -67,6 +67,27 @@ $break-xlarge: 1200px;
   @include Cousine;
   font-size: 9px;
   line-height: 12px;
+}
+
+@mixin inline-quote-copy {
+
+}
+
+@mixin pullquote-copy {
+  @include Noe;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 30%;
+    max-width: 200px;
+    height: 5px;
+    background-color: $black;
+    margin-bottom: 20px;
+  }
 }
 
 @mixin citation-copy {
