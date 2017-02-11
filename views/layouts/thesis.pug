@@ -37,15 +37,17 @@ block body
         for slice in pageContent.getSliceZone('thesis.body').slices
           case slice.sliceType
             when 'subhead'
-              span.subhead.pull-left !{slice.value.asHtml()}
+              span.subhead.sidebar !{slice.value.asHtml()}
             when 'copy'
               p !{slice.value.asHtml()}
+            when 'citation'
+              p.citation !{slice.value.asText()}
             when 'quote'
-              blockquote !{slice.value.asHtml()}
+              blockquote.quote !{slice.value.asText()}
             when 'pullquote'
-              blockquote !{slice.value.asHtml()}
+              blockquote.blockquote !{slice.value.asText()}
             when 'image-with-caption'
-              figure.figure-item.pull-left
+              figure.figure-item.sidebar
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')

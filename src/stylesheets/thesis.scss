@@ -80,6 +80,16 @@
   }
 }
 
+a[href^="http://["] {
+  @include superscript;
+  pointer-events: none;
+  color: $black;
+}
+
+.citation {
+  @include citation-copy;
+}
+
 .subhead {
   @include Cousine;
   text-transform: uppercase;
@@ -110,6 +120,6 @@
   }
 }
 
-.pull-left {
+.sidebar {
   padding-left: 0;
 }

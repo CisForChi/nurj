@@ -69,6 +69,20 @@ $break-xlarge: 1200px;
   line-height: 12px;
 }
 
+@mixin citation-copy {
+  @include Cousine;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+@mixin superscript {
+  @include Cousine;
+  font-size: 9px;
+  text-decoration: none;
+  position: relative;
+  top: -1em;
+}
+
 @mixin past($media) {
   @media screen and (min-width: $media) {
     @content;

@@ -4,6 +4,8 @@
    License: none (public domain)
 */
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body, div, span, applet, object, iframe,
@@ -205,6 +207,20 @@ figure {
   .body > * {
     padding-left: 10%; }
 
+a[href^="http://["] {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  text-decoration: none;
+  position: relative;
+  top: -1em;
+  pointer-events: none;
+  color: #111111; }
+
+.citation {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  line-height: 12px; }
+
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
@@ -225,5 +241,5 @@ figure {
     line-height: 12px;
     text-align: right; }
 
-.pull-left {
+.sidebar {
   padding-left: 0; }

@@ -5,8 +5,8 @@
     "start": "node app.js",
     "lint": "eslint app.js config.js prismic-configuration.js",
     "test": "npm run lint",
-    "build-scss": "node-sass src/stylesheets -o public/stylesheets",
-    "watch-scss": "node-sass -w src/stylesheets -o public/stylesheets"
+    "build-sass": "node-sass src/stylesheets -o public/stylesheets",
+    "watch-sass": "node-sass -w src/stylesheets -o public/stylesheets"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
