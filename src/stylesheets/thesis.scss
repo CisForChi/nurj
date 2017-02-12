@@ -12,8 +12,7 @@
 }
 
 .department {
-  @include Cousine;
-  text-transform: uppercase;
+  @include folio-copy;
 }
 
 .author {
@@ -28,10 +27,7 @@
 }
 
 .title {
-  @include Noe;
-  font-weight: 700;
-  line-height: 2.5rem;
-  font-size: 2.5rem;
+  @include headline-copy;
 }
 
 .advisors-container {
@@ -73,6 +69,15 @@
 
 .body {
   @include body-copy;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+    margin-bottom: 20px;
+  }
 
   & > * {
     padding-left: 10%;
@@ -130,4 +135,33 @@ a[href^="http://["] {
 
 .sidebar {
   padding-left: 0;
+}
+
+$photo-size: 100px;
+
+.bio-container {
+  margin-bottom: 50px;
+}
+
+.author-headshot {
+  display: inline-block;
+  position: relative;
+  width: $photo-size;
+  height: $photo-size;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: top;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin-left: -$photo-size/4;
+  }
+}
+
+.author-bio {
+  @include sidebar-copy;
+  display: inline-block;
+  width: 50%;
+  margin-left: 20px;
 }

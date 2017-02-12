@@ -40,6 +40,19 @@ $break-xlarge: 1200px;
   font-family: "Cousine", "Menlo", monospace;
 }
 
+@mixin folio-copy {
+  @include Cousine;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+@mixin headline-copy {
+  @include Noe;
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+}
+
 @mixin body-copy {
   @include Lava;
   font-size: 1.125rem;

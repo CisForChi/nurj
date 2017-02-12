@@ -21,8 +21,9 @@ block body
     article.thesis.content
       div.department
         !=pageContent.getText('thesis.department')
-      div.author
-        !=pageContent.getText('thesis.author')
+      each item in pageContent.getGroup('thesis.byline').toArray()
+        div.author
+          !=item.getText('author')
       div.title
         !=pageContent.getText('thesis.title')
       div.body
@@ -54,5 +55,13 @@ block body
                     cite.image-attribution !{imageWithCaption.get('attribution').asText()}
                   if imageWithCaption.get('caption')
                     figcaption.image-caption !{imageWithCaption.get('caption').asText()}
+      each item in pageContent.getGroup('thesis.byline').toArray()
+        div.bio-container
+          div.author-headshot
+            img(src=item.getImage('headshot').url)
+          div.author-bio
+            !=item.getText('bio')
+
+
 
 include ../partials/footer.pug
