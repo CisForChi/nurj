@@ -1,0 +1,51 @@
+@import "../../base";
+
+.meta-container {
+  width: 100%;
+  padding-left: 10%;
+  vertical-align: top;
+
+  @include past($break-small) {
+    padding-left: 0;
+    padding-right: 10px;
+    width: $gutter-width;
+    display: inline-block;
+  }
+}
+
+.advisors-container {
+  margin-bottom: 10px;
+  margin-top: 0;
+
+  &:after {
+    content: "";
+    margin-top: 10px;
+    border-bottom: .5px solid $black;
+    display: block;
+    width: 30%;
+    min-width: 60px;
+  }
+}
+
+.advisor {
+  @include sidebar-copy;
+  display: inline-block;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.publish-date {
+  &:before {
+    content: "Published";
+    display: block;
+  }
+
+  @include sidebar-copy;
+  margin-bottom: 20px;
+}

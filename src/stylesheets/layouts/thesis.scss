@@ -1,0 +1,35 @@
+@import "../base";
+@import "../components/thesis/meta-container";
+@import "../components/thesis/copy";
+@import "../components/thesis/bio-container";
+@import "../partials/header";
+@import "../partials/footer";
+
+.department {
+  @include folio-copy;
+}
+
+.author {
+  @include byline-copy;
+
+  &:after {
+    content: "—";
+  }
+}
+
+.inline-quote {
+  @include inline-quote-copy;
+}
+
+.pullquote {
+  @include pullquote-copy;
+  margin-left: 0;
+  display: inline-block;
+}
+
+a[href^="http://["] {
+  @include superscript;
+  pointer-events: none;
+  color: $black;
+  line-height: 0;
+}

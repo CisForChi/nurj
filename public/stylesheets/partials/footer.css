@@ -136,3 +136,30 @@ body {
     font-size: 9px;
     line-height: 12px;
     text-align: right; }
+
+.footer {
+  background-color: #111111;
+  padding: 40px 20px;
+  color: #f1f1f1; }
+  .footer .about, .footer .links {
+    vertical-align: top;
+    display: inline-block; }
+
+.about {
+  font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5rem; }
+  .about img {
+    width: 200px; }
+
+.links div {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+  padding-right: 10px; }
+
+.links ul {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 14px; }
+  .links ul li {
+    margin-top: 10px;
+    font-size: 12px; }

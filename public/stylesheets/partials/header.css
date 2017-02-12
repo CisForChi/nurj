@@ -136,3 +136,64 @@ body {
     font-size: 9px;
     line-height: 12px;
     text-align: right; }
+
+.header {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  height: 150px; }
+  @media screen and (min-width: 480px) {
+    .header {
+      padding-left: 5%; } }
+
+.masthead {
+  display: inline-block; }
+  .masthead img {
+    width: 100px; }
+    @media screen and (min-width: 480px) {
+      .masthead img {
+        width: 150px; } }
+
+.nav {
+  background-color: rgba(241, 241, 241, 0);
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: #111111;
+  padding: 20px;
+  z-index: -1; }
+  .nav .nav-list {
+    font-family: "Cousine", "Menlo", monospace; }
+    .nav .nav-list li a {
+      text-decoration: none;
+      line-height: 3rem;
+      color: #f1f1f1; }
+
+.nav-open {
+  position: relative;
+  clip: rect(0, 0, 0, 0);
+  z-index: 4;
+  display: none; }
+  .nav-open:checked ~ label:before {
+    content: "Close";
+    color: #f1f1f1; }
+  .nav-open:checked ~ .nav {
+    left: 10%;
+    z-index: 2; }
+
+label[for="nav-open"] {
+  font-family: "Cousine", "Menlo", monospace;
+  position: relative;
+  float: right;
+  z-index: 4; }
+  label[for="nav-open"]:before {
+    display: inline-block;
+    line-height: 36px;
+    content: "Menu"; }

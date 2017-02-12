@@ -1,0 +1,26 @@
+.bio-container {
+  margin-bottom: 50px;
+}
+
+.author-headshot {
+  display: inline-block;
+  position: relative;
+  width: $author-photo-size;
+  height: $author-photo-size;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: top;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin-left: -$author-photo-size/4;
+  }
+}
+
+.author-bio {
+  @include sidebar-copy;
+  display: inline-block;
+  width: calc(100% - 120px);
+  margin-left: 20px;
+}

@@ -136,3 +136,52 @@ body {
     font-size: 9px;
     line-height: 12px;
     text-align: right; }
+
+.meta-container {
+  width: 100%;
+  padding-left: 10%;
+  vertical-align: top; }
+  @media screen and (min-width: 480px) {
+    .meta-container {
+      padding-left: 0;
+      padding-right: 10px;
+      width: 20%;
+      display: inline-block; } }
+
+.advisors-container {
+  margin-bottom: 10px;
+  margin-top: 0; }
+  .advisors-container:after {
+    content: "";
+    margin-top: 10px;
+    border-bottom: 0.5px solid #111111;
+    display: block;
+    width: 30%;
+    min-width: 60px; }
+
+.advisor {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  line-height: 12px;
+  display: inline-block; }
+  @media screen and (min-width: 992px) {
+    .advisor {
+      font-size: 12px;
+      line-height: 15px; } }
+  .advisor:not(:first-child) {
+    margin-left: 10px; }
+  .advisor p {
+    margin: 0; }
+
+.publish-date {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  line-height: 12px;
+  margin-bottom: 20px; }
+  .publish-date:before {
+    content: "Published";
+    display: block; }
+  @media screen and (min-width: 992px) {
+    .publish-date {
+      font-size: 12px;
+      line-height: 15px; } }

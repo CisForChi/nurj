@@ -1,3 +1,5 @@
+@import "reset.scss";
+
 $black: #111111;
 $white: #f1f1f1;
 
@@ -6,6 +8,12 @@ $break-small: 480px;
 $break-medium: 768px;
 $break-large: 992px;
 $break-xlarge: 1200px;
+
+$body-width: 80%;
+$gutter-width: 100% - $body-width;
+
+$max-content-width: 990px;
+$author-photo-size: 100px;
 
 @font-face {
   font-family: "Lava";
@@ -77,6 +85,7 @@ $break-xlarge: 1200px;
 
   @include past($break-medium) {
     font-size: 1.25rem;
+    line-height: 2rem;
   }
 }
 
@@ -163,4 +172,84 @@ $break-xlarge: 1200px;
 body {
   background-color: $white;
   margin: 0;
+}
+
+.content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include past($break-medium) {
+    width: 70%;
+    max-width: $max-content-width;
+  }
+}
+
+.title {
+  @include headline-copy;
+  margin-bottom: 20px;
+
+  @include past($break-large) {
+    margin-bottom: 60px;
+  }
+}
+
+.body {
+  @include body-copy;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+    margin-bottom: 20px;
+  }
+
+  & > p {
+    padding-left: 10%;
+
+    @include past($break-medium) {
+      padding-left: $gutter-width;
+    }
+  }
+}
+
+.subhead {
+  @include Cousine;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include past($break-small) {
+      padding-left: $gutter-width;
+    }
+  }
+}
+
+.figure-item {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  @include past($break-small) {
+    width: $body-width;
+    display: inline-block;
+  }
+
+  .image-attribution {
+    display: block;
+    margin-top: 4px;
+    @include attribution-copy;
+    text-align: right;
+  }
+
+  .image-caption {
+
+  }
 }

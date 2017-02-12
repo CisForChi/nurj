@@ -136,3 +136,46 @@ body {
     font-size: 9px;
     line-height: 12px;
     text-align: right; }
+
+.thesis-copy {
+  display: inline-block; }
+  .thesis-copy section[data-field="copy"] {
+    width: 95%;
+    float: right; }
+    @media screen and (min-width: 480px) {
+      .thesis-copy section[data-field="copy"] {
+        width: 80%; }
+        .thesis-copy section[data-field="copy"] p {
+          margin-top: 0; } }
+  .thesis-copy section[data-field="citation"] {
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 9px;
+    line-height: 12px;
+    float: left;
+    padding-left: 5%; }
+    @media screen and (min-width: 992px) {
+      .thesis-copy section[data-field="citation"] {
+        font-size: 12px;
+        line-height: 15px; } }
+    .thesis-copy section[data-field="citation"] p {
+      word-wrap: break-word; }
+      .thesis-copy section[data-field="citation"] p:before {
+        display: block;
+        content: "";
+        position: relative;
+        height: 1px;
+        margin-bottom: 5px;
+        width: 100%;
+        background-color: #111111; }
+    @media screen and (min-width: 480px) {
+      .thesis-copy section[data-field="citation"] {
+        padding-left: 0;
+        display: block;
+        width: 80px; } }
+    @media screen and (min-width: 992px) {
+      .thesis-copy section[data-field="citation"] {
+        width: 120px; } }
+  @media screen and (min-width: 480px) {
+    .thesis-copy section[data-field="quote"] {
+      width: 70%;
+      float: right; } }

@@ -1,0 +1,56 @@
+@import "../../base";
+
+.thesis-copy {
+  display: inline-block;
+
+  section[data-field="copy"] {
+    width: 95%;
+    float: right;
+
+    @include past($break-small) {
+      width: 80%;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  section[data-field="citation"] {
+    @include citation-copy;
+    float: left;
+    padding-left: 5%;
+
+    p {
+      word-wrap: break-word;
+
+      &:before {
+        display: block;
+        content: "";
+        position: relative;
+        height: 1px;
+        margin-bottom: 5px;
+        width: 100%;
+        background-color: $black;
+      }
+    }
+
+    @include past($break-small) {
+      padding-left: 0;
+      display: block;
+      width: 80px;
+    }
+
+    @include past($break-large) {
+      width: 120px;
+    }
+  }
+
+  section[data-field="quote"] {
+
+    @include past($break-small) {
+      width: 70%;
+      float:right;
+    }
+  }
+}
