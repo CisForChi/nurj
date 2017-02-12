@@ -3,11 +3,17 @@
 @import "header.scss";
 @import "footer.scss";
 
+$body-width: 80%;
+$gutter-width: 100% - $body-width;
+
 .content {
   width: 90%;
-  margin-left: 5%;
-  @include past($break-small) {
+  margin-left: auto;
+  margin-right: auto;
 
+  @include past($break-medium) {
+    width: 70%;
+    max-width: 900px;
   }
 }
 
@@ -16,10 +22,7 @@
 }
 
 .author {
-  @include Noe;
-  font-style: italic;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  @include byline-copy;
 
   &:after {
     content: "—";
@@ -28,11 +31,29 @@
 
 .title {
   @include headline-copy;
+  margin-bottom: 20px;
+
+  @include past($break-large) {
+    margin-bottom: 60px;
+  }
+}
+
+.meta-container {
+  width: 100%;
+  padding-left: 10%;
+  vertical-align: top;
+
+  @include past($break-medium) {
+    padding-left: 0;
+    padding-right: 10px;
+    width: $gutter-width;
+    display: inline-block;
+  }
 }
 
 .advisors-container {
-  width: 100%;
   margin-bottom: 10px;
+  margin-top: 0;
 
   &:after {
     content: "";
@@ -40,7 +61,7 @@
     border-bottom: .5px solid $black;
     display: block;
     width: 30%;
-    max-width: 100px;
+    min-width: 100px;
   }
 }
 
@@ -79,19 +100,66 @@
     margin-bottom: 20px;
   }
 
-  & > * {
+  & > p {
     padding-left: 10%;
+
+    @include past($break-medium) {
+      padding-left: $gutter-width;
+    }
   }
 }
 
-a[href^="http://["] {
-  @include superscript;
-  pointer-events: none;
-  color: $black;
-}
+.thesis-copy {
+  display: inline-block;
 
-.citation {
-  @include citation-copy;
+  section[data-field="copy"] {
+
+    @include past($break-medium) {
+      width: 80%;
+      float: right;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  section[data-field="citation"] {
+    @include citation-copy;
+
+    p {
+      word-wrap: break-word;
+    }
+
+    // &:before {
+    //   display: block;
+    //   content: "";
+    //   position: relative;
+    //   height: 2px;
+    //   margin-bottom: 5px;
+    //   width: 100%;
+    //   background-color: $black;
+    // }
+
+    @include past($break-medium) {
+      padding-left: 0;
+      display: block;
+      width: 80px;
+    }
+
+    @include past($break-large) {
+      width: 140px;
+      float: left;
+    }
+  }
+
+  section[data-field="quote"] {
+
+    @include past($break-medium) {
+      width: 60%;
+      float:right;
+    }
+  }
 }
 
 .subhead {
@@ -102,6 +170,10 @@ a[href^="http://["] {
   h3 {
     margin-top: 30px;
     margin-bottom: 30px;
+
+    @include past($break-medium) {
+      padding-left: $gutter-width;
+    }
   }
 }
 
@@ -110,6 +182,11 @@ a[href^="http://["] {
 
   img {
     width: 100%;
+  }
+
+  @include past($break-medium) {
+    width: $body-width;
+    display: inline-block;
   }
 
   .image-attribution {
@@ -131,6 +208,7 @@ a[href^="http://["] {
 .pullquote {
   @include pullquote-copy;
   margin-left: 0;
+  display: inline-block;
 }
 
 .sidebar {
@@ -162,6 +240,12 @@ $photo-size: 100px;
 .author-bio {
   @include sidebar-copy;
   display: inline-block;
-  width: 50%;
+  width: calc(100% - 120px);
   margin-left: 20px;
+}
+
+a[href^="http://["] {
+  @include superscript;
+  pointer-events: none;
+  color: $black;
 }

@@ -27,28 +27,25 @@ block body
       div.title
         !=pageContent.getText('thesis.title')
       div.body
-        ul.advisors-container
-          each item in pageContent.getGroup('thesis.advisors').toArray()
-            li.advisor
-              p Faculty Advisor
-              p
-                != item.getText('faculty-advisor')
-        div.publish-date
-          != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        div.meta-container
+          ul.advisors-container
+            each item in pageContent.getGroup('thesis.advisors').toArray()
+              li.advisor
+                p Faculty Advisor
+                p
+                  != item.getText('faculty-advisor')
+          div.publish-date
+            != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         for slice in pageContent.getSliceZone('thesis.body').slices
           case slice.sliceType
             when 'subhead'
-              span.subhead.sidebar !{slice.value.asHtml()}
+              span.subhead !{slice.value.asHtml()}
             when 'copy'
-              p !{slice.value.asHtml()}
-            when 'citation'
-              p.citation !{slice.value.asText()}
-            when 'quote'
-              blockquote.inline-quote !{slice.value.asText()}
+              div.thesis-copy !{slice.value.asHtml()}
             when 'pullquote'
-              blockquote.pullquote.sidebar !{slice.value.asText()}
+              blockquote.pullquote !{slice.value.asText()}
             when 'image-with-caption'
-              figure.figure-item.sidebar
+              figure.figure-item
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')

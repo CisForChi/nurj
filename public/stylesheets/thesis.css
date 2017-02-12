@@ -189,7 +189,12 @@ body {
 
 .content {
   width: 90%;
-  margin-left: 5%; }
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 768px) {
+    .content {
+      width: 70%;
+      max-width: 900px; } }
 
 .department {
   font-family: "Cousine", "Menlo", monospace;
@@ -201,6 +206,9 @@ body {
   font-style: italic;
   font-size: 1.5rem;
   margin-bottom: 10px; }
+  @media screen and (min-width: 992px) {
+    .author {
+      font-size: 3rem; } }
   .author:after {
     content: "—"; }
 
@@ -208,24 +216,47 @@ body {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  margin-bottom: 20px; }
+  @media screen and (min-width: 992px) {
+    .title {
+      line-height: 4.5rem;
+      font-size: 4.5rem; } }
+  @media screen and (min-width: 992px) {
+    .title {
+      margin-bottom: 60px; } }
+
+.meta-container {
+  width: 100%;
+  padding-left: 10%;
+  vertical-align: top; }
+  @media screen and (min-width: 768px) {
+    .meta-container {
+      padding-left: 0;
+      padding-right: 10px;
+      width: 20%;
+      display: inline-block; } }
 
 .advisors-container {
-  width: 100%;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-top: 0; }
   .advisors-container:after {
     content: "";
     margin-top: 10px;
     border-bottom: 0.5px solid #111111;
     display: block;
     width: 30%;
-    max-width: 100px; }
+    min-width: 100px; }
 
 .advisor {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 9px;
   line-height: 12px;
   display: inline-block; }
+  @media screen and (min-width: 992px) {
+    .advisor {
+      font-size: 12px;
+      line-height: 15px; } }
   .advisor:not(:first-child) {
     margin-left: 10px; }
   .advisor p {
@@ -239,6 +270,10 @@ body {
   .publish-date:before {
     content: "Published";
     display: block; }
+  @media screen and (min-width: 992px) {
+    .publish-date {
+      font-size: 12px;
+      line-height: 15px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -255,22 +290,43 @@ body {
     height: 1px;
     background-color: #111111;
     margin-bottom: 20px; }
-  .body > * {
+  .body > p {
     padding-left: 10%; }
+    @media screen and (min-width: 768px) {
+      .body > p {
+        padding-left: 20%; } }
 
-a[href^="http://["] {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  text-decoration: none;
-  position: relative;
-  top: -1em;
-  pointer-events: none;
-  color: #111111; }
-
-.citation {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  line-height: 12px; }
+.thesis-copy {
+  display: inline-block; }
+  @media screen and (min-width: 768px) {
+    .thesis-copy section[data-field="copy"] {
+      width: 80%;
+      float: right; }
+      .thesis-copy section[data-field="copy"] p {
+        margin-top: 0; } }
+  .thesis-copy section[data-field="citation"] {
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 9px;
+    line-height: 12px; }
+    @media screen and (min-width: 992px) {
+      .thesis-copy section[data-field="citation"] {
+        font-size: 12px;
+        line-height: 15px; } }
+    .thesis-copy section[data-field="citation"] p {
+      word-wrap: break-word; }
+    @media screen and (min-width: 768px) {
+      .thesis-copy section[data-field="citation"] {
+        padding-left: 0;
+        display: block;
+        width: 80px; } }
+    @media screen and (min-width: 992px) {
+      .thesis-copy section[data-field="citation"] {
+        width: 140px;
+        float: left; } }
+  @media screen and (min-width: 768px) {
+    .thesis-copy section[data-field="quote"] {
+      width: 60%;
+      float: right; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -279,11 +335,18 @@ a[href^="http://["] {
   .subhead h3 {
     margin-top: 30px;
     margin-bottom: 30px; }
+    @media screen and (min-width: 768px) {
+      .subhead h3 {
+        padding-left: 20%; } }
 
 .figure-item {
   width: 100%; }
   .figure-item img {
     width: 100%; }
+  @media screen and (min-width: 768px) {
+    .figure-item {
+      width: 80%;
+      display: inline-block; } }
   .figure-item .image-attribution {
     display: block;
     margin-top: 4px;
@@ -297,7 +360,8 @@ a[href^="http://["] {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-left: 0; }
+  margin-left: 0;
+  display: inline-block; }
   .pullquote:before {
     content: "";
     display: block;
@@ -331,5 +395,18 @@ a[href^="http://["] {
   font-size: 9px;
   line-height: 12px;
   display: inline-block;
-  width: 50%;
+  width: calc(100% - 120px);
   margin-left: 20px; }
+  @media screen and (min-width: 992px) {
+    .author-bio {
+      font-size: 12px;
+      line-height: 15px; } }
+
+a[href^="http://["] {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  text-decoration: none;
+  position: relative;
+  top: -1em;
+  pointer-events: none;
+  color: #111111; }

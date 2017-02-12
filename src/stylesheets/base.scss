@@ -46,11 +46,27 @@ $break-xlarge: 1200px;
   font-size: 9px;
 }
 
+@mixin byline-copy {
+  @include Noe;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+
+  @include past($break-large) {
+    font-size: 3rem;
+  }
+}
+
 @mixin headline-copy {
   @include Noe;
   font-weight: 700;
   line-height: 2.5rem;
   font-size: 2.5rem;
+
+  @include past($break-large) {
+    line-height: 4.5rem;
+    font-size: 4.5rem;
+  }
 }
 
 @mixin body-copy {
@@ -68,6 +84,11 @@ $break-xlarge: 1200px;
   @include Cousine;
   font-size: 9px;
   line-height: 12px;
+
+  @include past($break-large) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 @mixin caption-copy {
@@ -107,6 +128,11 @@ $break-xlarge: 1200px;
   @include Cousine;
   font-size: 9px;
   line-height: 12px;
+
+  @include past($break-large) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 @mixin superscript {
