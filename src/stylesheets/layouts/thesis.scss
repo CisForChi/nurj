@@ -17,14 +17,14 @@
   }
 }
 
-.inline-quote {
-  @include inline-quote-copy;
-}
-
 .pullquote {
   @include pullquote-copy;
   margin-left: 0;
   display: inline-block;
+
+  @include past($break-medium) {
+    max-width: 600px;
+  }
 }
 
 a[href^="http://["] {

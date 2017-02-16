@@ -113,7 +113,7 @@ body {
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
-  font-size: 14px; }
+  font-size: 16px; }
   .subhead h3 {
     margin-top: 30px;
     margin-bottom: 30px; }
@@ -178,4 +178,5 @@ body {
   @media screen and (min-width: 480px) {
     .thesis-copy section[data-field="quote"] {
       width: 70%;
+      margin-right: 5%;
       float: right; } }

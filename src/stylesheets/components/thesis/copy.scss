@@ -47,9 +47,10 @@
   }
 
   section[data-field="quote"] {
-
+    @include inline-quote-copy;
     @include past($break-small) {
       width: 70%;
+      margin-right: 5%;
       float:right;
     }
   }
