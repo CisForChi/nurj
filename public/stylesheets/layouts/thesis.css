@@ -687,6 +687,9 @@ body {
   @media screen and (min-width: 480px) {
     .header {
       padding-left: 5%; } }
+  @media screen and (min-width: 768px) {
+    .header {
+      margin-bottom: 50px; } }
 
 .masthead {
   display: inline-block; }
@@ -716,6 +719,19 @@ body {
       text-decoration: none;
       line-height: 3rem;
       color: #f1f1f1; }
+  @media screen and (min-width: 768px) {
+    .nav {
+      position: relative;
+      display: inline-block;
+      background-color: transparent;
+      left: auto;
+      padding: 0;
+      transition: none;
+      z-index: 1; }
+      .nav .nav-list li a {
+        color: #111111;
+        font-size: 12px;
+        line-height: 14px; } }
 
 .nav-open {
   position: relative;
@@ -738,6 +754,9 @@ label[for="nav-open"] {
     display: inline-block;
     line-height: 36px;
     content: "Menu"; }
+  @media screen and (min-width: 768px) {
+    label[for="nav-open"] {
+      display: none; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126

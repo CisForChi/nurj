@@ -10,6 +10,10 @@
   @include past($break-small) {
     padding-left: 5%;
   }
+
+  @include past($break-medium) {
+    margin-bottom: 50px;
+  }
 }
 
 .masthead {
@@ -44,6 +48,22 @@
       color: $white;
     }
   }
+
+  @include past($break-medium) {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+    left: auto;
+    padding: 0;
+    transition: none;
+    z-index: 1;
+
+    .nav-list li a{
+      color: $black;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
 }
 
 .nav-open {
@@ -75,5 +95,9 @@ label[for="nav-open"] {
     display: inline-block;
     line-height: 36px;
     content: "Menu"
+  }
+
+  @include past($break-medium) {
+    display: none;
   }
 }
