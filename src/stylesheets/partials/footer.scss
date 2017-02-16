@@ -1,13 +1,22 @@
 @import "../base.scss";
 
-.footer {
+.footer-container {
   background-color: $black;
   padding: 40px 20px;
   color: $white;
+  padding-bottom: 100px;
 
   .about, .links {
     vertical-align: top;
     display: inline-block;
+  }
+
+  @include past($break-large) {
+    .footer {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 992px;
+    }
   }
 }
 
@@ -17,6 +26,11 @@
 
   img {
     width: 200px;
+  }
+
+  @include past($break-medium) {
+    width: 40%;
+    margin-right: 5%;
   }
 }
 
@@ -35,6 +49,18 @@
     li {
       margin-top: 10px;
       font-size: 12px;
+    }
+  }
+
+  @include past($break-medium) {
+    width: 50%;
+  }
+
+  @include past($break-large) {
+    max-width: 500px;
+
+    div {
+      width: 25%;
     }
   }
 }
