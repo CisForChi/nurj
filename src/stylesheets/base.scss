@@ -158,6 +158,22 @@ $author-photo-size: 100px;
   }
 }
 
+@mixin circular-photo($size) {
+  display: inline-block;
+  position: relative;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: top;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin-left: -$size/4;
+  }
+}
+
 @mixin transition($transition...) {
   -moz-transition:    $transition;
   -o-transition:      $transition;
@@ -172,6 +188,10 @@ $author-photo-size: 100px;
 body {
   background-color: $white;
   margin: 0;
+}
+
+a {
+  color: $black;
 }
 
 .content {
@@ -230,16 +250,18 @@ body {
   }
 }
 
-.figure-item {
+.hero {
   width: 100%;
-
-  img {
-    width: 100%;
-  }
 
   @include past($break-small) {
     width: $body-width;
     display: inline-block;
+  }
+}
+
+.hero, .figure-item {
+  img {
+    width: 100%;
   }
 
   .image-attribution {
@@ -250,6 +272,6 @@ body {
   }
 
   .image-caption {
-
+    @include caption-copy;
   }
 }

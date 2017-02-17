@@ -65,6 +65,9 @@ body {
   background-color: #f1f1f1;
   margin: 0; }
 
+a {
+  color: #111111; }
+
 .content {
   width: 90%;
   margin-left: auto;
@@ -121,21 +124,28 @@ body {
       .subhead h3 {
         padding-left: 20%; } }
 
-.figure-item {
+.hero {
   width: 100%; }
-  .figure-item img {
-    width: 100%; }
   @media screen and (min-width: 480px) {
-    .figure-item {
+    .hero {
       width: 80%;
       display: inline-block; } }
-  .figure-item .image-attribution {
-    display: block;
-    margin-top: 4px;
-    font-family: "Cousine", "Menlo", monospace;
-    font-size: 9px;
-    line-height: 12px;
-    text-align: right; }
+
+.hero img, .figure-item img {
+  width: 100%; }
+
+.hero .image-attribution, .figure-item .image-attribution {
+  display: block;
+  margin-top: 4px;
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  line-height: 12px;
+  text-align: right; }
+
+.hero .image-caption, .figure-item .image-caption {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 9px;
+  line-height: 12px; }
 
 .meta-container {
   width: 100%;

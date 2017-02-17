@@ -36,6 +36,14 @@ block body
                   != item.getText('faculty-advisor')
           div.publish-date
             != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        each hero in pageContent.getGroup('thesis.hero-image').toArray()
+          figure.hero
+            img(src=hero.getImage('image').url)
+            if hero.get('attribution')
+              cite.image-attribution !{hero.get('attribution').asText()}
+            if hero.get('caption')
+              figcaption.image-caption !{hero.get('caption').asText()}
+
         for slice in pageContent.getSliceZone('thesis.body').slices
           case slice.sliceType
             when 'subhead'

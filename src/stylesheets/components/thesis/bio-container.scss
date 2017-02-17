@@ -1,3 +1,5 @@
+@import '../../base';
+
 .bio-container {
   margin-bottom: 50px;
   max-width: 600px;
@@ -6,19 +8,7 @@
 }
 
 .author-headshot {
-  display: inline-block;
-  position: relative;
-  width: $author-photo-size;
-  height: $author-photo-size;
-  overflow: hidden;
-  border-radius: 50%;
-  vertical-align: top;
-
-  img {
-    width: auto;
-    height: 100%;
-    margin-left: -$author-photo-size/4;
-  }
+  @include circular-photo($author-photo-size);
 }
 
 .author-bio {
