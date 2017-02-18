@@ -131,6 +131,11 @@ $author-photo-size: 100px;
     background-color: $black;
     margin-bottom: 20px;
   }
+
+  @include past($break-large) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
 }
 
 @mixin citation-copy {
