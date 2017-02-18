@@ -135,11 +135,11 @@ a {
   width: 100%; }
 
 .hero .image-attribution, .figure-item .image-attribution {
-  display: block;
-  margin-top: 4px;
   font-family: "Cousine", "Menlo", monospace;
   font-size: 9px;
   line-height: 12px;
+  display: block;
+  margin-top: 4px;
   text-align: right; }
 
 .hero .image-caption, .figure-item .image-caption {

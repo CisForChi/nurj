@@ -1,0 +1,28 @@
+@mixin past($media) {
+  @media screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin circular-photo($size) {
+  display: inline-block;
+  position: relative;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: top;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin-left: -$size/4;
+  }
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}

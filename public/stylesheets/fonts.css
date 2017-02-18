@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Lava";
+  src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("../../assets/fonts/noe-display-regular.otf") format("otf"), url("../../assets/fonts/noe-display-regular-italic.otf") format("otf"), url("../../assets/fonts/noe-display-bold.otf") format("otf"), url("../../assets/fonts/noe-display-bold-italic.otf") format("otf"); }
+
+@font-face {
+  font-family: "Cousine";
+  src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
