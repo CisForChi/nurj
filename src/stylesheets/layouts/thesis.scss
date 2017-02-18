@@ -1,9 +1,9 @@
-@import "../base";
-@import "../components/thesis/meta-container";
-@import "../components/thesis/copy";
-@import "../components/thesis/bio-container";
-@import "../partials/header";
-@import "../partials/footer";
+@import "../_base";
+@import "../components/thesis/_meta-container";
+@import "../components/thesis/_copy";
+@import "../components/thesis/_bio-container";
+@import "../components/header";
+@import "../components/footer";
 
 .department {
   @include folio-copy;

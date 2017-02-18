@@ -82,25 +82,33 @@ a {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem;
-  margin-bottom: 20px; }
+  font-size: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
       font-size: 4.5rem; } }
-  @media screen and (min-width: 992px) {
-    .title {
-      margin-bottom: 60px; } }
+
+.subtitle {
+  font-family: "Cousine", "Menlo", monospace; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem; }
+  letter-spacing: .01rem;
+  margin-top: 20px; }
   @media screen and (min-width: 768px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
+  @media screen and (min-width: 992px) {
+    .body {
+      margin-top: 60px; } }
   .body:after {
     content: "";
     display: block;
@@ -112,7 +120,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -123,13 +131,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 80%;
+      width: 70%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -231,25 +239,33 @@ a {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem;
-  margin-bottom: 20px; }
+  font-size: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
       font-size: 4.5rem; } }
-  @media screen and (min-width: 992px) {
-    .title {
-      margin-bottom: 60px; } }
+
+.subtitle {
+  font-family: "Cousine", "Menlo", monospace; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem; }
+  letter-spacing: .01rem;
+  margin-top: 20px; }
   @media screen and (min-width: 768px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
+  @media screen and (min-width: 992px) {
+    .body {
+      margin-top: 60px; } }
   .body:after {
     content: "";
     display: block;
@@ -261,7 +277,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -272,13 +288,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 80%;
+      width: 70%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -305,7 +321,7 @@ a {
     .meta-container {
       padding-left: 0;
       padding-right: 10px;
-      width: 20%;
+      width: 30%;
       display: inline-block; } }
 
 .advisors-container {
@@ -429,25 +445,33 @@ a {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem;
-  margin-bottom: 20px; }
+  font-size: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
       font-size: 4.5rem; } }
-  @media screen and (min-width: 992px) {
-    .title {
-      margin-bottom: 60px; } }
+
+.subtitle {
+  font-family: "Cousine", "Menlo", monospace; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem; }
+  letter-spacing: .01rem;
+  margin-top: 20px; }
   @media screen and (min-width: 768px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
+  @media screen and (min-width: 992px) {
+    .body {
+      margin-top: 60px; } }
   .body:after {
     content: "";
     display: block;
@@ -459,7 +483,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -470,13 +494,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 80%;
+      width: 70%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -502,7 +526,7 @@ a {
     float: right; }
     @media screen and (min-width: 480px) {
       .thesis-copy section[data-field="copy"] {
-        width: 80%; }
+        width: 70%; }
         .thesis-copy section[data-field="copy"] p {
           margin-top: 0; } }
   .thesis-copy section[data-field="citation"] {
@@ -622,25 +646,33 @@ a {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem;
-  margin-bottom: 20px; }
+  font-size: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
       font-size: 4.5rem; } }
-  @media screen and (min-width: 992px) {
-    .title {
-      margin-bottom: 60px; } }
+
+.subtitle {
+  font-family: "Cousine", "Menlo", monospace; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem; }
+  letter-spacing: .01rem;
+  margin-top: 20px; }
   @media screen and (min-width: 768px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
+  @media screen and (min-width: 992px) {
+    .body {
+      margin-top: 60px; } }
   .body:after {
     content: "";
     display: block;
@@ -652,7 +684,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -663,13 +695,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 80%;
+      width: 70%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -802,25 +834,33 @@ a {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem;
-  margin-bottom: 20px; }
+  font-size: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
       font-size: 4.5rem; } }
-  @media screen and (min-width: 992px) {
-    .title {
-      margin-bottom: 60px; } }
+
+.subtitle {
+  font-family: "Cousine", "Menlo", monospace; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem; }
+  letter-spacing: .01rem;
+  margin-top: 20px; }
   @media screen and (min-width: 768px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
+  @media screen and (min-width: 992px) {
+    .body {
+      margin-top: 60px; } }
   .body:after {
     content: "";
     display: block;
@@ -832,7 +872,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -843,13 +883,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 80%;
+      width: 70%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -1031,25 +1071,33 @@ a {
   font-family: "Noe Display", serif;
   font-weight: 700;
   line-height: 2.5rem;
-  font-size: 2.5rem;
-  margin-bottom: 20px; }
+  font-size: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
       font-size: 4.5rem; } }
-  @media screen and (min-width: 992px) {
-    .title {
-      margin-bottom: 60px; } }
+
+.subtitle {
+  font-family: "Cousine", "Menlo", monospace; }
+  @media screen and (min-width: 768px) {
+    .subtitle {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px; } }
 
 .body {
   font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem; }
+  letter-spacing: .01rem;
+  margin-top: 20px; }
   @media screen and (min-width: 768px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
+  @media screen and (min-width: 992px) {
+    .body {
+      margin-top: 60px; } }
   .body:after {
     content: "";
     display: block;
@@ -1061,7 +1109,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -1072,13 +1120,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 20%; } }
+        padding-left: 30%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 80%;
+      width: 70%;
       display: inline-block; } }
 
 .hero img, .figure-item img {

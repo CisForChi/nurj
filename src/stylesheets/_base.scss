@@ -1,7 +1,7 @@
-@import "reset";
-@import "text";
-@import "variables";
-@import "mixins";
+@import "_reset";
+@import "_text";
+@import "_variables";
+@import "_mixins";
 
 .container {
   width: 100%;
@@ -29,15 +29,25 @@ a {
 
 .title {
   @include headline-copy;
-  margin-bottom: 20px;
+}
 
-  @include past($break-large) {
-    margin-bottom: 60px;
+.subtitle {
+  @include subtitle-copy;
+
+  @include past($break-medium) {
+    font-size: 1.3rem;
+    width: 80%;
+    max-width: 600px;
   }
 }
 
 .body {
   @include body-copy;
+  margin-top: 20px;
+
+  @include past($break-large) {
+    margin-top: 60px;
+  }
 
   &:after {
     content: "";

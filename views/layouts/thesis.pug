@@ -14,7 +14,7 @@ head
     script(src="//static.cdn.prismic.io/prismic.min.js")
     script(src="/javascript/vendors/highlight.min.js")
 
-include ../partials/header.pug
+include ../components/header.pug
 
 block body
   section.container
@@ -26,6 +26,8 @@ block body
           !=item.getText('author')
       div.title
         !=pageContent.getText('thesis.title')
+      div.subtitle
+        !=pageContent.getText('thesis.subtitle')
       div.body
         div.meta-container
           ul.advisors-container
@@ -69,4 +71,4 @@ block body
 
 
 
-include ../partials/footer.pug
+include ../components/footer.pug

@@ -29,6 +29,10 @@
   }
 }
 
+@mixin subtitle-copy {
+  @include Cousine;
+}
+
 @mixin body-copy {
   @include Lava;
   font-size: 1.125rem;
