@@ -63,7 +63,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
   margin: 0; }
 
 a {
@@ -120,7 +120,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -131,13 +131,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 70%;
+      width: 75%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -220,7 +220,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
   margin: 0; }
 
 a {
@@ -277,7 +277,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -288,13 +288,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 70%;
+      width: 75%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -321,7 +321,7 @@ a {
     .meta-container {
       padding-left: 0;
       padding-right: 10px;
-      width: 30%;
+      width: 25%;
       display: inline-block; } }
 
 .advisors-container {
@@ -426,7 +426,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
   margin: 0; }
 
 a {
@@ -483,7 +483,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -494,13 +494,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 70%;
+      width: 75%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -526,7 +526,7 @@ a {
     float: right; }
     @media screen and (min-width: 480px) {
       .thesis-copy section[data-field="copy"] {
-        width: 70%; }
+        width: 75%; }
         .thesis-copy section[data-field="copy"] p {
           margin-top: 0; } }
   .thesis-copy section[data-field="citation"] {
@@ -542,7 +542,7 @@ a {
     .thesis-copy section[data-field="citation"] p {
       word-wrap: break-word; }
       .thesis-copy section[data-field="citation"] p:before {
-        display: block;
+        display: inline-block;
         content: "";
         position: relative;
         height: 1px;
@@ -551,17 +551,15 @@ a {
         background-color: #111111; }
     @media screen and (min-width: 480px) {
       .thesis-copy section[data-field="citation"] {
-        padding-left: 0;
         display: block;
-        width: 80px; } }
-    @media screen and (min-width: 992px) {
-      .thesis-copy section[data-field="citation"] {
-        width: 120px; } }
-  @media screen and (min-width: 480px) {
-    .thesis-copy section[data-field="quote"] {
-      width: 70%;
-      margin-right: 5%;
-      float: right; } }
+        width: 25%;
+        padding-right: 20px; } }
+  .thesis-copy section[data-field="quote"] {
+    float: right; }
+    @media screen and (min-width: 480px) {
+      .thesis-copy section[data-field="quote"] {
+        width: 70%;
+        padding-right: 5%; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -627,7 +625,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
   margin: 0; }
 
 a {
@@ -684,7 +682,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -695,13 +693,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 70%;
+      width: 75%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -815,7 +813,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
   margin: 0; }
 
 a {
@@ -872,7 +870,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -883,13 +881,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 70%;
+      width: 75%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -948,7 +946,7 @@ a {
     .nav .nav-list li a {
       text-decoration: none;
       line-height: 3rem;
-      color: #f1f1f1; }
+      color: #fbfbfb; }
   @media screen and (min-width: 768px) {
     .nav {
       position: relative;
@@ -970,7 +968,7 @@ a {
   display: none; }
   .nav-open:checked ~ label:before {
     content: "Close";
-    color: #f1f1f1; }
+    color: #fbfbfb; }
   .nav-open:checked ~ .nav {
     left: 10%;
     z-index: 2; }
@@ -1052,7 +1050,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
   margin: 0; }
 
 a {
@@ -1109,7 +1107,7 @@ a {
     padding-left: 10%; }
     @media screen and (min-width: 768px) {
       .body > p {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .subhead {
   font-family: "Cousine", "Menlo", monospace;
@@ -1120,13 +1118,13 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 480px) {
       .subhead h3 {
-        padding-left: 30%; } }
+        padding-left: 25%; } }
 
 .hero {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 70%;
+      width: 75%;
       display: inline-block; } }
 
 .hero img, .figure-item img {
@@ -1148,7 +1146,7 @@ a {
 .footer-container {
   background-color: #111111;
   padding: 40px 20px;
-  color: #f1f1f1;
+  color: #fbfbfb;
   padding-bottom: 100px; }
   .footer-container .about, .footer-container .links {
     vertical-align: top;
@@ -1182,7 +1180,7 @@ a {
     margin-top: 10px; }
     .links ul li a {
       font-size: 12px;
-      color: #f1f1f1; }
+      color: #fbfbfb; }
 
 @media screen and (min-width: 768px) {
   .links {

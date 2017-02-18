@@ -26,7 +26,7 @@
       word-wrap: break-word;
 
       &:before {
-        display: block;
+        display: inline-block;
         content: "";
         position: relative;
         height: 1px;
@@ -37,22 +37,19 @@
     }
 
     @include past($break-small) {
-      padding-left: 0;
       display: block;
-      width: 80px;
-    }
-
-    @include past($break-large) {
-      width: 120px;
+      width: $gutter-width;
+      padding-right: 20px;
     }
   }
 
   section[data-field="quote"] {
+    float: right;
+    
     @include inline-quote-copy;
     @include past($break-small) {
-      width: 70%;
-      margin-right: 5%;
-      float:right;
+      width: $body-width - 5%;
+      padding-right: 5%;
     }
   }
 }
