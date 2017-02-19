@@ -64,7 +64,7 @@
 
 @mixin attribution-copy {
   @include Cousine;
-  font-size: 9px;
+  font-size: 7px;
   line-height: 12px;
 }
 
@@ -84,7 +84,7 @@
     width: 30%;
     max-width: 200px;
     height: 5px;
-    background-color: $black;
+    background-color: $color-black;
     margin-bottom: 20px;
   }
 

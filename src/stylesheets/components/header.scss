@@ -36,7 +36,7 @@
   left: 100%;
   width: 100%;
   bottom: 0;
-  background-color: $black;
+  background-color: $color-black;
   padding: 20px;
   z-index: -1;
 
@@ -45,7 +45,7 @@
     li a {
       text-decoration: none;
       line-height: 3rem;
-      color: $white;
+      color: $color-white;
     }
   }
 
@@ -59,7 +59,7 @@
     z-index: 1;
 
     .nav-list li a{
-      color: $black;
+      color: $color-black;
       font-size: 12px;
       line-height: 14px;
     }
@@ -75,7 +75,7 @@
   &:checked {
     & ~ label:before {
       content: "Close";
-      color: $white;
+      color: $color-white;
     }
 
     & ~ .nav {

@@ -32,7 +32,7 @@
         height: 1px;
         margin-bottom: 5px;
         width: 100%;
-        background-color: $black;
+        background-color: $color-black;
       }
     }
 
@@ -45,7 +45,7 @@
 
   section[data-field="quote"] {
     float: right;
-    
+
     @include inline-quote-copy;
     @include past($break-small) {
       width: $body-width - 5%;

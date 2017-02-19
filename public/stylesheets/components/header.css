@@ -62,7 +62,7 @@ figure {
   width: 100%; }
 
 body {
-  background-color: #fbfbfb;
+  background-color: #fffbf7;
   margin: 0; }
 
 a {
@@ -139,21 +139,28 @@ a {
       width: 75%;
       display: inline-block; } }
 
-.hero img, .figure-item img {
-  width: 100%; }
-
-.hero .image-attribution, .figure-item .image-attribution {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  line-height: 12px;
-  display: block;
-  margin-top: 4px;
-  text-align: right; }
-
-.hero .image-caption, .figure-item .image-caption {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  line-height: 12px; }
+.hero, .figure-item {
+  position: relative; }
+  .hero img, .figure-item img {
+    width: 100%;
+    display: inline-block; }
+  .hero .image-attribution, .figure-item .image-attribution {
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 7px;
+    line-height: 12px;
+    float: right;
+    margin-right: -1px;
+    transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    transform: translateX(100%) rotate(-90deg);
+    -ms-transform: translateX(100%) rotate(-90deg);
+    -webkit-transform: translateX(100%) rotate(-90deg); }
+  .hero .image-caption, .figure-item .image-caption {
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 9px;
+    line-height: 12px;
+    margin-top: 5px; }
 
 .header {
   width: 100%;
