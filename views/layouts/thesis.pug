@@ -67,7 +67,10 @@ block body
           div.author-headshot
             img(src=item.getImage('headshot').url)
           div.author-bio
+            div
+              strong ABOUT THE AUTHOR
             !=item.getText('bio')
+  script(src="/javascript/script.js")
 
 
 
