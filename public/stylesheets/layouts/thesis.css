@@ -59,6 +59,12 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .container {
   width: 100%; }
 
@@ -222,6 +228,12 @@ figure {
 @font-face {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
 
 .container {
   width: 100%; }
@@ -436,6 +448,12 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .container {
   width: 100%; }
 
@@ -642,6 +660,12 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .container {
   width: 100%; }
 
@@ -837,6 +861,12 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .container {
   width: 100%; }
 
@@ -964,16 +994,26 @@ a {
   z-index: 9;
   padding-top: 15px;
   background-color: #fffbf7; }
-  @media screen and (min-width: 480px) {
-    .header-sticky {
-      padding-left: 5%; } }
   @media screen and (min-width: 768px) {
     .header-sticky {
       margin-bottom: 50px;
       background-color: transparent;
-      top: 0; } }
+      top: 0;
+      width: 200px; }
+      .header-sticky.collide {
+        opacity: 0; } }
   .header-sticky.show {
     top: 0; }
+
+.header-sticky .masthead,
+.header-sticky label[for="nav-open"]:before,
+.header-sticky .nav {
+  opacity: 0.6; }
+
+.header-sticky:hover .masthead,
+.header-sticky:hover label[for="nav-open"]:before,
+.header-sticky:hover .nav {
+  opacity: 1; }
 
 .masthead {
   display: inline-block; }
@@ -1101,6 +1141,12 @@ figure {
 @font-face {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
 
 .container {
   width: 100%; }

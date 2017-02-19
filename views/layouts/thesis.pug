@@ -19,24 +19,24 @@ include ../components/header.pug
 block body
   section.container
     article.thesis.content
-      div.department
+      div.department.js-detect-collision
         !=pageContent.getText('thesis.department')
       each item in pageContent.getGroup('thesis.byline').toArray()
-        div.author
+        div.author.js-detect-collision
           !=item.getText('author')
-      div.title
+      div.title.js-detect-collision
         !=pageContent.getText('thesis.title')
-      div.subtitle
+      div.subtitle.js-detect-collision
         !=pageContent.getText('thesis.subtitle')
       div.body
-        div.meta-container
+        div.meta-container.js-detect-collision
           ul.advisors-container
             each item in pageContent.getGroup('thesis.advisors').toArray()
               li.advisor
                 p Faculty Advisor
                 p
                   != item.getText('faculty-advisor')
-          div.publish-date
+          div.publish-date.js-detect-collision
             != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         each hero in pageContent.getGroup('thesis.hero-image').toArray()
           figure.hero
@@ -53,9 +53,9 @@ block body
             when 'copy'
               div.thesis-copy !{slice.value.asHtml()}
             when 'pullquote'
-              blockquote.pullquote !{slice.value.asText()}
+              blockquote.pullquote.js-detect-collision !{slice.value.asText()}
             when 'image-with-caption'
-              figure.figure-item
+              figure.figure-item.js-detect-collision
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')

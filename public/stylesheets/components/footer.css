@@ -58,6 +58,12 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 .container {
   width: 100%; }
 

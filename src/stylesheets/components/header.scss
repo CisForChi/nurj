@@ -29,19 +29,32 @@
   padding-top: 15px;
   background-color: $color-background;
 
-  @include past($break-small) {
-    padding-left: 5%;
-  }
-
   @include past($break-medium) {
     margin-bottom: 50px;
     background-color: rgba(0, 0, 0, 0);
     top: 0;
+    width: 200px;
+
+    &.collide {
+      opacity: 0;
+    }
   }
 
   &.show {
     top: 0;
   }
+}
+
+.header-sticky .masthead,
+.header-sticky label[for="nav-open"]:before,
+.header-sticky .nav {
+  opacity: 0.6;
+}
+
+.header-sticky:hover .masthead,
+.header-sticky:hover label[for="nav-open"]:before,
+.header-sticky:hover .nav {
+  opacity: 1;
 }
 
 .masthead {
