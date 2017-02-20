@@ -47,8 +47,25 @@ figure {
   margin: 0; }
 
 @font-face {
-  font-family: "Lava";
-  src: url("../../assets/fonts/lava-regular.otf") format("otf"), url("../../assets/fonts/lava-regular-italic.otf") format("otf"), url("../../assets/fonts/lava-heavy.otf") format("otf"); }
+  font-family: "Bembo";
+  src: url("../../assets/fonts/et-book/et-book-roman-line-figures.eot");
+  src: url("../../assets/fonts/et-book/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-roman-line-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-roman-line-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bembo";
+  src: url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.eot");
+  src: url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Bembo";
+  src: url("../../assets/fonts/et-book/et-book-bold-line-figures.eot");
+  src: url("../../assets/fonts/et-book/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-bold-line-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-bold-line-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
   font-family: "Noe Display";
@@ -102,7 +119,7 @@ a {
       max-width: 600px; } }
 
 .body {
-  font-family: "Lava", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: .01rem;

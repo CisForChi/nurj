@@ -34,7 +34,7 @@
 }
 
 @mixin body-copy {
-  @include Lava;
+  @include Bembo;
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: .01rem;
