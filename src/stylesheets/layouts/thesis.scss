@@ -30,6 +30,5 @@
 a[href^="http://["] {
   @include superscript;
   pointer-events: none;
-  color: $color-black;
   line-height: 0;
 }

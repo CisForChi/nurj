@@ -1,4 +1,5 @@
-@import "fonts";
+@import "_fonts";
+@import "_variables";
 
 @mixin folio-copy {
   @include Cousine;
@@ -111,4 +112,5 @@
   text-decoration: none;
   position: relative;
   top: -1em;
+  color: $color-purple;
 }
