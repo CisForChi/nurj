@@ -75,6 +75,16 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.u-anim--fadeOut300 {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear .3s, opacity .3s 0s; }
+
+.u-anim--fadeIn300 {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity .3s 0s; }
+
 .pull-left {
   float: left; }
 
@@ -202,22 +212,20 @@ a {
 
 .header-sticky {
   position: fixed;
-  transition: .2s all ease;
   height: 60px;
   top: -60px;
   z-index: 9;
   padding-top: 15px;
-  background-color: #fffbf7; }
+  background-color: #fffbf7;
+  transition: top .3s; }
+  .header-sticky.show {
+    top: 0; }
   @media screen and (min-width: 768px) {
     .header-sticky {
       margin-bottom: 50px;
       background-color: transparent;
       top: 0;
-      width: 200px; }
-      .header-sticky.collide {
-        opacity: 0; } }
-  .header-sticky.show {
-    top: 0; }
+      width: 200px; } }
 
 .header-sticky .masthead,
 .header-sticky label[for="nav-open"]:before,

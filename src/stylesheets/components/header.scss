@@ -22,26 +22,22 @@
 
 .header-sticky {
   position: fixed;
-  transition: .2s all ease;
   height: 60px;
   top: -60px;
   z-index: 9;
   padding-top: 15px;
   background-color: $color-background;
+  transition: top .3s;
+
+  &.show {
+    top: 0;
+  }
 
   @include past($break-medium) {
     margin-bottom: 50px;
     background-color: rgba(0, 0, 0, 0);
     top: 0;
     width: 200px;
-
-    &.collide {
-      opacity: 0;
-    }
-  }
-
-  &.show {
-    top: 0;
   }
 }
 

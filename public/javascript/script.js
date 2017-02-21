@@ -19,12 +19,20 @@ $(window).scroll(function() {
     $('.header-sticky').addClass('show')
   }
 
-  $('.header-sticky').removeClass('collide')
+  var colliding = false
   for (var el of $('.js-detect-collision')) {
     if (collide($('.nav'), $(el), 20)) {
-      $('.header-sticky').addClass('collide')
+      colliding = true
       break
     }
+  }
+
+  if (!colliding) {
+    $('.header-sticky').removeClass('u-anim--fadeOut300')
+    $('.header-sticky').addClass('u-anim--fadeIn300')
+  } else {
+    $('.header-sticky').removeClass('u-anim--fadeIn300')
+    $('.header-sticky').addClass('u-anim--fadeOut300')
   }
 
   lastScroll = $(window).scrollTop()

@@ -75,6 +75,16 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+.u-anim--fadeOut300 {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear .3s, opacity .3s 0s; }
+
+.u-anim--fadeIn300 {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity .3s 0s; }
+
 .pull-left {
   float: left; }
 
