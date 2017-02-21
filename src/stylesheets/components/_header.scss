@@ -90,7 +90,7 @@
   z-index: -1;
 
   .nav-list {
-    @include font--cousine;
+    @include font-cousine;
     li a {
       text-decoration: none;
       line-height: 3rem;
@@ -135,7 +135,7 @@
 }
 
 label[for="nav-open"] {
-  @include font--cousine;
+  @include font-cousine;
   position: relative;
   float: right;
   z-index: 4;

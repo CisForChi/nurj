@@ -15,7 +15,7 @@
   }
 
   section[data-field="citation"] {
-    @include citation-copy;
+    @include text-citation;
     float: left;
     padding-left: 5%;
 
@@ -43,7 +43,7 @@
   section[data-field="quote"] {
     float: right;
 
-    @include inline-quote-copy;
+    @include text-inlineQuote;
     @include past($break-small) {
       width: $body-width - 5%;
       padding-right: 5%;

@@ -1,14 +1,14 @@
 @import "_fonts";
 @import "_variables";
 
-@mixin folio-copy {
-  @include font--cousine;
+@mixin text-folio {
+  @include font-cousine;
   text-transform: uppercase;
   font-size: $fontSize-xsmall;
 }
 
-@mixin byline-copy {
-  @include font--noe;
+@mixin text-byline {
+  @include font-noe;
   font-style: italic;
   font-size: $fontSize-large;
 
@@ -17,8 +17,8 @@
   }
 }
 
-@mixin headline-copy {
-  @include font--noe;
+@mixin text-headline {
+  @include font-noe;
   font-weight: 700;
   font-size: $fontSize-larger;
   line-height: $lineHeight-larger;
@@ -29,12 +29,12 @@
   }
 }
 
-@mixin subtitle-copy {
-  @include font--cousine;
+@mixin text-subtitle {
+  @include font-cousine;
 }
 
-@mixin body-copy {
-  @include font--bembo;
+@mixin text-body {
+  @include font-bembo;
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: .01rem;
@@ -45,34 +45,35 @@
   }
 }
 
-@mixin sidebar-copy {
-  @include font--cousine;
+@mixin text-sidebar {
+  @include font-cousine;
   font-size: $fontSize-xsmall;
   line-height: $lineHeight-smaller;
 
   @include past($break-large) {
-    font-size: $fontSize-smaller;
+    font-size: $fontSize-small;
+    line-height: $lineHeight-small;
   }
 }
 
-@mixin caption-copy {
-  @include font--cousine;
+@mixin text-caption {
+  @include font-cousine;
   font-size: $fontSize-xsmall;
   line-height: $lineHeight-smaller;
 }
 
-@mixin attribution-copy {
-  @include font--cousine;
+@mixin text-attribution {
+  @include font-cousine;
   font-size: $fontSize-xsmall;
   line-height: $lineHeight-smaller;
 }
 
-@mixin inline-quote-copy {
+@mixin text-inlineQuote {
 
 }
 
-@mixin pullquote-copy {
-  @include font--noe;
+@mixin text-pullquote {
+  @include font-noe;
   font-weight: 700;
   font-size: $fontSize-large;
 
@@ -92,8 +93,8 @@
   }
 }
 
-@mixin citation-copy {
-  @include font--cousine;
+@mixin text-citation {
+  @include font-cousine;
   font-size: $fontSize-xsmall;
   line-height: $lineHeight-smaller;
 
@@ -102,8 +103,8 @@
   }
 }
 
-@mixin superscript {
-  @include font--cousine;
+@mixin text-superscript {
+  @include font-cousine;
   font-size: $fontSize-xsmall;
   text-decoration: none;
   position: relative;

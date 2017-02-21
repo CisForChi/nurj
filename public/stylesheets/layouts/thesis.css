@@ -230,7 +230,8 @@ a.link:hover {
   display: inline-block; }
   @media screen and (min-width: 992px) {
     .advisor {
-      font-size: 0.5rem; } }
+      font-size: 0.707rem;
+      line-height: 1.125rem; } }
   .advisor:not(:first-child) {
     margin-left: 10px; }
   .advisor p {
@@ -246,7 +247,8 @@ a.link:hover {
     display: block; }
   @media screen and (min-width: 992px) {
     .publish-date {
-      font-size: 0.5rem; } }
+      font-size: 0.707rem;
+      line-height: 1.125rem; } }
 
 .thesis-copy {
   display: inline-block; }
@@ -317,7 +319,8 @@ a.link:hover {
   margin-left: 20px; }
   @media screen and (min-width: 992px) {
     .author-bio {
-      font-size: 0.5rem; } }
+      font-size: 0.707rem;
+      line-height: 1.125rem; } }
 
 .header-container {
   height: 150px; }

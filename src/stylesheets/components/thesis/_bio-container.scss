@@ -10,7 +10,7 @@
 }
 
 .author-bio {
-  @include sidebar-copy;
+  @include text-sidebar;
   display: inline-block;
   width: calc(100% - 120px);
   margin-left: 20px;

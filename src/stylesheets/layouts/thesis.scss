@@ -6,11 +6,11 @@
 @import "../components/_footer";
 
 .department {
-  @include folio-copy;
+  @include text-folio;
 }
 
 .author {
-  @include byline-copy;
+  @include text-byline;
 
   &:after {
     content: " —";
@@ -18,7 +18,7 @@
 }
 
 .pullquote {
-  @include pullquote-copy;
+  @include text-pullquote;
   margin-left: 0;
   display: inline-block;
 
@@ -28,7 +28,7 @@
 }
 
 a[href^="http://["] {
-  @include superscript;
+  @include text-superscript;
   pointer-events: none;
   line-height: 0;
 }
