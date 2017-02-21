@@ -2,8 +2,8 @@
 @import "../components/thesis/_meta-container";
 @import "../components/thesis/_copy";
 @import "../components/thesis/_bio-container";
-@import "../components/header";
-@import "../components/footer";
+@import "../components/_header";
+@import "../components/_footer";
 
 .department {
   @include folio-copy;
