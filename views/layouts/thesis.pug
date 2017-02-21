@@ -63,7 +63,7 @@ block body
                   if imageWithCaption.get('caption')
                     figcaption.image-caption !{imageWithCaption.get('caption').asText()}
       each item in pageContent.getGroup('thesis.byline').toArray()
-        div.bio-container
+        div.bio-container.js-detect-collision
           div.author-headshot
             img(src=item.getImage('headshot').url)
           div.author-bio

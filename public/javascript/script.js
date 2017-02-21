@@ -12,11 +12,11 @@ $(window).scroll(function() {
   }
 
   if (lastScroll < $(window).scrollTop()) {
-    $('.header-sticky').removeClass('show')
+    $('.header').removeClass('show')
   }
 
   if (lastScroll > $(window).scrollTop()) {
-    $('.header-sticky').addClass('show')
+    $('.header').addClass('show')
   }
 
   var colliding = false
@@ -28,11 +28,11 @@ $(window).scroll(function() {
   }
 
   if (!colliding) {
-    $('.header-sticky').removeClass('u-anim--fadeOut300')
-    $('.header-sticky').addClass('u-anim--fadeIn300')
+    $('.header-sticky').removeClass('fadeOut')
+    $('.header-sticky').addClass('fadeIn')
   } else {
-    $('.header-sticky').removeClass('u-anim--fadeIn300')
-    $('.header-sticky').addClass('u-anim--fadeOut300')
+    $('.header-sticky').removeClass('fadeIn')
+    $('.header-sticky').addClass('fadeOut')
   }
 
   lastScroll = $(window).scrollTop()

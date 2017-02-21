@@ -2,13 +2,13 @@
 @import "_variables";
 
 @mixin folio-copy {
-  @include Cousine;
+  @include font--cousine;
   text-transform: uppercase;
   font-size: 9px;
 }
 
 @mixin byline-copy {
-  @include Noe;
+  @include font--noe;
   font-style: italic;
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -19,7 +19,7 @@
 }
 
 @mixin headline-copy {
-  @include Noe;
+  @include font--noe;
   font-weight: 700;
   line-height: 2.5rem;
   font-size: 2.5rem;
@@ -31,11 +31,11 @@
 }
 
 @mixin subtitle-copy {
-  @include Cousine;
+  @include font--cousine;
 }
 
 @mixin body-copy {
-  @include Bembo;
+  @include font--bembo;
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: .01rem;
@@ -47,7 +47,7 @@
 }
 
 @mixin sidebar-copy {
-  @include Cousine;
+  @include font--cousine;
   font-size: 9px;
   line-height: 12px;
 
@@ -58,13 +58,13 @@
 }
 
 @mixin caption-copy {
-  @include Cousine;
+  @include font--cousine;
   font-size: 9px;
   line-height: 12px;
 }
 
 @mixin attribution-copy {
-  @include Cousine;
+  @include font--cousine;
   font-size: 7px;
   line-height: 12px;
 }
@@ -74,7 +74,7 @@
 }
 
 @mixin pullquote-copy {
-  @include Noe;
+  @include font--noe;
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -96,7 +96,7 @@
 }
 
 @mixin citation-copy {
-  @include Cousine;
+  @include font--cousine;
   font-size: 9px;
   line-height: 12px;
 
@@ -107,7 +107,7 @@
 }
 
 @mixin superscript {
-  @include Cousine;
+  @include font--cousine;
   font-size: 9px;
   text-decoration: none;
   position: relative;

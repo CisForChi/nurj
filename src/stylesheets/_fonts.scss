@@ -36,14 +36,14 @@
        url("../../assets/fonts/cousine-italic.otf") format("otf");
 }
 
-@mixin Noe {
+@mixin font--noe {
   font-family: "Noe Display", serif;
 }
 
-@mixin Bembo {
+@mixin font--bembo {
   font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
 }
 
-@mixin Cousine {
+@mixin font--cousine {
   font-family: "Cousine", "Menlo", monospace;
 }

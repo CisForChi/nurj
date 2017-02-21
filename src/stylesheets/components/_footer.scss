@@ -19,7 +19,7 @@
 }
 
 .about {
-  @include Bembo;
+  @include font--bembo;
   line-height: 1.5rem;
 
   img {
@@ -41,7 +41,7 @@
   }
 
   ul {
-    @include Cousine;
+    @include font--cousine;
     font-size: 14px;
 
     li {

@@ -19,35 +19,50 @@
 
 .header-sticky {
   position: fixed;
-  height: 60px;
-  top: -60px;
+  height: 65px;
+  top: -70px;
   z-index: 9;
   padding-top: 15px;
   background-color: $color-background;
-  transition: top .3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: top .3s 0s;
 
   &.show {
     top: 0;
   }
 
   @include past($break-medium) {
+    box-shadow: none;
     margin-bottom: 50px;
     background-color: rgba(0, 0, 0, 0);
     top: 0;
     width: 200px;
+
+    &.fadeOut {
+      @include anim--fadeOut300;
+    }
+
+    &.fadeIn {
+      @include anim--fadeIn300;
+    }
   }
 }
 
 .header-sticky .masthead,
 .header-sticky label[for="nav-open"]:before,
 .header-sticky .nav {
-  opacity: 0.6;
+  @include past($break-medium) {
+    opacity: 0.6;
+    transition: opacity .1s linear;
+  }
 }
 
 .header-sticky:hover .masthead,
 .header-sticky:hover label[for="nav-open"]:before,
 .header-sticky:hover .nav {
-  opacity: 1;
+  @include past($break-medium) {
+    opacity: 1;
+  }
 }
 
 .masthead {
@@ -75,7 +90,7 @@
   z-index: -1;
 
   .nav-list {
-    @include Cousine;
+    @include font--cousine;
     li a {
       text-decoration: none;
       line-height: 3rem;
@@ -120,7 +135,7 @@
 }
 
 label[for="nav-open"] {
-  @include Cousine;
+  @include font--cousine;
   position: relative;
   float: right;
   z-index: 4;

@@ -5,6 +5,7 @@
     "start": "node app.js",
     "lint": "eslint app.js config.js prismic-configuration.js",
     "test": "npm run lint",
+    "sass": "npm run build-sass && npm run watch-sass",
     "build-sass": "node-sass src/stylesheets -o public/stylesheets",
     "watch-sass": "node-sass -w src/stylesheets -o public/stylesheets"
   },

@@ -76,16 +76,6 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
-.u-anim--fadeOut300 {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear .3s, opacity .3s 0s; }
-
-.u-anim--fadeIn300 {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s linear 0s, opacity .3s 0s; }
-
 .pull-left {
   float: left; }
 
@@ -350,30 +340,43 @@ a.link:hover {
 
 .header-sticky {
   position: fixed;
-  height: 60px;
-  top: -60px;
+  height: 65px;
+  top: -70px;
   z-index: 9;
   padding-top: 15px;
   background-color: #fffbf7;
-  transition: top .3s; }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: top .3s 0s; }
   .header-sticky.show {
     top: 0; }
   @media screen and (min-width: 768px) {
     .header-sticky {
+      box-shadow: none;
       margin-bottom: 50px;
       background-color: transparent;
       top: 0;
-      width: 200px; } }
+      width: 200px; }
+      .header-sticky.fadeOut {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear .3s, opacity .3s 0s; }
+      .header-sticky.fadeIn {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity .3s 0s; } }
 
-.header-sticky .masthead,
-.header-sticky label[for="nav-open"]:before,
-.header-sticky .nav {
-  opacity: 0.6; }
+@media screen and (min-width: 768px) {
+  .header-sticky .masthead,
+  .header-sticky label[for="nav-open"]:before,
+  .header-sticky .nav {
+    opacity: 0.6;
+    transition: opacity .1s linear; } }
 
-.header-sticky:hover .masthead,
-.header-sticky:hover label[for="nav-open"]:before,
-.header-sticky:hover .nav {
-  opacity: 1; }
+@media screen and (min-width: 768px) {
+  .header-sticky:hover .masthead,
+  .header-sticky:hover label[for="nav-open"]:before,
+  .header-sticky:hover .nav {
+    opacity: 1; } }
 
 .masthead {
   display: inline-block; }
