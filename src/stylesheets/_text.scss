@@ -4,29 +4,28 @@
 @mixin folio-copy {
   @include font--cousine;
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: $fontSize-xsmall;
 }
 
 @mixin byline-copy {
   @include font--noe;
   font-style: italic;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: $fontSize-large;
 
   @include past($break-large) {
-    font-size: 3rem;
+    font-size: $fontSize-xlarge;
   }
 }
 
 @mixin headline-copy {
   @include font--noe;
   font-weight: 700;
-  line-height: 2.5rem;
-  font-size: 2.5rem;
+  font-size: $fontSize-larger;
+  line-height: $lineHeight-larger;
 
   @include past($break-large) {
-    line-height: 4.5rem;
-    font-size: 4.5rem;
+    line-height: $lineHeight-jumbo;
+    font-size: $fontSize-jumbo;
   }
 }
 
@@ -40,7 +39,7 @@
   line-height: 1.75rem;
   letter-spacing: .01rem;
 
-  @include past($break-medium) {
+  @include past($break-small) {
     font-size: 1.25rem;
     line-height: 2rem;
   }
@@ -48,25 +47,24 @@
 
 @mixin sidebar-copy {
   @include font--cousine;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: $fontSize-xsmall;
+  line-height: $lineHeight-smaller;
 
   @include past($break-large) {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: $fontSize-smaller;
   }
 }
 
 @mixin caption-copy {
   @include font--cousine;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: $fontSize-xsmall;
+  line-height: $lineHeight-smaller;
 }
 
 @mixin attribution-copy {
   @include font--cousine;
-  font-size: 7px;
-  line-height: 12px;
+  font-size: $fontSize-xsmall;
+  line-height: $lineHeight-smaller;
 }
 
 @mixin inline-quote-copy {
@@ -76,8 +74,7 @@
 @mixin pullquote-copy {
   @include font--noe;
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: $fontSize-large;
 
   &:before {
     content: "";
@@ -90,25 +87,24 @@
   }
 
   @include past($break-large) {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: $fontSize-larger;
+    line-height: $lineHeight-xlarge;
   }
 }
 
 @mixin citation-copy {
   @include font--cousine;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: $fontSize-xsmall;
+  line-height: $lineHeight-smaller;
 
   @include past($break-large) {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: $fontSize-smaller;
   }
 }
 
 @mixin superscript {
   @include font--cousine;
-  font-size: 9px;
+  font-size: $fontSize-xsmall;
   text-decoration: none;
   position: relative;
   top: -1em;

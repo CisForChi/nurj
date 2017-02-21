@@ -119,12 +119,12 @@ a.link:hover {
 .title {
   font-family: "Noe Display", serif;
   font-weight: 700;
-  line-height: 2.5rem;
-  font-size: 2.5rem; }
+  font-size: 1.999rem;
+  line-height: 2.5rem; }
   @media screen and (min-width: 992px) {
     .title {
       line-height: 4.5rem;
-      font-size: 4.5rem; } }
+      font-size: 3.998rem; } }
 
 .subtitle {
   font-family: "Cousine", "Menlo", monospace; }
@@ -140,7 +140,7 @@ a.link:hover {
   line-height: 1.75rem;
   letter-spacing: .01rem;
   margin-top: 20px; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     .body {
       font-size: 1.25rem;
       line-height: 2rem; } }
@@ -185,8 +185,8 @@ a.link:hover {
     display: inline-block; }
   .hero .image-attribution, .figure-item .image-attribution {
     font-family: "Cousine", "Menlo", monospace;
-    font-size: 7px;
-    line-height: 12px;
+    font-size: 0.354rem;
+    line-height: 0.75rem;
     float: right;
     margin-right: -1px;
     transform-origin: 0% 0%;
@@ -197,8 +197,8 @@ a.link:hover {
     -webkit-transform: translateX(100%) rotate(-90deg); }
   .hero .image-caption, .figure-item .image-caption {
     font-family: "Cousine", "Menlo", monospace;
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 0.354rem;
+    line-height: 0.75rem;
     margin-top: 5px; }
 
 .meta-container {
@@ -225,13 +225,12 @@ a.link:hover {
 
 .advisor {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 0.354rem;
+  line-height: 0.75rem;
   display: inline-block; }
   @media screen and (min-width: 992px) {
     .advisor {
-      font-size: 12px;
-      line-height: 15px; } }
+      font-size: 0.5rem; } }
   .advisor:not(:first-child) {
     margin-left: 10px; }
   .advisor p {
@@ -239,16 +238,15 @@ a.link:hover {
 
 .publish-date {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 0.354rem;
+  line-height: 0.75rem;
   margin-bottom: 20px; }
   .publish-date:before {
     content: "Published";
     display: block; }
   @media screen and (min-width: 992px) {
     .publish-date {
-      font-size: 12px;
-      line-height: 15px; } }
+      font-size: 0.5rem; } }
 
 .thesis-copy {
   display: inline-block; }
@@ -262,14 +260,13 @@ a.link:hover {
           margin-top: 0; } }
   .thesis-copy section[data-field="citation"] {
     font-family: "Cousine", "Menlo", monospace;
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 0.354rem;
+    line-height: 0.75rem;
     float: left;
     padding-left: 5%; }
     @media screen and (min-width: 992px) {
       .thesis-copy section[data-field="citation"] {
-        font-size: 12px;
-        line-height: 15px; } }
+        font-size: 0.5rem; } }
     .thesis-copy section[data-field="citation"] p {
       word-wrap: break-word; }
       .thesis-copy section[data-field="citation"] p:before {
@@ -313,15 +310,14 @@ a.link:hover {
 
 .author-bio {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 0.354rem;
+  line-height: 0.75rem;
   display: inline-block;
   width: calc(100% - 120px);
   margin-left: 20px; }
   @media screen and (min-width: 992px) {
     .author-bio {
-      font-size: 12px;
-      line-height: 15px; } }
+      font-size: 0.5rem; } }
 
 .header-container {
   height: 150px; }
@@ -497,24 +493,22 @@ label[for="nav-open"] {
 .department {
   font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
-  font-size: 9px; }
+  font-size: 0.354rem; }
 
 .author {
   font-family: "Noe Display", serif;
   font-style: italic;
-  font-size: 1.5rem;
-  margin-bottom: 10px; }
+  font-size: 1.414rem; }
   @media screen and (min-width: 992px) {
     .author {
-      font-size: 3rem; } }
+      font-size: 2.827rem; } }
   .author:after {
     content: " —"; }
 
 .pullquote {
   font-family: "Noe Display", serif;
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.414rem;
   margin-left: 0;
   display: inline-block; }
   .pullquote:before {
@@ -527,7 +521,7 @@ label[for="nav-open"] {
     margin-bottom: 20px; }
   @media screen and (min-width: 992px) {
     .pullquote {
-      font-size: 2.5rem;
+      font-size: 1.999rem;
       line-height: 3rem; } }
   @media screen and (min-width: 768px) {
     .pullquote {
@@ -535,7 +529,7 @@ label[for="nav-open"] {
 
 a[href^="http://["] {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 9px;
+  font-size: 0.354rem;
   text-decoration: none;
   position: relative;
   top: -1em;
