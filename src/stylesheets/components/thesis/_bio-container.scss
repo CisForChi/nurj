@@ -1,15 +1,15 @@
-.bio-container {
+.bio {
   margin-bottom: 50px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.author-headshot {
+.bio-headshot {
   @include circular-photo($author-photo-size);
 }
 
-.author-bio {
+.bio-description {
   @include text-sidebar;
   display: inline-block;
   width: calc(100% - 120px);

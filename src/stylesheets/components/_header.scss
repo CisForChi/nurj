@@ -1,4 +1,9 @@
-.header-container {
+.header {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+
   height: 150px;
 
   @include past($break-small) {
@@ -10,14 +15,7 @@
   }
 }
 
-.header {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 40px;
-}
-
-.header-sticky {
+.header.is-sticky {
   position: fixed;
   height: 65px;
   top: -70px;
@@ -27,7 +25,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   transition: top .3s 0s;
 
-  &.show {
+  &.is-down {
     top: 0;
   }
 
@@ -48,24 +46,24 @@
   }
 }
 
-.header-sticky .masthead,
-.header-sticky label[for="nav-open"]:before,
-.header-sticky .nav {
+.header.is-sticky .header-masthead,
+.header.is-sticky label[for="is-open"]:before,
+.header.is-sticky .header-nav {
   @include past($break-medium) {
     opacity: 0.6;
     transition: opacity .1s linear;
   }
 }
 
-.header-sticky:hover .masthead,
-.header-sticky:hover label[for="nav-open"]:before,
-.header-sticky:hover .nav {
+.header.is-sticky:hover .header-masthead,
+.header.is-sticky:hover label[for="is-open"]:before,
+.header.is-sticky:hover .header-nav {
   @include past($break-medium) {
     opacity: 1;
   }
 }
 
-.masthead {
+.header .header-masthead {
   display: inline-block;
 
   img {
@@ -77,7 +75,7 @@
   }
 }
 
-.nav {
+.header .header-nav {
   background-color: rgba(241, 241, 241, 0);
   @include transition(.3s all ease);
   position: fixed;
@@ -89,7 +87,7 @@
   padding: 20px;
   z-index: -1;
 
-  .nav-list {
+  .header-navList {
     @include font-cousine;
     li a {
       text-decoration: none;
@@ -107,7 +105,7 @@
     transition: none;
     z-index: 1;
 
-    .nav-list li a{
+    .header-navList li a{
       color: $color-black;
       font-size: 12px;
       line-height: 14px;
@@ -115,7 +113,7 @@
   }
 }
 
-.nav-open {
+.header .is-open {
   position: relative;
   clip: rect(0, 0, 0, 0);
   z-index: 4;
@@ -127,14 +125,14 @@
       color: $color-white;
     }
 
-    & ~ .nav {
+    & ~ .header-nav {
       left: 10%;
       z-index: 2;
     }
   }
 }
 
-label[for="nav-open"] {
+.header label[for="is-open"] {
   @include font-cousine;
   position: relative;
   float: right;

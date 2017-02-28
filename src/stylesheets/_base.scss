@@ -122,7 +122,8 @@ a.link:hover {
   }
 }
 
-.hero, .figure-item {
+.figure,
+.hero {
   position: relative;
 
   img {
@@ -130,7 +131,8 @@ a.link:hover {
     display: inline-block;
   }
 
-  .image-attribution {
+  .figure-attribution,
+  .hero-attribution {
     @include text-attribution;
     float:right;
     margin-right: -1px;
@@ -142,7 +144,8 @@ a.link:hover {
     -webkit-transform: translateX(100%) rotate(-90deg);
   }
 
-  .image-caption {
+  .figure-caption,
+  .hero-caption {
     @include text-caption;
     margin-top: 5px;
   }

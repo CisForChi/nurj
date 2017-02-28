@@ -178,12 +178,17 @@ a.link:hover {
       width: 75%;
       display: inline-block; } }
 
-.hero, .figure-item {
+.figure,
+.hero {
   position: relative; }
-  .hero img, .figure-item img {
+  .figure img,
+  .hero img {
     width: 100%;
     display: inline-block; }
-  .hero .image-attribution, .figure-item .image-attribution {
+  .figure .figure-attribution,
+  .figure .hero-attribution,
+  .hero .figure-attribution,
+  .hero .hero-attribution {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
     line-height: 0.75rem;
@@ -195,27 +200,30 @@ a.link:hover {
     transform: translateX(100%) rotate(-90deg);
     -ms-transform: translateX(100%) rotate(-90deg);
     -webkit-transform: translateX(100%) rotate(-90deg); }
-  .hero .image-caption, .figure-item .image-caption {
+  .figure .figure-caption,
+  .figure .hero-caption,
+  .hero .figure-caption,
+  .hero .hero-caption {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
     line-height: 0.75rem;
     margin-top: 5px; }
 
-.meta-container {
+.meta {
   width: 100%;
   padding-left: 10%;
   vertical-align: top; }
   @media screen and (min-width: 480px) {
-    .meta-container {
+    .meta {
       padding-left: 0;
       padding-right: 10px;
       width: 25%;
       display: inline-block; } }
 
-.advisors-container {
+.meta-advisors {
   margin-bottom: 10px;
   margin-top: 0; }
-  .advisors-container:after {
+  .meta-advisors:after {
     content: "";
     margin-top: 10px;
     border-bottom: 0.5px solid #111111;
@@ -223,30 +231,30 @@ a.link:hover {
     width: 30%;
     min-width: 60px; }
 
-.advisor {
+.meta-advisor {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.354rem;
   line-height: 0.75rem;
   display: inline-block; }
   @media screen and (min-width: 992px) {
-    .advisor {
+    .meta-advisor {
       font-size: 0.707rem;
       line-height: 1.125rem; } }
-  .advisor:not(:first-child) {
+  .meta-advisor:not(:first-child) {
     margin-left: 10px; }
-  .advisor p {
+  .meta-advisor p {
     margin: 0; }
 
-.publish-date {
+.meta-publishDate {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.354rem;
   line-height: 0.75rem;
   margin-bottom: 20px; }
-  .publish-date:before {
+  .meta-publishDate:before {
     content: "Published";
     display: block; }
   @media screen and (min-width: 992px) {
-    .publish-date {
+    .meta-publishDate {
       font-size: 0.707rem;
       line-height: 1.125rem; } }
 
@@ -291,13 +299,13 @@ a.link:hover {
         width: 70%;
         padding-right: 5%; } }
 
-.bio-container {
+.bio {
   margin-bottom: 50px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto; }
 
-.author-headshot {
+.bio-headshot {
   display: inline-block;
   position: relative;
   width: 100px;
@@ -305,12 +313,12 @@ a.link:hover {
   overflow: hidden;
   border-radius: 50%;
   vertical-align: top; }
-  .author-headshot img {
+  .bio-headshot img {
     width: auto;
     height: 100%;
     margin-left: -25px; }
 
-.author-bio {
+.bio-description {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.354rem;
   line-height: 0.75rem;
@@ -318,26 +326,24 @@ a.link:hover {
   width: calc(100% - 120px);
   margin-left: 20px; }
   @media screen and (min-width: 992px) {
-    .author-bio {
+    .bio-description {
       font-size: 0.707rem;
       line-height: 1.125rem; } }
-
-.header-container {
-  height: 150px; }
-  @media screen and (min-width: 480px) {
-    .header-container {
-      padding-left: 5%; } }
-  @media screen and (min-width: 768px) {
-    .header-container {
-      margin-bottom: 50px; } }
 
 .header {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 40px; }
+  padding-top: 40px;
+  height: 150px; }
+  @media screen and (min-width: 480px) {
+    .header {
+      padding-left: 5%; } }
+  @media screen and (min-width: 768px) {
+    .header {
+      margin-bottom: 50px; } }
 
-.header-sticky {
+.header.is-sticky {
   position: fixed;
   height: 65px;
   top: -70px;
@@ -346,46 +352,46 @@ a.link:hover {
   background-color: #fffbf7;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   transition: top .3s 0s; }
-  .header-sticky.show {
+  .header.is-sticky.is-down {
     top: 0; }
   @media screen and (min-width: 768px) {
-    .header-sticky {
+    .header.is-sticky {
       box-shadow: none;
       margin-bottom: 50px;
       background-color: transparent;
       top: 0;
       width: 200px; }
-      .header-sticky.fadeOut {
+      .header.is-sticky.fadeOut {
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s linear .3s, opacity .3s 0s; }
-      .header-sticky.fadeIn {
+      .header.is-sticky.fadeIn {
         visibility: visible;
         opacity: 1;
         transition: visibility 0s linear 0s, opacity .3s 0s; } }
 
 @media screen and (min-width: 768px) {
-  .header-sticky .masthead,
-  .header-sticky label[for="nav-open"]:before,
-  .header-sticky .nav {
+  .header.is-sticky .header-masthead,
+  .header.is-sticky label[for="is-open"]:before,
+  .header.is-sticky .header-nav {
     opacity: 0.6;
     transition: opacity .1s linear; } }
 
 @media screen and (min-width: 768px) {
-  .header-sticky:hover .masthead,
-  .header-sticky:hover label[for="nav-open"]:before,
-  .header-sticky:hover .nav {
+  .header.is-sticky:hover .header-masthead,
+  .header.is-sticky:hover label[for="is-open"]:before,
+  .header.is-sticky:hover .header-nav {
     opacity: 1; } }
 
-.masthead {
+.header .header-masthead {
   display: inline-block; }
-  .masthead img {
+  .header .header-masthead img {
     width: 100px; }
     @media screen and (min-width: 480px) {
-      .masthead img {
+      .header .header-masthead img {
         width: 150px; } }
 
-.nav {
+.header .header-nav {
   background-color: rgba(241, 241, 241, 0);
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -399,14 +405,14 @@ a.link:hover {
   background-color: #111111;
   padding: 20px;
   z-index: -1; }
-  .nav .nav-list {
+  .header .header-nav .header-navList {
     font-family: "Cousine", "Menlo", monospace; }
-    .nav .nav-list li a {
+    .header .header-nav .header-navList li a {
       text-decoration: none;
       line-height: 3rem;
       color: #fbfbfb; }
   @media screen and (min-width: 768px) {
-    .nav {
+    .header .header-nav {
       position: relative;
       display: inline-block;
       background-color: transparent;
@@ -414,34 +420,34 @@ a.link:hover {
       padding: 0;
       transition: none;
       z-index: 1; }
-      .nav .nav-list li a {
+      .header .header-nav .header-navList li a {
         color: #111111;
         font-size: 12px;
         line-height: 14px; } }
 
-.nav-open {
+.header .is-open {
   position: relative;
   clip: rect(0, 0, 0, 0);
   z-index: 4;
   display: none; }
-  .nav-open:checked ~ label:before {
+  .header .is-open:checked ~ label:before {
     content: "Close";
     color: #fbfbfb; }
-  .nav-open:checked ~ .nav {
+  .header .is-open:checked ~ .header-nav {
     left: 10%;
     z-index: 2; }
 
-label[for="nav-open"] {
+.header label[for="is-open"] {
   font-family: "Cousine", "Menlo", monospace;
   position: relative;
   float: right;
   z-index: 4; }
-  label[for="nav-open"]:before {
+  .header label[for="is-open"]:before {
     display: inline-block;
     line-height: 36px;
     content: "Menu"; }
   @media screen and (min-width: 768px) {
-    label[for="nav-open"] {
+    .header label[for="is-open"] {
       display: none; } }
 
 .footer-container {
@@ -498,14 +504,14 @@ label[for="nav-open"] {
   text-transform: uppercase;
   font-size: 0.354rem; }
 
-.author {
+.thesis-author {
   font-family: "Noe Display", serif;
   font-style: italic;
   font-size: 1.414rem; }
   @media screen and (min-width: 992px) {
-    .author {
+    .thesis-author {
       font-size: 2.827rem; } }
-  .author:after {
+  .thesis-author:after {
     content: " —"; }
 
 .pullquote {

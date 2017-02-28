@@ -1,4 +1,3 @@
-//- https://xd.adobe.com/view/88eab670-5b2f-4641-923d-23f14bba8c9a/screen/ec5fef01-2823-4be6-9b74-3e2d5a2bdb77/Web-1280-1/
 doctype html (lang='en')
 
 head
@@ -22,29 +21,29 @@ block body
       div.department.js-detect-collision
         !=pageContent.getText('thesis.department')
       each item in pageContent.getGroup('thesis.byline').toArray()
-        div.author.js-detect-collision
+        div.thesis-author.js-detect-collision
           !=item.getText('author')
       div.title.js-detect-collision
         !=pageContent.getText('thesis.title')
       div.subtitle.js-detect-collision
         !=pageContent.getText('thesis.subtitle')
       div.body
-        div.meta-container.js-detect-collision
-          ul.advisors-container
+        div.meta.js-detect-collision
+          ul.meta-advisors
             each item in pageContent.getGroup('thesis.advisors').toArray()
-              li.advisor
+              li.meta-advisor
                 p Faculty Advisor
                 p
                   != item.getText('faculty-advisor')
-          div.publish-date.js-detect-collision
+          div.meta-publishDate.js-detect-collision
             != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         each hero in pageContent.getGroup('thesis.hero-image').toArray()
           figure.hero
             img(src=hero.getImage('image').url)
             if hero.get('attribution')
-              cite.image-attribution !{hero.get('attribution').asText()}
+              cite.hero-attribution !{hero.get('attribution').asText()}
             if hero.get('caption')
-              figcaption.image-caption !{hero.get('caption').asText()}
+              figcaption.hero-caption !{hero.get('caption').asText()}
 
         for slice in pageContent.getSliceZone('thesis.body').slices
           case slice.sliceType
@@ -55,18 +54,18 @@ block body
             when 'pullquote'
               blockquote.pullquote.js-detect-collision !{slice.value.asText()}
             when 'image-with-caption'
-              figure.figure-item.js-detect-collision
+              figure.figure.js-detect-collision
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')
-                    cite.image-attribution !{imageWithCaption.get('attribution').asText()}
+                    cite.figure-attribution !{imageWithCaption.get('attribution').asText()}
                   if imageWithCaption.get('caption')
-                    figcaption.image-caption !{imageWithCaption.get('caption').asText()}
+                    figcaption.figure-caption !{imageWithCaption.get('caption').asText()}
       each item in pageContent.getGroup('thesis.byline').toArray()
-        div.bio-container.js-detect-collision
-          div.author-headshot
+        div.bio.js-detect-collision
+          div.bio-headshot
             img(src=item.getImage('headshot').url)
-          div.author-bio
+          div.bio-description
             div
               strong ABOUT THE AUTHOR
             !=item.getText('bio')

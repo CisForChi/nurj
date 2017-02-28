@@ -1,42 +1,39 @@
-$('section[data-field="citation"]').addClass('js-detect-collision')
+$(window).scroll(hideHeaderOnCollision)
 
 var lastScroll = 0;
-
-var metaBottom = $('.meta-container').position().top + $('.meta-container').height()
-
-$(window).scroll(function() {
+var metaBottom = $('.meta').position().top + $('.meta').height()
+$('section[data-field="citation"]').addClass('js-detect-collision')
+function hideHeaderOnCollision() {
   if ($(window).scrollTop() > metaBottom) {
-    $('.header').addClass('header-sticky')
+    $('.header').addClass('is-sticky')
   } else {
-    $('.header').removeClass('header-sticky')
-  }
-
-  if (lastScroll < $(window).scrollTop()) {
-    $('.header').removeClass('show')
+    $('.header').removeClass('is-sticky')
   }
 
   if (lastScroll > $(window).scrollTop()) {
-    $('.header').addClass('show')
+    $('.header.is-sticky').addClass('is-down')
+  } else {
+    $('.header.is-sticky').removeClass('is-down')
   }
 
   var colliding = false
   for (var el of $('.js-detect-collision')) {
-    if (collide($('.nav'), $(el), 20)) {
+    if (collide($('.header-nav'), $(el), 20)) {
       colliding = true
       break
     }
   }
 
   if (!colliding) {
-    $('.header-sticky').removeClass('fadeOut')
-    $('.header-sticky').addClass('fadeIn')
+    $('.header.is-sticky').removeClass('fadeOut')
+    $('.header.is-sticky').addClass('fadeIn')
   } else {
-    $('.header-sticky').removeClass('fadeIn')
-    $('.header-sticky').addClass('fadeOut')
+    $('.header.is-sticky').removeClass('fadeIn')
+    $('.header.is-sticky').addClass('fadeOut')
   }
 
   lastScroll = $(window).scrollTop()
-})
+}
 
 function collide(a, b, margin) {
   margin = margin || 0
