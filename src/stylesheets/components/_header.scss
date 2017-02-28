@@ -1,17 +1,18 @@
+.header-container {
+  height: 150px;
+  @include past($break-medium) {
+    margin-bottom: 50px;
+  }
+}
+
 .header {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 40px;
 
-  height: 150px;
-
   @include past($break-small) {
     padding-left: 5%;
-  }
-
-  @include past($break-medium) {
-    margin-bottom: 50px;
   }
 }
 
