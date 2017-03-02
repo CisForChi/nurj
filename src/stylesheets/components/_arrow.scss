@@ -1,0 +1,30 @@
+.arrow {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  top: -40px;
+
+  @include past($break-medium) {
+    right: 50px;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    top: initial;
+    animation: fadeIn .3s 1;
+
+    @include past($break-medium) {
+      right: 50px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.arrow-polygon {
+  fill: $color-purple;
+}

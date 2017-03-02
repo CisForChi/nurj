@@ -1,8 +1,22 @@
 $(window).scroll(hideHeaderOnCollision)
+$(window).scroll(fixArrowInBody)
 
 var lastScroll = 0;
 var metaBottom = $('.meta').position().top + $('.meta').height()
 $('section[data-field="citation"]').addClass('js-detect-collision')
+
+$('.arrow').click(function() {
+  $('body').animate({scrollTop: 0}, '300')
+})
+
+function fixArrowInBody() {
+  if ($(window).scrollTop() > metaBottom) {
+    $('.arrow').addClass('is-fixed')
+  } else {
+    $('.arrow').removeClass('is-fixed')
+  }
+}
+
 function hideHeaderOnCollision() {
   if ($(window).scrollTop() > metaBottom) {
     $('.header').addClass('is-sticky')

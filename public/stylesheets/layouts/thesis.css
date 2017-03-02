@@ -76,6 +76,66 @@ figure {
   font-family: "Cousine";
   src: url("../../assets/fonts/cousine-regular.otf") format("otf"), url("../../assets/fonts/cousine-italic.otf") format("otf"); }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .pull-left {
   float: left; }
 
@@ -104,7 +164,7 @@ a.link:hover {
   padding: 2px;
   margin-left: -2px;
   background-image: none;
-  background-color: #9100ff;
+  background-color: #861FFC;
   background-size: cover; }
 
 .content {
@@ -353,7 +413,8 @@ a.link:hover {
   padding-top: 15px;
   background-color: #fffbf7;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: top .3s 0s; }
+  transition: top .3s 0s;
+  animation: fadeIn .3s 1; }
   .header.is-sticky.is-down {
     top: 0; }
   @media screen and (min-width: 768px) {
@@ -456,7 +517,8 @@ a.link:hover {
   background-color: #111111;
   padding: 40px 20px;
   color: #fbfbfb;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  position: relative; }
   .footer-container .about, .footer-container .links {
     vertical-align: top;
     display: inline-block; }
@@ -501,6 +563,29 @@ a.link:hover {
     .links div {
       width: 25%; } }
 
+.arrow {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  top: -40px; }
+  @media screen and (min-width: 768px) {
+    .arrow {
+      right: 50px; } }
+  .arrow.is-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    top: initial;
+    animation: fadeIn .3s 1; }
+    @media screen and (min-width: 768px) {
+      .arrow.is-fixed {
+        right: 50px; } }
+  .arrow:hover {
+    cursor: pointer; }
+
+.arrow-polygon {
+  fill: #861FFC; }
+
 .department {
   font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
@@ -544,6 +629,6 @@ a[href^="http://["] {
   text-decoration: none;
   position: relative;
   top: -1em;
-  color: #9100ff;
+  color: #861FFC;
   pointer-events: none;
   line-height: 0; }

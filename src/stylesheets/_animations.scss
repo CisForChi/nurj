@@ -1,10 +1,28 @@
-@mixin anim--fadeIn300 {
+@include keyframes(fadeIn) {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@include keyframes(fadeOut) {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@mixin anim--fadeInOnce300 {
+  @include animation('fadeIn .3s 1');
+}
+
+@mixin anim--fadeOutOnce300 {
+  @include animation('fadeOut .3s 1');
+}
+
+@mixin trans--fadeIn300 {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s linear 0s, opacity .3s 0s;
 }
 
-@mixin anim--fadeOut300 {
+@mixin trans--fadeOut300 {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear .3s, opacity .3s 0s;

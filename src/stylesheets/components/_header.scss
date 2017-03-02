@@ -25,6 +25,7 @@
   background-color: $color-background;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   transition: top .3s 0s;
+  animation: fadeIn .3s 1;
 
   &.is-down {
     top: 0;
@@ -38,11 +39,11 @@
     width: 200px;
 
     &.fadeOut {
-      @include anim--fadeOut300;
+      @include trans--fadeOut300;
     }
 
     &.fadeIn {
-      @include anim--fadeIn300;
+      @include trans--fadeIn300;
     }
   }
 }
