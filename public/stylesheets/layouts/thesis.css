@@ -467,7 +467,8 @@ a.link:hover {
   bottom: 0;
   background-color: #111111;
   padding: 20px;
-  z-index: -1; }
+  z-index: -1;
+  width: 150px; }
   .header .header-nav .header-navList {
     font-family: "Cousine", "Menlo", monospace; }
     .header .header-nav .header-navList li a {
