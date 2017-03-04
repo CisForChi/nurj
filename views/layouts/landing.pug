@@ -20,12 +20,21 @@ block body
     div.feed
       each post in posts
         if post.type == "thesis"
-          div.post
+          -
+            var sizes = ['post-sm', 'post-md', 'post-lg']
+            var size = sizes[post.getText("thesis.title")[0].charCodeAt(0) % 3]
+
+          div(class="post " + size)
             a.post-department
               != post.getText("thesis.department")
             if post.getGroup("thesis.hero-image")
               each hero in post.getGroup('thesis.hero-image').toArray()
-                img(src=hero.getImage('image').url class="post-hero")
+                a(href=ctx.linkResolver(post))
+                  img(src=hero.getImage('image').url class="post-hero")
+            else
+              h3.post-lede
+                a(href=ctx.linkResolver(post))
+                  != post.getFirstParagraph().text.replace(/(([^\s]+\s\s*){20})(.*)/,"$1…")
             h2.post-title
               a(href=ctx.linkResolver(post))
                 != post.getText("thesis.title")

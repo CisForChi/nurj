@@ -115,9 +115,10 @@
 @mixin post-title {
   @include font-noe;
   font-weight: 300;
-  font-size: $fontSize-medium;
-  line-height: $lineHeight-medium;
+  font-size: $fontSize-large;
+  line-height: $lineHeight-large;
   margin-top: 5px;
+  margin-bottom: 0;
 }
 
 @mixin post-department {

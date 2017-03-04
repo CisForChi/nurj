@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -269,13 +270,24 @@ a.link:hover {
     margin-top: 5px; }
 
 .post {
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
   .post:not(:first-child):before {
     content: "";
     margin-bottom: 20px;
     height: 1px;
     background-color: #95989A;
     display: block; }
+  @media screen and (min-width: 768px) {
+    .post {
+      padding: 20px; }
+      .post.post-sm {
+        width: 33%; }
+      .post.post-md {
+        width: 50%; }
+      .post.post-lg {
+        width: 66%; }
+      .post:not(:first-child):before {
+        display: none; } }
 
 .post .post-hero {
   width: 100%;
@@ -284,11 +296,26 @@ a.link:hover {
 .post .post-title {
   font-family: "Noe Display", serif;
   font-weight: 300;
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  margin-top: 5px; }
+  font-size: 1.414rem;
+  line-height: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 0; }
   .post .post-title a {
     text-decoration: none; }
+
+.post .post-lede {
+  position: relative;
+  font-weight: 300;
+  font-family: "Noe Display", serif;
+  font-size: 1.414rem;
+  line-height: 1.5rem;
+  margin-top: 0; }
+  .post .post-lede a {
+    text-decoration: none; }
+  .post .post-lede:before {
+    content: "“";
+    position: absolute;
+    left: -10px; }
 
 .post .post-department {
   font-family: "Cousine", "Menlo", monospace;
@@ -502,3 +529,9 @@ a.link:hover {
 .feed {
   width: 100%;
   padding: 0 20px; }
+  @media screen and (min-width: 768px) {
+    .feed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; } }

@@ -1,5 +1,5 @@
 .post {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   &:not(:first-child):before {
     content: "";
@@ -7,6 +7,26 @@
     height: 1px;
     background-color: $color-grey;
     display: block;
+  }
+
+  @include past($break-medium) {
+    padding: 20px;
+
+    &.post-sm {
+      width: 33%;
+    }
+
+    &.post-md {
+      width: 50%;
+    }
+
+    &.post-lg {
+      width: 66%;
+    }
+
+    &:not(:first-child):before {
+      display: none;
+    }
   }
 }
 
@@ -20,6 +40,25 @@
 
   a {
     text-decoration: none;
+  }
+}
+
+.post .post-lede {
+  position: relative;
+  font-weight: 300;
+  @include font-noe;
+  font-size: $fontSize-large;
+  line-height: $lineHeight-large;
+  margin-top: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:before {
+    content: "“";
+    position: absolute;
+    left: -10px;
   }
 }
 
