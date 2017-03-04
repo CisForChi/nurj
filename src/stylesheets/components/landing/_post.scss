@@ -1,0 +1,32 @@
+.post {
+  margin-bottom: 40px;
+
+  &:not(:first-child):before {
+    content: "";
+    margin-bottom: 20px;
+    height: 1px;
+    background-color: $color-grey;
+    display: block;
+  }
+}
+
+.post .post-hero {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.post .post-title {
+  @include post-title;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.post .post-department {
+  @include post-department;
+}
+
+.post .post-meta {
+  @include post-meta;
+}

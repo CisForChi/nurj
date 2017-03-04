@@ -1,0 +1,38 @@
+doctype html(lang='en')
+
+head
+  title Northwestern Undergraduate Research Journal
+  link(rel="stylesheet", href="/stylesheets/layouts/landing.css")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  // Required for Previews and Experiments
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+  script
+    = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+  script(src="//static.cdn.prismic.io/prismic.min.js")
+  script(src="/javascript/vendors/highlight.min.js")
+
+block body
+  include ../components/header.pug
+  section.container
+    div.splash
+  section.container
+    div.feed
+      each post in posts
+        if post.type == "thesis"
+          div.post
+            a.post-department
+              != post.getText("thesis.department")
+            if post.getGroup("thesis.hero-image")
+              each hero in post.getGroup('thesis.hero-image').toArray()
+                img(src=hero.getImage('image').url class="post-hero")
+            h2.post-title
+              a(href=ctx.linkResolver(post))
+                != post.getText("thesis.title")
+            p.post-meta
+              span
+                each item in post.getGroup("thesis.byline").toArray()
+                  != item.getText("author") + " | "
+              span
+                != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+  include ../components/footer.pug

@@ -1,6 +1,3 @@
-/**
- * Module dependencies.
- */
 var Prismic = require('prismic-nodejs');
 var app = require('./config');
 var PORT = app.get('port');
@@ -35,21 +32,31 @@ function api(req, res) {
   });
 }
 
-// INSERT YOUR ROUTES HERE
+app.get('/', function(req, res) {
+  var prismicApi
 
-/**
-* route with documentation to build your project with prismic
-*/
-app.route('/').get(function(req, res) {
-  api(req, res).then(function(api) {
-    return api.getByUID('page', 'homepage');
-  }).then(function(prismicdoc) {
-    res.render('index', {
-      pagecontent: prismicdoc
-    });
-  }).catch(function(err) {
-    handleError(err, req, res);
-  });
+  api(req, res).then(api => {
+    prismicApi = api
+    return prismicApi.getSingle('landing')
+  }).then(landing => {
+    if (landing) {
+      var queryOptions = {
+        // page: req.params.p || '1'
+      }
+
+      return prismicApi.query(
+        Prismic.Predicates.at("document.type", "thesis"),
+        queryOptions
+      ).then(function(responses) {
+        res.render('layouts/landing', {
+          landing,
+          posts: responses.results
+        })
+      })
+    } else {
+      handleError(404, req, res)
+    }
+  })
 });
 
 /**
@@ -77,16 +84,16 @@ app.get('/preview', function(req, res) {
 });
 
 app.get('/thesis/:uid', function(req, res) {
-   // We store the param uid in a variable
    var uid = req.params.uid;
    api(req, res).then(function(api) {
-      // We are using the function to get a document by its uid
        return api.getByUID('thesis', uid);
    }).then(function(pageContent) {
-       // pageContent is a document, or null if there is no match
+     if (pageContent) {
        res.render('layouts/thesis', {
-       // Where 'page' is the name of your pug template file (page.pug)
            pageContent: pageContent
        });
+     } else {
+       handleError(404, req, res)
+     }
    });
 });

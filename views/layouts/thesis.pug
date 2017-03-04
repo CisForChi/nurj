@@ -1,21 +1,20 @@
-doctype html (lang='en')
+doctype html(lang='en')
 
 head
-    title
-      !=pageContent.getText('thesis.title')
-    link(rel="stylesheet", href="/stylesheets/layouts/thesis.css")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+  title
+    !=pageContent.getText('thesis.title')
+  link(rel="stylesheet", href="/stylesheets/layouts/thesis.css")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
 
-    // Required for Previews and Experiments
-    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
-    script
-      = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
-    script(src="//static.cdn.prismic.io/prismic.min.js")
-    script(src="/javascript/vendors/highlight.min.js")
-
-include ../components/header.pug
+  // Required for Previews and Experiments
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+  script
+    = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+  script(src="//static.cdn.prismic.io/prismic.min.js")
+  script(src="/javascript/vendors/highlight.min.js")
 
 block body
+  include ../components/header.pug
   section.container
     article.thesis.content
       div.department.js-detect-collision
@@ -37,13 +36,14 @@ block body
                   != item.getText('faculty-advisor')
           div.meta-publishDate.js-detect-collision
             != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
-        each hero in pageContent.getGroup('thesis.hero-image').toArray()
-          figure.hero
-            img(src=hero.getImage('image').url)
-            if hero.get('attribution')
-              cite.hero-attribution !{hero.get('attribution').asText()}
-            if hero.get('caption')
-              figcaption.hero-caption !{hero.get('caption').asText()}
+        if pageContent.getGroup('thesis.hero-image')
+          each hero in pageContent.getGroup('thesis.hero-image').toArray()
+            figure.hero
+              img(src=hero.getImage('image').url)
+              if hero.get('attribution')
+                cite.hero-attribution !{hero.get('attribution').asText()}
+              if hero.get('caption')
+                figcaption.hero-caption !{hero.get('caption').asText()}
 
         for slice in pageContent.getSliceZone('thesis.body').slices
           case slice.sliceType
@@ -63,12 +63,16 @@ block body
                     figcaption.figure-caption !{imageWithCaption.get('caption').asText()}
       each item in pageContent.getGroup('thesis.byline').toArray()
         div.bio.js-detect-collision
-          div.bio-headshot
-            img(src=item.getImage('headshot').url)
+          if item.getImage('headshot')
+            div.bio-headshot
+              img(src=item.getImage('headshot').url)
           div.bio-description
             div
               strong ABOUT THE AUTHOR
-            !=item.getText('bio')
+            if item.getText('bio')
+              !=item.getText('bio')
+            else
+              !=item.getText('author')
 
-include ../components/footer.pug
+  include ../components/footer.pug
 script(src="/javascript/script.js")

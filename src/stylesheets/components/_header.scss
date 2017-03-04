@@ -68,6 +68,10 @@
 .header .header-masthead {
   display: inline-block;
 
+  @include past($break-medium) {
+    display: block;
+  }
+
   img {
     width: 100px;
 
@@ -88,7 +92,6 @@
   background-color: $color-black;
   padding: 20px;
   z-index: -1;
-  width: 150px;
 
   .header-navList {
     @include font-cousine;
@@ -107,6 +110,7 @@
     padding: 0;
     transition: none;
     z-index: 1;
+    width: 150px;
 
     .header-navList li a{
       color: $color-black;

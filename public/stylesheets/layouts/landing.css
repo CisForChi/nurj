@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -269,126 +268,36 @@ a.link:hover {
     line-height: 0.75rem;
     margin-top: 5px; }
 
-.meta {
-  width: 100%;
-  padding-left: 10%;
-  vertical-align: top; }
-  @media screen and (min-width: 480px) {
-    .meta {
-      padding-left: 0;
-      padding-right: 10px;
-      width: 25%;
-      display: inline-block; } }
-
-.meta-advisors {
-  margin-bottom: 10px;
-  margin-top: 0; }
-  .meta-advisors:after {
+.post {
+  margin-bottom: 40px; }
+  .post:not(:first-child):before {
     content: "";
-    margin-top: 10px;
-    border-bottom: 0.5px solid #111111;
-    display: block;
-    width: 30%;
-    min-width: 60px; }
-
-.meta-advisor {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  line-height: 0.75rem;
-  display: inline-block; }
-  @media screen and (min-width: 992px) {
-    .meta-advisor {
-      font-size: 0.707rem;
-      line-height: 1.125rem; } }
-  .meta-advisor:not(:first-child) {
-    margin-left: 10px; }
-  .meta-advisor p {
-    margin: 0; }
-
-.meta-publishDate {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  line-height: 0.75rem;
-  margin-bottom: 20px; }
-  .meta-publishDate:before {
-    content: "Published";
+    margin-bottom: 20px;
+    height: 1px;
+    background-color: #95989A;
     display: block; }
-  @media screen and (min-width: 992px) {
-    .meta-publishDate {
-      font-size: 0.707rem;
-      line-height: 1.125rem; } }
 
-.thesis-copy {
-  display: inline-block; }
-  .thesis-copy section[data-field="copy"] {
-    width: 95%;
-    float: right; }
-    @media screen and (min-width: 480px) {
-      .thesis-copy section[data-field="copy"] {
-        width: 75%; }
-        .thesis-copy section[data-field="copy"] p {
-          margin-top: 0; } }
-  .thesis-copy section[data-field="citation"] {
-    font-family: "Cousine", "Menlo", monospace;
-    font-size: 0.354rem;
-    line-height: 0.75rem;
-    float: left;
-    padding-left: 5%; }
-    @media screen and (min-width: 992px) {
-      .thesis-copy section[data-field="citation"] {
-        font-size: 0.5rem; } }
-    .thesis-copy section[data-field="citation"] p {
-      word-wrap: break-word; }
-      .thesis-copy section[data-field="citation"] p:before {
-        display: inline-block;
-        content: "";
-        position: relative;
-        height: 1px;
-        margin-bottom: 5px;
-        width: 100%;
-        background-color: #111111; }
-    @media screen and (min-width: 480px) {
-      .thesis-copy section[data-field="citation"] {
-        display: block;
-        width: 25%;
-        padding-right: 20px; } }
-  .thesis-copy section[data-field="quote"] {
-    float: right; }
-    @media screen and (min-width: 480px) {
-      .thesis-copy section[data-field="quote"] {
-        width: 70%;
-        padding-right: 5%; } }
+.post .post-hero {
+  width: 100%;
+  margin: 5px 0; }
 
-.bio {
-  margin-bottom: 50px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto; }
+.post .post-title {
+  font-family: "Noe Display", serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: 5px; }
+  .post .post-title a {
+    text-decoration: none; }
 
-.bio-headshot {
-  display: inline-block;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50%;
-  vertical-align: top; }
-  .bio-headshot img {
-    width: auto;
-    height: 100%;
-    margin-left: -25px; }
-
-.bio-description {
+.post .post-department {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  line-height: 0.75rem;
-  display: inline-block;
-  width: calc(100% - 120px);
-  margin-left: 20px; }
-  @media screen and (min-width: 992px) {
-    .bio-description {
-      font-size: 0.707rem;
-      line-height: 1.125rem; } }
+  font-size: 0.707rem;
+  text-transform: uppercase; }
+
+.post .post-meta {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem; }
 
 .header-container {
   height: 150px; }
@@ -590,49 +499,6 @@ a.link:hover {
 .arrow-polygon {
   fill: #861FFC; }
 
-.department {
-  font-family: "Cousine", "Menlo", monospace;
-  text-transform: uppercase;
-  font-size: 0.354rem; }
-
-.thesis-author {
-  font-family: "Noe Display", serif;
-  font-style: italic;
-  font-size: 1.414rem; }
-  @media screen and (min-width: 992px) {
-    .thesis-author {
-      font-size: 2.827rem; } }
-  .thesis-author:after {
-    content: " —"; }
-
-.pullquote {
-  font-family: "Noe Display", serif;
-  font-weight: 700;
-  font-size: 1.414rem;
-  margin-left: 0;
-  display: inline-block; }
-  .pullquote:before {
-    content: "";
-    display: block;
-    width: 30%;
-    max-width: 200px;
-    height: 5px;
-    background-color: #111111;
-    margin-bottom: 20px; }
-  @media screen and (min-width: 992px) {
-    .pullquote {
-      font-size: 1.999rem;
-      line-height: 3rem; } }
-  @media screen and (min-width: 768px) {
-    .pullquote {
-      max-width: 600px; } }
-
-a[href^="http://["] {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  text-decoration: none;
-  position: relative;
-  top: -1em;
-  color: #861FFC;
-  pointer-events: none;
-  line-height: 0; }
+.feed {
+  width: 100%;
+  padding: 0 20px; }

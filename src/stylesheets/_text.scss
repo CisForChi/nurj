@@ -111,3 +111,22 @@
   top: -1em;
   color: $color-purple;
 }
+
+@mixin post-title {
+  @include font-noe;
+  font-weight: 300;
+  font-size: $fontSize-medium;
+  line-height: $lineHeight-medium;
+  margin-top: 5px;
+}
+
+@mixin post-department {
+  @include font-cousine;
+  font-size: $fontSize-small;
+  text-transform: uppercase;
+}
+
+@mixin post-meta {
+  @include font-cousine;
+  font-size: $fontSize-small;
+}
