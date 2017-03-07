@@ -22,7 +22,12 @@ block body
         if post.type == "thesis"
           -
             var sizes = ['post-sm', 'post-md', 'post-lg']
-            var size = sizes[post.getText("thesis.title")[0].charCodeAt(0) % 3]
+            var size
+            if (post.getGroup("thesis.hero-image")) {
+              size = sizes[post.getText("thesis.title")[0].charCodeAt(0) % 3]
+            } else {
+              size = 'post-sm'
+            }
 
           div(class="post " + size)
             a.post-department

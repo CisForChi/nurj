@@ -300,8 +300,8 @@ a.link:hover {
     .meta-advisor {
       font-size: 0.707rem;
       line-height: 1.125rem; } }
-  .meta-advisor:not(:first-child) {
-    margin-left: 10px; }
+  .meta-advisor:not(:last-child) {
+    margin-right: 10px; }
   .meta-advisor p {
     margin: 0; }
 
