@@ -60,6 +60,7 @@ a.link:hover {
 
 .title {
   @include text-headline;
+  margin-bottom: 8px;
 }
 
 .subtitle {
@@ -74,7 +75,7 @@ a.link:hover {
 
 .body {
   @include text-body;
-  margin-top: 20px;
+  margin-top: 40px;
 
   @include past($break-large) {
     margin-top: 60px;

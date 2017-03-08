@@ -75,7 +75,7 @@
   img {
     width: 100px;
 
-    @include past($break-small) {
+    @include past($break-medium) {
       width: 150px;
     }
   }

@@ -4,7 +4,7 @@
 @mixin text-folio {
   @include font-cousine;
   text-transform: uppercase;
-  font-size: $fontSize-xsmall;
+  font-size: $fontSize-small;
 }
 
 @mixin text-byline {
@@ -19,9 +19,9 @@
 
 @mixin text-headline {
   @include font-noe;
-  font-weight: 700;
-  font-size: $fontSize-larger;
-  line-height: $lineHeight-larger;
+  font-weight: bold;
+  font-size: $fontSize-xlarge;
+  line-height: $lineHeight-xlarge;
 
   @include past($break-large) {
     line-height: $lineHeight-jumbo;
@@ -47,25 +47,20 @@
 
 @mixin text-sidebar {
   @include font-cousine;
-  font-size: $fontSize-xsmall;
-  line-height: $lineHeight-smaller;
-
-  @include past($break-large) {
-    font-size: $fontSize-small;
-    line-height: $lineHeight-small;
-  }
+  font-size: $fontSize-small;
+  line-height: $lineHeight-medium;
 }
 
 @mixin text-caption {
   @include font-cousine;
-  font-size: $fontSize-xsmall;
-  line-height: $lineHeight-smaller;
+  font-size: $fontSize-small;
+  line-height: $lineHeight-medium;
 }
 
 @mixin text-attribution {
   @include font-cousine;
   font-size: $fontSize-xsmall;
-  line-height: $lineHeight-smaller;
+  line-height: $lineHeight-small;
 }
 
 @mixin text-inlineQuote {
@@ -95,12 +90,8 @@
 
 @mixin text-citation {
   @include font-cousine;
-  font-size: $fontSize-xsmall;
-  line-height: $lineHeight-smaller;
-
-  @include past($break-large) {
-    font-size: $fontSize-smaller;
-  }
+  font-size: $fontSize-smaller;
+  line-height: $lineHeight-small;
 }
 
 @mixin text-superscript {

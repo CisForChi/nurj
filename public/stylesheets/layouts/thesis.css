@@ -212,12 +212,13 @@ a.link:hover {
 
 .title {
   font-family: "Noe Display", serif;
-  font-weight: 700;
-  font-size: 1.999rem;
-  line-height: 2.5rem; }
+  font-weight: bold;
+  font-size: 2.827rem;
+  line-height: 2.827rem;
+  margin-bottom: 8px; }
   @media screen and (min-width: 992px) {
     .title {
-      line-height: 4.5rem;
+      line-height: 3.998rem;
       font-size: 3.998rem; } }
 
 .subtitle {
@@ -233,7 +234,7 @@ a.link:hover {
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: .01rem;
-  margin-top: 20px; }
+  margin-top: 40px; }
   @media screen and (min-width: 480px) {
     .body {
       font-size: 1.25rem;
@@ -285,7 +286,7 @@ a.link:hover {
   .hero .hero-attribution {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
-    line-height: 0.75rem;
+    line-height: 0.707rem;
     float: right;
     margin-right: -1px;
     transform-origin: 0% 0%;
@@ -299,8 +300,8 @@ a.link:hover {
   .hero .figure-caption,
   .hero .hero-caption {
     font-family: "Cousine", "Menlo", monospace;
-    font-size: 0.354rem;
-    line-height: 0.75rem;
+    font-size: 0.707rem;
+    line-height: 1.25rem;
     margin-top: 5px; }
 
 .meta {
@@ -319,7 +320,6 @@ a.link:hover {
   margin-top: 0; }
   .meta-advisors:after {
     content: "";
-    margin-top: 10px;
     border-bottom: 0.5px solid #111111;
     display: block;
     width: 30%;
@@ -327,30 +327,23 @@ a.link:hover {
 
 .meta-advisor {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  line-height: 0.75rem;
-  display: inline-block; }
-  @media screen and (min-width: 992px) {
-    .meta-advisor {
-      font-size: 0.707rem;
-      line-height: 1.125rem; } }
+  font-size: 0.707rem;
+  line-height: 1.25rem;
+  display: inline-block;
+  margin-bottom: 10px; }
   .meta-advisor:not(:last-child) {
-    margin-right: 10px; }
+    margin-right: 20px; }
   .meta-advisor p {
     margin: 0; }
 
 .meta-publishDate {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  line-height: 0.75rem;
+  font-size: 0.707rem;
+  line-height: 1.25rem;
   margin-bottom: 20px; }
   .meta-publishDate:before {
     content: "Published";
     display: block; }
-  @media screen and (min-width: 992px) {
-    .meta-publishDate {
-      font-size: 0.707rem;
-      line-height: 1.125rem; } }
 
 .thesis-copy {
   display: inline-block; }
@@ -364,13 +357,10 @@ a.link:hover {
           margin-top: 0; } }
   .thesis-copy section[data-field="citation"] {
     font-family: "Cousine", "Menlo", monospace;
-    font-size: 0.354rem;
-    line-height: 0.75rem;
+    font-size: 0.5rem;
+    line-height: 0.707rem;
     float: left;
     padding-left: 5%; }
-    @media screen and (min-width: 992px) {
-      .thesis-copy section[data-field="citation"] {
-        font-size: 0.5rem; } }
     .thesis-copy section[data-field="citation"] p {
       word-wrap: break-word; }
       .thesis-copy section[data-field="citation"] p:before {
@@ -414,15 +404,11 @@ a.link:hover {
 
 .bio-description {
   font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.354rem;
-  line-height: 0.75rem;
+  font-size: 0.707rem;
+  line-height: 1.25rem;
   display: inline-block;
   width: calc(100% - 120px);
   margin-left: 20px; }
-  @media screen and (min-width: 992px) {
-    .bio-description {
-      font-size: 0.707rem;
-      line-height: 1.125rem; } }
 
 .header-container {
   height: 150px; }
@@ -487,7 +473,7 @@ a.link:hover {
       display: block; } }
   .header .header-masthead img {
     width: 100px; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
       .header .header-masthead img {
         width: 150px; } }
 
@@ -627,7 +613,7 @@ a.link:hover {
 .department {
   font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
-  font-size: 0.354rem; }
+  font-size: 0.707rem; }
 
 .thesis-author {
   font-family: "Noe Display", serif;
@@ -656,7 +642,7 @@ a.link:hover {
   @media screen and (min-width: 992px) {
     .pullquote {
       font-size: 1.999rem;
-      line-height: 3rem; } }
+      line-height: 2.827rem; } }
   @media screen and (min-width: 768px) {
     .pullquote {
       max-width: 600px; } }
