@@ -314,7 +314,8 @@ a.link:hover {
     display: block; }
   @media screen and (min-width: 768px) {
     .post {
-      padding: 20px; }
+      padding: 20px;
+      box-sizing: content-box; }
       .post.post-sm {
         width: 33%; }
       .post.post-md {
@@ -330,9 +331,9 @@ a.link:hover {
 
 .post .post-title {
   font-family: "Noe Display", serif;
-  font-weight: 300;
-  font-size: 1.414rem;
-  line-height: 1.414rem;
+  font-weight: bold;
+  font-size: 1.999rem;
+  line-height: 1.999rem;
   margin-top: 5px;
   margin-bottom: 0; }
   .post .post-title a {
@@ -343,8 +344,8 @@ a.link:hover {
   font-weight: 300;
   font-family: "Noe Display", serif;
   font-size: 1.414rem;
-  line-height: 1.414rem;
-  margin-top: 0; }
+  line-height: 1.999rem;
+  margin-top: 10px; }
   .post .post-lede a {
     text-decoration: none; }
   .post .post-lede:before {
@@ -493,7 +494,8 @@ a.link:hover {
   padding: 40px 20px;
   color: #fbfbfb;
   padding-bottom: 100px;
-  position: relative; }
+  position: relative;
+  margin-top: 120px; }
   .footer-container .about, .footer-container .links {
     vertical-align: top;
     display: inline-block; }
@@ -506,6 +508,8 @@ a.link:hover {
 .about {
   font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
   line-height: 1.5rem; }
+  .about p {
+    max-width: 300px; }
   .about img {
     width: 200px; }
   @media screen and (min-width: 768px) {

@@ -542,7 +542,8 @@ a.link:hover {
   padding: 40px 20px;
   color: #fbfbfb;
   padding-bottom: 100px;
-  position: relative; }
+  position: relative;
+  margin-top: 120px; }
   .footer-container .about, .footer-container .links {
     vertical-align: top;
     display: inline-block; }
@@ -555,6 +556,8 @@ a.link:hover {
 .about {
   font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
   line-height: 1.5rem; }
+  .about p {
+    max-width: 300px; }
   .about img {
     width: 200px; }
   @media screen and (min-width: 768px) {

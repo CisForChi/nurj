@@ -11,6 +11,7 @@
 
   @include past($break-medium) {
     padding: 20px;
+    box-sizing: content-box;
 
     &.post-sm {
       width: 33%;
@@ -48,8 +49,8 @@
   font-weight: 300;
   @include font-noe;
   font-size: $fontSize-large;
-  line-height: $lineHeight-large;
-  margin-top: 0;
+  line-height: $lineHeight-larger;
+  margin-top: 10px;
 
   a {
     text-decoration: none;
