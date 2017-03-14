@@ -312,18 +312,22 @@ a.link:hover {
     height: 1px;
     background-color: #95989A;
     display: block; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     .post {
       padding: 20px;
+      box-sizing: border-box;
+      width: 50%; }
+      .post:not(:first-child):before {
+        display: none; } }
+  @media screen and (min-width: 768px) {
+    .post {
       box-sizing: content-box; }
       .post.post-sm {
         width: 33%; }
       .post.post-md {
         width: 50%; }
       .post.post-lg {
-        width: 66%; }
-      .post:not(:first-child):before {
-        display: none; } }
+        width: 66%; } }
 
 .post .post-hero {
   width: 100%;
@@ -568,7 +572,7 @@ a.link:hover {
 .feed {
   width: 100%;
   padding: 0 20px; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     .feed {
       display: flex;
       flex-wrap: wrap;

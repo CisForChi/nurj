@@ -8,7 +8,7 @@
   width: 100%;
   padding: 0 20px;
 
-  @include past($break-medium) {
+  @include past($break-small) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

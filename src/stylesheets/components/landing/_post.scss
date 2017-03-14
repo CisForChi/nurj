@@ -9,8 +9,16 @@
     display: block;
   }
 
-  @include past($break-medium) {
+  @include past($break-small) {
     padding: 20px;
+    box-sizing: border-box;
+    width: 50%;
+    &:not(:first-child):before {
+      display: none;
+    }
+  }
+
+  @include past($break-medium) {
     box-sizing: content-box;
 
     &.post-sm {
@@ -23,10 +31,6 @@
 
     &.post-lg {
       width: 66%;
-    }
-
-    &:not(:first-child):before {
-      display: none;
     }
   }
 }
