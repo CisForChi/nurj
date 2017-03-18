@@ -24,8 +24,9 @@ block body
           !=item.getText('author')
       div.title.js-detect-collision
         !=pageContent.getText('thesis.title')
-      div.subtitle.js-detect-collision
-        !=pageContent.getText('thesis.subtitle')
+      if pageContent.getText('thesis.subtitle')
+        div.subtitle.js-detect-collision
+          !=pageContent.getText('thesis.subtitle')
       div.body
         div.meta.js-detect-collision
           ul.meta-advisors

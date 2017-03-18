@@ -234,7 +234,8 @@ a.link:hover {
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: .01rem;
-  margin-top: 40px; }
+  margin-top: 40px;
+  position: relative; }
   @media screen and (min-width: 480px) {
     .body {
       font-size: 1.25rem;
@@ -267,7 +268,8 @@ a.link:hover {
         padding-left: 25%; } }
 
 .hero {
-  width: 100%; }
+  width: 100%;
+  float: right; }
   @media screen and (min-width: 480px) {
     .hero {
       width: 75%;

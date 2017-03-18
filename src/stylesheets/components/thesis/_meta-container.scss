@@ -4,6 +4,7 @@
   vertical-align: top;
 
   @include past($break-small) {
+    position: absolute;
     padding-left: 0;
     padding-right: 10px;
     width: $gutter-width;

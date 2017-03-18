@@ -76,6 +76,7 @@ a.link:hover {
 .body {
   @include text-body;
   margin-top: 40px;
+  position: relative;
 
   @include past($break-large) {
     margin-top: 60px;
@@ -116,6 +117,7 @@ a.link:hover {
 
 .hero {
   width: 100%;
+  float: right;
 
   @include past($break-small) {
     width: $body-width;
