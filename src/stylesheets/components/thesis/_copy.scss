@@ -36,6 +36,7 @@
     @include past($break-small) {
       display: block;
       width: $gutter-width;
+      padding-left: 0;
       padding-right: 20px;
     }
   }
@@ -47,6 +48,36 @@
     @include past($break-small) {
       width: $body-width - 5%;
       padding-right: 5%;
+    }
+  }
+
+  section[data-field="inline-figure"] {
+    float: left;
+    padding-left: 5%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include past($break-small) {
+      display: block;
+      width: $gutter-width;
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+
+  section[data-field="figure-caption"] {
+    @include text-caption;
+    float: left;
+    padding-left: 5%;
+
+    @include past($break-small) {
+      display: block;
+      width: $gutter-width;
+      padding-left: 0;
+      padding-right: 20px;
     }
   }
 }

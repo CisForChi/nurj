@@ -378,6 +378,7 @@ a.link:hover {
       .thesis-copy section[data-field="citation"] {
         display: block;
         width: 25%;
+        padding-left: 0;
         padding-right: 20px; } }
   .thesis-copy section[data-field="quote"] {
     float: right; }
@@ -385,6 +386,30 @@ a.link:hover {
       .thesis-copy section[data-field="quote"] {
         width: 70%;
         padding-right: 5%; } }
+  .thesis-copy section[data-field="inline-figure"] {
+    float: left;
+    padding-left: 5%; }
+    .thesis-copy section[data-field="inline-figure"] img {
+      width: 100%;
+      height: auto; }
+    @media screen and (min-width: 480px) {
+      .thesis-copy section[data-field="inline-figure"] {
+        display: block;
+        width: 25%;
+        padding-left: 0;
+        padding-right: 20px; } }
+  .thesis-copy section[data-field="figure-caption"] {
+    font-family: "Cousine", "Menlo", monospace;
+    font-size: 0.707rem;
+    line-height: 1.25rem;
+    float: left;
+    padding-left: 5%; }
+    @media screen and (min-width: 480px) {
+      .thesis-copy section[data-field="figure-caption"] {
+        display: block;
+        width: 25%;
+        padding-left: 0;
+        padding-right: 20px; } }
 
 .bio {
   margin-bottom: 50px;
