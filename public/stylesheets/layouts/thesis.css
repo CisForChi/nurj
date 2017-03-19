@@ -345,7 +345,25 @@ a.link:hover {
   line-height: 1.25rem;
   margin-bottom: 20px; }
   .meta-publishDate:before {
-    content: "Published";
+    content: "Published On";
+    display: block; }
+
+.meta-published {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
+  line-height: 1.25rem;
+  margin-bottom: 20px; }
+  .meta-published:before {
+    content: "Originally Published";
+    display: block; }
+
+.meta-type {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
+  line-height: 1.25rem;
+  margin-bottom: 20px; }
+  .meta-type:before {
+    content: "";
     display: block; }
 
 .thesis-copy {

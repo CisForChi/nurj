@@ -41,7 +41,27 @@
 
 .meta-publishDate {
   &:before {
-    content: "Published";
+    content: "Published On";
+    display: block;
+  }
+
+  @include text-sidebar;
+  margin-bottom: 20px;
+}
+
+.meta-published {
+  &:before {
+    content: "Originally Published";
+    display: block;
+  }
+
+  @include text-sidebar;
+  margin-bottom: 20px;
+}
+
+.meta-type {
+  &:before {
+    content: "";
     display: block;
   }
 

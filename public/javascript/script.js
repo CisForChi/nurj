@@ -2,7 +2,7 @@ $(window).scroll(hideHeaderOnCollision)
 $(window).scroll(fixArrowInBody)
 
 var lastScroll = 0;
-var metaBottom = $('.meta').position().top + $('.meta').height()
+var metaBottom = $('.meta').offset().top + $('.meta').height()
 $('section[data-field="citation"]').addClass('js-detect-collision')
 
 $('.arrow').click(function() {

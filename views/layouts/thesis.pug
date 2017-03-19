@@ -37,6 +37,10 @@ block body
                   != item.getText('faculty-advisor')
           div.meta-publishDate.js-detect-collision
             != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+          div.meta-published
+            != pageContent.getText('thesis.published')
+          div.meta-type
+            != pageContent.getText('thesis.type')
         if pageContent.getGroup('thesis.hero-image')
           each hero in pageContent.getGroup('thesis.hero-image').toArray()
             figure.hero
