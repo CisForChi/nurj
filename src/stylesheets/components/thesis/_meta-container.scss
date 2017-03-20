@@ -2,13 +2,24 @@
   width: 100%;
   padding-left: 10%;
   vertical-align: top;
+  display: inline-block;
 
   @include past($break-small) {
-    position: absolute;
     padding-left: 0;
     padding-right: 10px;
     width: $gutter-width;
     display: inline-block;
+    float: left;
+  }
+
+  div {
+    display: inline-block;
+    width: 50%;
+
+    @include past($break-small) {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -29,6 +40,10 @@
   @include text-sidebar;
   display: inline-block;
   margin-bottom: 10px;
+
+  @include past($break-small) {
+    width: 100%;
+  }
 
   &:not(:last-child) {
     margin-right: 20px;

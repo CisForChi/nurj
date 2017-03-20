@@ -17,30 +17,33 @@ block body
   include ../components/header.pug
   section.container
     article.thesis.content
-      div.department.js-detect-collision
-        !=pageContent.getText('thesis.department')
-      each item in pageContent.getGroup('thesis.byline').toArray()
-        div.thesis-author.js-detect-collision
-          !=item.getText('author')
-      div.title.js-detect-collision
-        !=pageContent.getText('thesis.title')
-      if pageContent.getText('thesis.subtitle')
-        div.subtitle.js-detect-collision
-          !=pageContent.getText('thesis.subtitle')
-      div.body
-        div.meta.js-detect-collision
-          ul.meta-advisors
-            each item in pageContent.getGroup('thesis.advisors').toArray()
-              li.meta-advisor
-                p Faculty Advisor
-                p
-                  != item.getText('faculty-advisor')
-          div.meta-publishDate.js-detect-collision
-            != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+      div.headline
+        div.department.js-detect-collision
+          !=pageContent.getText('thesis.department')
+        each item in pageContent.getGroup('thesis.byline').toArray()
+          div.thesis-author.js-detect-collision
+            !=item.getText('author')
+        div.title.js-detect-collision
+          !=pageContent.getText('thesis.title')
+        if pageContent.getText('thesis.subtitle')
+          div.subtitle.js-detect-collision
+            !=pageContent.getText('thesis.subtitle')
+      div.meta.js-detect-collision
+        ul.meta-advisors
+          each item in pageContent.getGroup('thesis.advisors').toArray()
+            li.meta-advisor
+              p Faculty Advisor
+              p
+                != item.getText('faculty-advisor')
+        div.meta-publishDate.js-detect-collision
+          != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        if pageContent.getText('thesis.published')
           div.meta-published
             != pageContent.getText('thesis.published')
+        if pageContent.getText('thesis.type')
           div.meta-type
             != pageContent.getText('thesis.type')
+      div.body
         if pageContent.getGroup('thesis.hero-image')
           each hero in pageContent.getGroup('thesis.hero-image').toArray()
             figure.hero

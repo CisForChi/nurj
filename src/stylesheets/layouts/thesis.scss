@@ -6,6 +6,17 @@
 @import "../components/_footer";
 @import "../components/_arrow";
 
+.headline {
+  margin-bottom: 20px;
+
+  @include past($break-small) {
+    display: inline-block;
+    width: $body-width;
+    float: right;
+    margin-bottom: 60px;
+  }
+}
+
 .department {
   @include text-folio;
 }

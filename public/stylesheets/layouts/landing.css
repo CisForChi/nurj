@@ -269,7 +269,8 @@ a.link:hover {
 
 .hero {
   width: 100%;
-  float: right; }
+  float: right;
+  margin-bottom: 40px; }
   @media screen and (min-width: 480px) {
     .hero {
       width: 75%;

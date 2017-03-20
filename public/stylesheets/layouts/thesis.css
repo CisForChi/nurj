@@ -269,7 +269,8 @@ a.link:hover {
 
 .hero {
   width: 100%;
-  float: right; }
+  float: right;
+  margin-bottom: 40px; }
   @media screen and (min-width: 480px) {
     .hero {
       width: 75%;
@@ -309,14 +310,22 @@ a.link:hover {
 .meta {
   width: 100%;
   padding-left: 10%;
-  vertical-align: top; }
+  vertical-align: top;
+  display: inline-block; }
   @media screen and (min-width: 480px) {
     .meta {
-      position: absolute;
       padding-left: 0;
       padding-right: 10px;
       width: 25%;
-      display: inline-block; } }
+      display: inline-block;
+      float: left; } }
+  .meta div {
+    display: inline-block;
+    width: 50%; }
+    @media screen and (min-width: 480px) {
+      .meta div {
+        display: block;
+        width: 100%; } }
 
 .meta-advisors {
   margin-bottom: 10px;
@@ -334,6 +343,9 @@ a.link:hover {
   line-height: 1.25rem;
   display: inline-block;
   margin-bottom: 10px; }
+  @media screen and (min-width: 480px) {
+    .meta-advisor {
+      width: 100%; } }
   .meta-advisor:not(:last-child) {
     margin-right: 20px; }
   .meta-advisor p {
@@ -657,6 +669,15 @@ a.link:hover {
 
 .arrow-polygon {
   fill: #861FFC; }
+
+.headline {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 480px) {
+    .headline {
+      display: inline-block;
+      width: 75%;
+      float: right;
+      margin-bottom: 60px; } }
 
 .department {
   font-family: "Cousine", "Menlo", monospace;
