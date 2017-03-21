@@ -60,7 +60,7 @@
 @mixin text-attribution {
   @include font-cousine;
   font-size: $fontSize-xsmall;
-  line-height: $lineHeight-small;
+  line-height: $lineHeight-medium;
 }
 
 @mixin text-inlineQuote {

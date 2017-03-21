@@ -143,8 +143,7 @@ a.link:hover {
   .figure-attribution,
   .hero-attribution {
     @include text-attribution;
-    float:right;
-    margin-right: -1px;
+    float: right;
     transform-origin: 0% 0%;
     -ms-transform-origin: 0% 0%;
     -webkit-transform-origin: 0% 0%;

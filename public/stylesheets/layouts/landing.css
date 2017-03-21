@@ -293,9 +293,8 @@ a.link:hover {
   .hero .hero-attribution {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
-    line-height: 0.707rem;
+    line-height: 1.25rem;
     float: right;
-    margin-right: -1px;
     transform-origin: 0% 0%;
     -ms-transform-origin: 0% 0%;
     -webkit-transform-origin: 0% 0%;
