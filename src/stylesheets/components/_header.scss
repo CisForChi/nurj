@@ -1,6 +1,7 @@
 .header-container {
-  height: 150px;
+  height: 100px;
   @include past($break-medium) {
+    height: 150px;
     margin-bottom: 50px;
   }
 }
@@ -37,6 +38,7 @@
     background-color: rgba(0, 0, 0, 0);
     top: 0;
     width: 200px;
+    padding-top: 30px;
 
     &.fadeOut {
       @include trans--fadeOut300;

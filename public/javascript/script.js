@@ -2,7 +2,7 @@ $(window).scroll(hideHeaderOnCollision)
 $(window).scroll(fixArrowInBody)
 
 var lastScroll = 0;
-var metaBottom = $('.meta').offset().top + $('.meta').height()
+var metaBottom = $('.body').offset().top
 $('section[data-field="citation"]').addClass('js-detect-collision')
 
 $('.arrow').click(function() {
@@ -18,21 +18,20 @@ function fixArrowInBody() {
 }
 
 function hideHeaderOnCollision() {
-  if ($(window).scrollTop() > metaBottom) {
-    $('.header').addClass('is-sticky')
-  } else {
-    $('.header').removeClass('is-sticky')
-  }
-
   if (lastScroll > $(window).scrollTop()) {
     $('.header.is-sticky').addClass('is-down')
   } else {
     $('.header.is-sticky').removeClass('is-down')
   }
 
+  if ($(window).scrollTop() < metaBottom) {
+    $('.header').addClass('is-down')
+  }
+
   var colliding = false
   for (var el of $('.js-detect-collision')) {
     if (collide($('.header-nav'), $(el), 20)) {
+      console.log(el);
       colliding = true
       break
     }

@@ -28,7 +28,7 @@ block body
         if pageContent.getText('thesis.subtitle')
           div.subtitle.js-detect-collision
             !=pageContent.get('thesis.subtitle').asHtml()
-      div.meta.js-detect-collision
+      div.meta
         ul.meta-advisors
           each item in pageContent.getGroup('thesis.advisors').toArray()
             li.meta-advisor

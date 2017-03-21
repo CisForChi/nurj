@@ -296,7 +296,7 @@ a.link:hover {
   .hero .hero-attribution {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
-    line-height: 1.25rem;
+    line-height: 0;
     float: right;
     transform-origin: 0% 0%;
     -ms-transform-origin: 0% 0%;
@@ -304,6 +304,12 @@ a.link:hover {
     transform: translateX(100%) rotate(-90deg);
     -ms-transform: translateX(100%) rotate(-90deg);
     -webkit-transform: translateX(100%) rotate(-90deg); }
+    @media screen and (min-width: 480px) {
+      .figure .figure-attribution,
+      .figure .hero-attribution,
+      .hero .figure-attribution,
+      .hero .hero-attribution {
+        line-height: 1.25rem; } }
   .figure .figure-caption,
   .figure .hero-caption,
   .hero .figure-caption,
@@ -390,9 +396,10 @@ a.link:hover {
   font-size: 0.707rem; }
 
 .header-container {
-  height: 150px; }
+  height: 100px; }
   @media screen and (min-width: 768px) {
     .header-container {
+      height: 150px;
       margin-bottom: 50px; } }
 
 .header {
@@ -422,7 +429,8 @@ a.link:hover {
       margin-bottom: 50px;
       background-color: transparent;
       top: 0;
-      width: 200px; }
+      width: 200px;
+      padding-top: 30px; }
       .header.is-sticky.fadeOut {
         visibility: hidden;
         opacity: 0;

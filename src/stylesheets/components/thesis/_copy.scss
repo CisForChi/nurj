@@ -1,5 +1,6 @@
 .thesis-copy {
   display: inline-block;
+  width: 100%;
 
   section[data-field="copy"] {
     width: 95%;
@@ -18,6 +19,7 @@
     @include text-citation;
     float: left;
     padding-left: 5%;
+    width: 100%;
 
     p {
       word-wrap: break-word;
@@ -42,42 +44,12 @@
   }
 
   section[data-field="quote"] {
-    float: right;
-
     @include text-inlineQuote;
+
     @include past($break-small) {
+      float: right;
       width: $body-width - 5%;
       padding-right: 5%;
-    }
-  }
-
-  section[data-field="inline-figure"] {
-    float: left;
-    padding-left: 5%;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    @include past($break-small) {
-      display: block;
-      width: $gutter-width;
-      padding-left: 0;
-      padding-right: 20px;
-    }
-  }
-
-  section[data-field="figure-caption"] {
-    @include text-caption;
-    float: left;
-    padding-left: 5%;
-
-    @include past($break-small) {
-      display: block;
-      width: $gutter-width;
-      padding-left: 0;
-      padding-right: 20px;
     }
   }
 }
