@@ -1,17 +1,23 @@
 .bio {
   margin-bottom: 50px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  // max-width: 600px;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 
 .bio-headshot {
   display: block;
   margin: 20px auto;
-  @include circular-photo($author-photo-size);
-
+  width: $gutter-width;
+  vertical-align: top;
   @include past($break-small) {
     display: inline-block;
+    margin: 0 auto;
+  }
+
+  div {
+    @include circular-photo($author-photo-size);
+    margin: 0 auto;
   }
 }
 
@@ -19,8 +25,7 @@
   @include text-sidebar;
   @include past($break-small) {
     display: inline-block;
-    width: calc(100% - 120px);
-    margin-left: 20px;
+    width: $body-width;
   }
 }
 

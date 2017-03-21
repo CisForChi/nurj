@@ -453,26 +453,28 @@ a.link:hover {
         padding-right: 20px; } }
 
 .bio {
-  margin-bottom: 50px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-bottom: 50px; }
 
 .bio-headshot {
   display: block;
   margin: 20px auto;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50%;
+  width: 25%;
   vertical-align: top; }
-  .bio-headshot img {
-    width: auto;
-    height: 100%; }
   @media screen and (min-width: 480px) {
     .bio-headshot {
-      display: inline-block; } }
+      display: inline-block;
+      margin: 0 auto; } }
+  .bio-headshot div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    vertical-align: top;
+    margin: 0 auto; }
+    .bio-headshot div img {
+      width: auto;
+      height: 100%; }
 
 .bio-description {
   font-family: "Cousine", "Menlo", monospace;
@@ -481,8 +483,7 @@ a.link:hover {
   @media screen and (min-width: 480px) {
     .bio-description {
       display: inline-block;
-      width: calc(100% - 120px);
-      margin-left: 20px; } }
+      width: 75%; } }
 
 .bibliography {
   font-family: "Cousine", "Menlo", monospace;

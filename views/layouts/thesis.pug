@@ -60,7 +60,7 @@ block body
             when 'copy'
               div.thesis-copy !{slice.value.asHtml()}
             when 'pullquote'
-              blockquote.pullquote.js-detect-collision !{slice.value.asText()}
+              blockquote.pullquote.js-detect-collision !{slice.value.asHtml()}
             when 'image-with-caption'
               figure.figure.js-detect-collision
                 each imageWithCaption in slice.value.toArray()
@@ -68,12 +68,13 @@ block body
                   if imageWithCaption.get('attribution')
                     cite.figure-attribution !{imageWithCaption.get('attribution').asText()}
                   if imageWithCaption.get('caption')
-                    figcaption.figure-caption !{imageWithCaption.get('caption').asText()}
+                    figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
       each item in pageContent.getGroup('thesis.byline').toArray()
         div.bio.js-detect-collision
-          if item.getImage('headshot')
-            div.bio-headshot
-              img(src=item.getImage('headshot').url)
+          div.bio-headshot
+            if item.getImage('headshot')
+              div
+                img(src=item.getImage('headshot').url)
           div.bio-description
             strong ABOUT THE AUTHOR
             p
