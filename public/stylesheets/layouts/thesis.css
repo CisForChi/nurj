@@ -459,7 +459,8 @@ a.link:hover {
   margin-right: auto; }
 
 .bio-headshot {
-  display: inline-block;
+  display: block;
+  margin: 20px auto;
   position: relative;
   width: 100px;
   height: 100px;
@@ -469,21 +470,28 @@ a.link:hover {
   .bio-headshot img {
     width: auto;
     height: 100%; }
+  @media screen and (min-width: 480px) {
+    .bio-headshot {
+      display: inline-block; } }
 
 .bio-description {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.707rem;
-  line-height: 1.25rem;
-  display: inline-block;
-  width: calc(100% - 120px);
-  margin-left: 20px; }
+  line-height: 1.25rem; }
+  @media screen and (min-width: 480px) {
+    .bio-description {
+      display: inline-block;
+      width: calc(100% - 120px);
+      margin-left: 20px; } }
 
 .bibliography {
-  margin-left: 25%;
-  width: 75%;
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.707rem;
   line-height: 1.25rem; }
+  @media screen and (min-width: 480px) {
+    .bibliography {
+      margin-left: 25%;
+      width: 75%; } }
 
 .header-container {
   height: 150px; }

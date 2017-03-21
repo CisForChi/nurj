@@ -6,18 +6,29 @@
 }
 
 .bio-headshot {
+  display: block;
+  margin: 20px auto;
   @include circular-photo($author-photo-size);
+
+  @include past($break-small) {
+    display: inline-block;
+  }
 }
 
 .bio-description{
   @include text-sidebar;
-  display: inline-block;
-  width: calc(100% - 120px);
-  margin-left: 20px;
+  @include past($break-small) {
+    display: inline-block;
+    width: calc(100% - 120px);
+    margin-left: 20px;
+  }
 }
 
 .bibliography {
-  margin-left: $gutter-width;
-  width: $body-width;
   @include text-bibliography;
+
+  @include past($break-small) {
+    margin-left: $gutter-width;
+    width: $body-width;
+  }
 }

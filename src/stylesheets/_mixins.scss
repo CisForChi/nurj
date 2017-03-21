@@ -5,7 +5,6 @@
 }
 
 @mixin circular-photo($size) {
-  display: inline-block;
   position: relative;
   width: $size;
   height: $size;
