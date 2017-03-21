@@ -126,13 +126,18 @@ a.link:hover {
   }
 }
 
+.figure {
+  margin: 40px 0;
+}
+
 .figure,
 .hero {
   position: relative;
 
   img {
-    width: 100%;
-    display: inline-block;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
   .figure-attribution,
@@ -151,6 +156,10 @@ a.link:hover {
   .figure-caption,
   .hero-caption {
     @include text-caption;
-    margin-top: 5px;
+    margin: 10px auto;
+
+    @include past($break-small) {
+      width: 50%;
+    }
   }
 }

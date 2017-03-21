@@ -276,13 +276,17 @@ a.link:hover {
       width: 75%;
       display: inline-block; } }
 
+.figure {
+  margin: 40px 0; }
+
 .figure,
 .hero {
   position: relative; }
   .figure img,
   .hero img {
-    width: 100%;
-    display: inline-block; }
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
   .figure .figure-attribution,
   .figure .hero-attribution,
   .hero .figure-attribution,
@@ -305,7 +309,13 @@ a.link:hover {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.707rem;
     line-height: 1.25rem;
-    margin-top: 5px; }
+    margin: 10px auto; }
+    @media screen and (min-width: 480px) {
+      .figure .figure-caption,
+      .figure .hero-caption,
+      .hero .figure-caption,
+      .hero .hero-caption {
+        width: 50%; } }
 
 .post {
   margin-bottom: 20px; }
