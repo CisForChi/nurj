@@ -9,9 +9,15 @@
   @include circular-photo($author-photo-size);
 }
 
-.bio-description {
+.bio-description{
   @include text-sidebar;
   display: inline-block;
   width: calc(100% - 120px);
   margin-left: 20px;
+}
+
+.bibliography {
+  margin-left: $gutter-width;
+  width: $body-width;
+  @include text-bibliography;
 }

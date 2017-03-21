@@ -75,17 +75,20 @@ block body
             div.bio-headshot
               img(src=item.getImage('headshot').url)
           div.bio-description
-            div
-              strong ABOUT THE AUTHOR
+            strong ABOUT THE AUTHOR
+            p
+              if item.getText('bio')
+                !=item.getText('bio')
+              else
+                !=item.getText('author')
+            if item.getText('acknowledgements')
+              strong ACKNOWLEDGEMENTS
               p
-                if item.getText('bio')
-                  !=item.getText('bio')
-                else
-                  !=item.getText('author')
-              if item.getText('acknowledgements')
-                strong ACKNOWLEDGEMENTS
-                p
-                  !=item.getText('acknowledgements')
+                !=item.getText('acknowledgements')
+      if pageContent.getText('thesis.bibliography')
+        div.bibliography.js-detect-collision
+          strong BIBLIOGRAPHY
+          !=pageContent.get('thesis.bibliography').asHtml()
 
   include ../components/footer.pug
 script(src="/javascript/script.js")

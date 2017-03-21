@@ -478,6 +478,13 @@ a.link:hover {
   width: calc(100% - 120px);
   margin-left: 20px; }
 
+.bibliography {
+  margin-left: 25%;
+  width: 75%;
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
+  line-height: 1.25rem; }
+
 .header-container {
   height: 150px; }
   @media screen and (min-width: 768px) {
