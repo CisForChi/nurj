@@ -82,6 +82,7 @@ a.link:hover {
   @include text-body;
   margin-top: 40px;
   position: relative;
+  clear: both;
 
   @include past($break-large) {
     margin-top: 60px;
@@ -121,12 +122,12 @@ a.link:hover {
 }
 
 .hero {
-  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   float: right;
   margin-bottom: 40px;
 
   @include past($break-small) {
-    width: $body-width;
     display: inline-block;
   }
 }
@@ -159,8 +160,10 @@ a.link:hover {
 
   .figure-caption,
   .hero-caption {
-    @include text-caption;
     margin: 10px auto;
+    p, h3 {
+      @include text-caption;
+    }
 
     @include past($break-small) {
       width: 50%;

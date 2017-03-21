@@ -46,12 +46,12 @@ block body
       div.body
         if pageContent.getGroup('thesis.hero-image')
           each hero in pageContent.getGroup('thesis.hero-image').toArray()
-            figure.hero
+            figure.hero.js-detect-collision
               img(src=hero.getImage('image').url)
               if hero.get('attribution')
-                cite.hero-attribution !{hero.get('attribution').asText()}
+                cite.hero-attribution !{hero.get('attribution').asHtml()}
               if hero.get('caption')
-                figcaption.hero-caption !{hero.get('caption').asText()}
+                figcaption.hero-caption !{hero.get('caption').asHtml()}
 
         for slice in pageContent.getSliceZone('thesis.body').slices
           case slice.sliceType

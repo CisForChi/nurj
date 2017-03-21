@@ -237,7 +237,8 @@ a.link:hover {
   line-height: 1.75rem;
   letter-spacing: .01rem;
   margin-top: 40px;
-  position: relative; }
+  position: relative;
+  clear: both; }
   @media screen and (min-width: 480px) {
     .body {
       font-size: 1.25rem;
@@ -270,12 +271,12 @@ a.link:hover {
         padding-left: 25%; } }
 
 .hero {
-  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   float: right;
   margin-bottom: 40px; }
   @media screen and (min-width: 480px) {
     .hero {
-      width: 75%;
       display: inline-block; } }
 
 .figure {
@@ -307,10 +308,18 @@ a.link:hover {
   .figure .hero-caption,
   .hero .figure-caption,
   .hero .hero-caption {
-    font-family: "Cousine", "Menlo", monospace;
-    font-size: 0.707rem;
-    line-height: 1.25rem;
     margin: 10px auto; }
+    .figure .figure-caption p, .figure .figure-caption h3,
+    .figure .hero-caption p,
+    .figure .hero-caption h3,
+    .hero .figure-caption p,
+    .hero .figure-caption h3,
+    .hero .hero-caption p,
+    .hero .hero-caption h3 {
+      font-family: "Cousine", "Menlo", monospace;
+      font-size: 0.707rem;
+      line-height: 1.25rem;
+      font-weight: normal; }
     @media screen and (min-width: 480px) {
       .figure .figure-caption,
       .figure .hero-caption,
