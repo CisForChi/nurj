@@ -24,10 +24,10 @@ block body
           div.thesis-author.js-detect-collision
             !=item.getText('author')
         div.title.js-detect-collision
-          !=pageContent.getText('thesis.title')
+          !=pageContent.get('thesis.title').asHtml()
         if pageContent.getText('thesis.subtitle')
           div.subtitle.js-detect-collision
-            !=pageContent.getText('thesis.subtitle')
+            !=pageContent.get('thesis.subtitle').asHtml()
       div.meta.js-detect-collision
         ul.meta-advisors
           each item in pageContent.getGroup('thesis.advisors').toArray()

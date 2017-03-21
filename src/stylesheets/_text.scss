@@ -31,6 +31,7 @@
 
 @mixin text-subtitle {
   @include font-cousine;
+  font-weight: normal;
 }
 
 @mixin text-body {

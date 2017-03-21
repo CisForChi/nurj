@@ -210,21 +210,23 @@ a.link:hover {
       width: 70%;
       max-width: 990px; } }
 
-.title {
+.title h1 {
   font-family: "Noe Display", serif;
   font-weight: bold;
   font-size: 2.827rem;
   line-height: 2.827rem;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  margin: 0; }
   @media screen and (min-width: 992px) {
-    .title {
+    .title h1 {
       line-height: 3.998rem;
       font-size: 3.998rem; } }
 
-.subtitle {
-  font-family: "Cousine", "Menlo", monospace; }
+.subtitle h2 {
+  font-family: "Cousine", "Menlo", monospace;
+  font-weight: normal; }
   @media screen and (min-width: 768px) {
-    .subtitle {
+    .subtitle h2 {
       font-size: 1.3rem;
       width: 80%;
       max-width: 600px; } }

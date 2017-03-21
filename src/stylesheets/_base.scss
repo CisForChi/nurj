@@ -59,17 +59,22 @@ a.link:hover {
 }
 
 .title {
-  @include text-headline;
-  margin-bottom: 8px;
+  h1 {
+    @include text-headline;
+    margin-bottom: 8px;
+    margin: 0;
+  }
 }
 
 .subtitle {
-  @include text-subtitle;
+  h2 {
+    @include text-subtitle;
 
-  @include past($break-medium) {
-    font-size: 1.3rem;
-    width: 80%;
-    max-width: 600px;
+    @include past($break-medium) {
+      font-size: 1.3rem;
+      width: 80%;
+      max-width: 600px;
+    }
   }
 }
 
