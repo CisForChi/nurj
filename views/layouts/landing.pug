@@ -18,35 +18,32 @@ block body
     div.splash
   section.container
     div.feed
+      -
+        var i = 1
       each post in posts
         if post.type == "thesis"
           -
-            var sizes = ['post-sm', 'post-lg']
-            var size
-            if (post.getGroup("thesis.hero-image")) {
-              size = sizes[post.getText("thesis.title")[0].charCodeAt(0) % 2]
-            } else {
-              size = 'post-sm'
-            }
+            var size = (i % 3 == 0) && post.getGroup("thesis.hero-image") ? 'post-lg' : 'post-sm'
+            var modifier = i % 6 == 0 ? 'post-reversed' : ''
+            i += 1
 
-          div(class="post " + size)
+          div(class="post " + size + " " + modifier)
             a.post-department
               != post.getText("thesis.department")
             if post.getGroup("thesis.hero-image")
               each hero in post.getGroup('thesis.hero-image').toArray()
-                a(href=ctx.linkResolver(post))
+                a(href=ctx.linkResolver(post) class="post-heroLink")
                   img(src=hero.getImage('image').url class="post-hero")
-            else
-              h3.post-lede
+            div.post-info
+              h2.post-title
                 a(href=ctx.linkResolver(post))
-                  != post.getFirstParagraph().text.replace(/(([^\s]+\s\s*){20})(.*)/,"$1…")
-            h2.post-title
-              a(href=ctx.linkResolver(post))
-                != post.getText("thesis.title")
-            p.post-meta
-              span
-                each item in post.getGroup("thesis.byline").toArray()
-                  != item.getText("author") + " | "
-              span
-                != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+                  != post.getText("thesis.title")
+              h3.post-subtitle
+                != post.getText("thesis.subtitle")
+              p.post-meta
+                span
+                  each item in post.getGroup("thesis.byline").toArray()
+                    != item.getText("author") + " | "
+                span
+                  != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
   include ../components/footer.pug

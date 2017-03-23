@@ -25,14 +25,49 @@
       width: 33%;
     }
 
-    &.post-md {
-      width: 50%;
-    }
-
     &.post-lg {
-      width: 66%;
+      width: 80%;
+
+      .post-department {
+        width: 30%;
+        padding-left: 20px;
+      }
+
+      .post-heroLink {
+        width: 60%;
+        float: left;
+      }
+
+      img {
+        max-width: 100%;
+        float: left;
+      }
+
+      .post-info {
+        display: inline-block;
+        width: 40%;
+        padding-left: 20px;
+      }
+
+      &.post-reversed {
+        text-align: right;
+
+        .post-heroLink {
+          float: right;
+        }
+
+        .post-info,
+        .post-department {
+          padding-right: 20px;
+          padding-left: 0;
+        }
+      }
     }
   }
+}
+
+.post .post-heroLink {
+  display: inline-block;
 }
 
 .post .post-hero {
@@ -46,6 +81,10 @@
   a {
     text-decoration: none;
   }
+}
+
+.post .post-subtitle {
+  @include post-subtitle;
 }
 
 .post .post-lede {
@@ -69,6 +108,7 @@
 
 .post .post-department {
   @include post-department;
+  display: inline-block;
 }
 
 .post .post-meta {

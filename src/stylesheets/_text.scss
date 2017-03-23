@@ -118,10 +118,23 @@
 @mixin post-title {
   @include font-noe;
   font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0;
   font-size: $fontSize-larger;
   line-height: $lineHeight-larger;
-  margin-top: 5px;
-  margin-bottom: 0;
+
+  @include past($break-large) {
+    font-size: $fontSize-xlarge;
+    line-height: $lineHeight-xlarge;
+  }
+}
+
+@mixin post-subtitle {
+  @include font-cousine;
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: $fontSize-small;
+  line-height: $lineHeight-medium;
 }
 
 @mixin post-department {

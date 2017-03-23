@@ -353,10 +353,32 @@ a.link:hover {
       box-sizing: content-box; }
       .post.post-sm {
         width: 33%; }
-      .post.post-md {
-        width: 50%; }
       .post.post-lg {
-        width: 66%; } }
+        width: 80%; }
+        .post.post-lg .post-department {
+          width: 30%;
+          padding-left: 20px; }
+        .post.post-lg .post-heroLink {
+          width: 60%;
+          float: left; }
+        .post.post-lg img {
+          max-width: 100%;
+          float: left; }
+        .post.post-lg .post-info {
+          display: inline-block;
+          width: 40%;
+          padding-left: 20px; }
+        .post.post-lg.post-reversed {
+          text-align: right; }
+          .post.post-lg.post-reversed .post-heroLink {
+            float: right; }
+          .post.post-lg.post-reversed .post-info,
+          .post.post-lg.post-reversed .post-department {
+            padding-right: 20px;
+            padding-left: 0; } }
+
+.post .post-heroLink {
+  display: inline-block; }
 
 .post .post-hero {
   width: 100%;
@@ -365,12 +387,23 @@ a.link:hover {
 .post .post-title {
   font-family: "Noe Display", serif;
   font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0;
   font-size: 1.999rem;
-  line-height: 1.999rem;
-  margin-top: 5px;
-  margin-bottom: 0; }
+  line-height: 1.999rem; }
+  @media screen and (min-width: 992px) {
+    .post .post-title {
+      font-size: 2.827rem;
+      line-height: 2.827rem; } }
   .post .post-title a {
     text-decoration: none; }
+
+.post .post-subtitle {
+  font-family: "Cousine", "Menlo", monospace;
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 0.707rem;
+  line-height: 1.25rem; }
 
 .post .post-lede {
   position: relative;
@@ -389,7 +422,8 @@ a.link:hover {
 .post .post-department {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.707rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  display: inline-block; }
 
 .post .post-meta {
   font-family: "Cousine", "Menlo", monospace;
@@ -607,5 +641,6 @@ a.link:hover {
     .feed {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: center; } }
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 5%; } }
