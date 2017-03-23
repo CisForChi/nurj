@@ -30,11 +30,12 @@ block body
             !=pageContent.get('thesis.subtitle').asHtml()
       div.meta
         ul.meta-advisors
-          each item in pageContent.getGroup('thesis.advisors').toArray()
-            li.meta-advisor
-              p Faculty Advisor
-              p
-                != item.getText('faculty-advisor')
+          if pageContent.getGroup('thesis.advisors')
+            each item in pageContent.getGroup('thesis.advisors').toArray()
+              li.meta-advisor
+                p Faculty Advisor
+                p
+                  != item.getText('faculty-advisor')
         div.meta-publishDate.js-detect-collision
           != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         if pageContent.getText('thesis.published')
