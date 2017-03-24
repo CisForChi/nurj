@@ -1,0 +1,22 @@
+doctype html(lang='en')
+
+head
+  title Northwestern Undergraduate Research Journal
+  link(rel="stylesheet", href="/stylesheets/layouts/landing.css")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  // Required for Previews and Experiments
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+  script
+    = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+  script(src="//static.cdn.prismic.io/prismic.min.js")
+  script(src="/javascript/vendors/highlight.min.js")
+
+block body
+  include ../components/header.pug
+  p
+    != page.getText("page.title")
+  p
+    != page.getText("page.description")
+  
+  include ../components/footer.pug

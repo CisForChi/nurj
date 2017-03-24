@@ -2,7 +2,7 @@ doctype html(lang='en')
 
 head
   title
-    !=pageContent.getText('thesis.title')
+    !=thesis.getText('thesis.title')
   link(rel="stylesheet", href="/stylesheets/layouts/thesis.css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
 
@@ -19,34 +19,34 @@ block body
     article.thesis.content
       div.headline
         div.department.js-detect-collision
-          !=pageContent.getText('thesis.department')
-        each item in pageContent.getGroup('thesis.byline').toArray()
+          !=thesis.getText('thesis.department')
+        each item in thesis.getGroup('thesis.byline').toArray()
           div.thesis-author.js-detect-collision
             !=item.getText('author')
         div.title.js-detect-collision
-          !=pageContent.get('thesis.title').asHtml()
-        if pageContent.getText('thesis.subtitle')
+          !=thesis.get('thesis.title').asHtml()
+        if thesis.getText('thesis.subtitle')
           div.subtitle.js-detect-collision
-            !=pageContent.get('thesis.subtitle').asHtml()
+            !=thesis.get('thesis.subtitle').asHtml()
       div.meta
         ul.meta-advisors
-          if pageContent.getGroup('thesis.advisors')
-            each item in pageContent.getGroup('thesis.advisors').toArray()
+          if thesis.getGroup('thesis.advisors')
+            each item in thesis.getGroup('thesis.advisors').toArray()
               li.meta-advisor
                 p Faculty Advisor
                 p
                   != item.getText('faculty-advisor')
         div.meta-publishDate.js-detect-collision
-          != pageContent.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
-        if pageContent.getText('thesis.published')
+          != thesis.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        if thesis.getText('thesis.published')
           div.meta-published
-            != pageContent.getText('thesis.published')
-        if pageContent.getText('thesis.type')
+            != thesis.getText('thesis.published')
+        if thesis.getText('thesis.type')
           div.meta-type
-            != pageContent.getText('thesis.type')
+            != thesis.getText('thesis.type')
       div.body
-        if pageContent.getGroup('thesis.hero-image')
-          each hero in pageContent.getGroup('thesis.hero-image').toArray()
+        if thesis.getGroup('thesis.hero-image')
+          each hero in thesis.getGroup('thesis.hero-image').toArray()
             figure.hero.js-detect-collision
               img(src=hero.getImage('image').url)
               if hero.get('attribution')
@@ -54,7 +54,7 @@ block body
               if hero.get('caption')
                 figcaption.hero-caption !{hero.get('caption').asHtml()}
 
-        for slice in pageContent.getSliceZone('thesis.body').slices
+        for slice in thesis.getSliceZone('thesis.body').slices
           case slice.sliceType
             when 'subhead'
               span.subhead !{slice.value.asHtml()}
@@ -70,7 +70,7 @@ block body
                     cite.figure-attribution !{imageWithCaption.get('attribution').asText()}
                   if imageWithCaption.get('caption')
                     figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
-      each item in pageContent.getGroup('thesis.byline').toArray()
+      each item in thesis.getGroup('thesis.byline').toArray()
         div.bio.js-detect-collision
           div.bio-headshot
             if item.getImage('headshot')
@@ -87,10 +87,10 @@ block body
               strong ACKNOWLEDGEMENTS
               p
                 !=item.getText('acknowledgements')
-      if pageContent.getText('thesis.bibliography')
+      if thesis.getText('thesis.bibliography')
         div.bibliography.js-detect-collision
           strong BIBLIOGRAPHY
-          !=pageContent.get('thesis.bibliography').asHtml()
+          !=thesis.get('thesis.bibliography').asHtml()
 
   include ../components/footer.pug
 script(src="/javascript/script.js")

@@ -72,19 +72,6 @@ app.get('/', function(req, res) {
 });
 
 /**
-* Prismic documentation to build your project with prismic
-*/
-app.get('/help', function(req, res) {
-  const repoRegexp = new RegExp('^(https?:\/\/([\\-\\w]+)\\.[a-z]+\\.(io|dev))\/api$');
-  const match = PConfig.apiEndpoint.match(repoRegexp);
-  const repoURL = match[1];
-  const name = match[2];
-  const host = req.headers.host;
-  const isConfigured = name !== 'your-repo-name';
-  res.render('help', {isConfigured, repoURL, name, host});
-});
-
-/**
 * preconfigured prismic preview
 */
 app.get('/preview', function(req, res) {
@@ -96,16 +83,32 @@ app.get('/preview', function(req, res) {
 });
 
 app.get('/thesis/:uid', function(req, res) {
-   var uid = req.params.uid;
+   var uid = req.params.uid
    api(req, res).then(function(api) {
-       return api.getByUID('thesis', uid);
-   }).then(function(pageContent) {
-     if (pageContent) {
+       return api.getByUID('thesis', uid)
+   }).then(function(thesis) {
+     if (thesis) {
        res.render('layouts/thesis', {
-           pageContent: pageContent
+           thesis: thesis
        });
      } else {
        handleError(404, req, res)
      }
    });
 });
+
+app.get('/:uid', function(req, res) {
+  var uid = req.params.uid
+
+  api(req, res).then(api => {
+    return api.getByUID('page', uid)
+  }).then(function(page) {
+    if (page) {
+      res.render('layouts/page', {
+        page: page
+      })
+    } else {
+      handleError(404, req, res)
+    }
+  })
+})

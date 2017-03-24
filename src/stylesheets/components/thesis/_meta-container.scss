@@ -40,13 +40,10 @@
   @include text-sidebar;
   display: inline-block;
   margin-bottom: 10px;
+  width: 50%;
 
   @include past($break-small) {
     width: 100%;
-  }
-
-  &:not(:last-child) {
-    margin-right: 20px;
   }
 
   p {
