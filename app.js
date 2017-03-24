@@ -40,17 +40,29 @@ app.get('/', function(req, res) {
     return prismicApi.getSingle('landing')
   }).then(landing => {
     if (landing) {
-      var queryOptions = {
-        // page: req.params.p || '1'
-      }
-
-      return prismicApi.query(
-        Prismic.Predicates.at("document.type", "thesis"),
-        queryOptions
+      prismicApi.query(
+        [
+          Prismic.Predicates.at("document.type", "thesis"),
+        ],
+        {
+          orderings : '[my.thesis.last_publication_date]',
+          pageSize: 10
+        }
       ).then(function(responses) {
-        res.render('layouts/landing', {
-          landing,
-          posts: responses.results
+        var posts = responses.results.reverse()
+        prismicApi.query(
+          [
+            Prismic.Predicates.at("document.tags", ["featured"]),
+          ],
+          {
+            orderings : '[my.thesis.last_publication_date]',
+            pageSize: 6
+          }
+        ).then(function(responses) {
+          res.render('layouts/landing', {
+            features: responses.results,
+            posts
+          })
         })
       })
     } else {

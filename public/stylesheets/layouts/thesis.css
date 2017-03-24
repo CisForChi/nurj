@@ -486,13 +486,6 @@ a.link:hover {
       margin-left: 25%;
       width: 75%; } }
 
-.header-container {
-  height: 100px; }
-  @media screen and (min-width: 768px) {
-    .header-container {
-      height: 150px;
-      margin-bottom: 50px; } }
-
 .header {
   width: 100%;
   padding-left: 20px;
@@ -690,6 +683,12 @@ a.link:hover {
 
 .arrow-polygon {
   fill: #861FFC; }
+
+.thesis {
+  padding-top: 150px; }
+  @media screen and (min-width: 480px) {
+    .thesis {
+      padding-top: 175px; } }
 
 .headline {
   margin-bottom: 20px; }

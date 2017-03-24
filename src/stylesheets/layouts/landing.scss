@@ -4,6 +4,47 @@
 @import "../components/_footer";
 @import "../components/_arrow";
 
+.splash {
+  background-color: $color-black;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.splash-link {
+  @include font-cousine;
+  color: $color-white;
+  position: absolute;
+  text-decoration: none;
+}
+
+.splash-arrow {
+  transform: rotate(90deg);
+  width: 20px;
+  position: absolute;
+  right: -40px;
+  top: -10px;
+
+  polygon {
+    fill: $color-white;
+  }
+}
+
+.features {
+  width: 80%;
+  padding-top: 50px;
+  padding-left: 15%;
+}
+
+.feature-department {
+  @include font-noe;
+  text-decoration: none;
+  font-size: $fontSize-larger;
+  line-height: $lineHeight-larger;
+  color: $color-white;
+  display: block;
+  margin-bottom: 20px;
+}
+
 .feed {
   width: 100%;
   padding: 0 20px;

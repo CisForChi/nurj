@@ -16,6 +16,14 @@ block body
   include ../components/header.pug
   section.container
     div.splash
+      div.features
+        each feature in features
+          a(href=ctx.linkResolver(feature) class="feature-department")
+            != feature.getText("thesis.department")
+        a(href="/" class="splash-link") SEE ALL THESES
+          svg(class="splash-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 93" style="enable-background:new 0 0 51 93;" xml:space="preserve")
+            polygon(points="37.6,20.4 26,8.9 14.4,20.4 15.8,21.8 25,12.7 25,82 27,82 27,12.7 36.2,21.8 ")
+
   section.container
     div.feed
       -

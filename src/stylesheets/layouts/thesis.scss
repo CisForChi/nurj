@@ -6,6 +6,14 @@
 @import "../components/_footer";
 @import "../components/_arrow";
 
+.thesis {
+  padding-top: 150px;
+
+  @include past($break-small) {
+    padding-top: 175px;
+  }
+}
+
 .headline {
   margin-bottom: 20px;
 
