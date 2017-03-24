@@ -6,7 +6,7 @@ var request = require('request');
 
 function handleError(err, req, res) {
   if (err.status == 404) {
-    res.status(404).send('404 not found');
+    res.render('pages/404')
   } else {
     res.status(500).send('Error 500: ' + err.message);
   }
@@ -92,7 +92,7 @@ app.get('/thesis/:uid', function(req, res) {
            thesis: thesis
        });
      } else {
-       handleError(404, req, res)
+       handleError({status: 404}, req, res)
      }
    });
 });
@@ -108,7 +108,7 @@ app.get('/:uid', function(req, res) {
         page: page
       })
     } else {
-      handleError(404, req, res)
+      handleError({status: 404}, req, res)
     }
   })
 })
