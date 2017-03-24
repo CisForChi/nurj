@@ -1,0 +1,24 @@
+@import "../_base";
+@import "../components/_header";
+@import "../components/_footer";
+@import "../components/_arrow";
+
+.error {
+  width: 100vw;
+}
+
+.message {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 150px 20px;
+
+  h1 {
+    @include font-noe;
+    font-size: $fontSize-jumbo;
+    text-align: center;
+  }
+
+  p {
+    @include font-bembo;
+  }
+}

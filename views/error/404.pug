@@ -1,0 +1,26 @@
+doctype html(lang='en')
+
+head
+  title Northwestern Undergraduate Research Journal
+  link(rel="stylesheet", href="/stylesheets/error/error.css")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  // Required for Previews and Experiments
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+  script
+    = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+  script(src="//static.cdn.prismic.io/prismic.min.js")
+  script(src="/javascript/vendors/highlight.min.js")
+
+body
+  include ../components/header.pug
+  div.container
+    div.error
+      div.message
+        h1 Oops!
+        p You tried accessing a page that doesn't actually exist. We call that a 404. How about looking at some pages that actually do exist, instead?
+        each page in pages
+          li 
+            a(href=ctx.linkResolver(page))
+              != page.getText('thesis.title')
+  include ../components/footer.pug
