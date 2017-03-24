@@ -2,7 +2,7 @@ doctype html(lang='en')
 
 head
   title Northwestern Undergraduate Research Journal
-  link(rel="stylesheet", href="/stylesheets/layouts/landing.css")
+  link(rel="stylesheet", href="/stylesheets/layouts/page.css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
 
   // Required for Previews and Experiments
@@ -14,9 +14,11 @@ head
 
 block body
   include ../components/header.pug
-  p
-    != page.getText("page.title")
-  p
-    != page.getText("page.description")
+  div.container
+    div.page
+      h1.page-title
+        != page.getText("page.title")
+      p.page-description
+        != page.getText("page.description")
   
   include ../components/footer.pug

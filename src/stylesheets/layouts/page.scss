@@ -1,0 +1,29 @@
+@import "../_base";
+@import "../components/landing/_post";
+@import "../components/_header";
+@import "../components/_footer";
+@import "../components/_arrow";
+
+.page {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0 auto;
+  max-width: $max-content-width;
+
+  @include past($break-small) {
+    padding-top: 150px;
+  }
+}
+
+.page-title {
+  @include font-noe;
+  font-size: $fontSize-larger;
+  line-height: $lineHeight-larger;
+  font-weight: normal;
+
+  @include past($break-small) {
+    font-size: $fontSize-xlarge;
+    line-height: $lineHeight-xlarge;
+  }
+}
