@@ -13,12 +13,12 @@
   padding: 150px 20px;
 
   h1 {
-    @include font-noe;
+    @include font-primary;
     font-size: $fontSize-jumbo;
     text-align: center;
   }
 
   p {
-    @include font-bembo;
+    @include font-text;
   }
 }

@@ -17,7 +17,7 @@
 }
 
 .page-title {
-  @include font-noe;
+  @include font-primary;
   font-size: $fontSize-larger;
   line-height: $lineHeight-larger;
   font-weight: normal;

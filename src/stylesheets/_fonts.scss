@@ -1,28 +1,4 @@
 @font-face {
-  font-family: "Bembo";
-  src: url("../../assets/fonts/et-book/et-book-roman-line-figures.eot");
-  src: url("../../assets/fonts/et-book/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-roman-line-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-roman-line-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bembo";
-  src: url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.eot");
-  src: url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Bembo";
-  src: url("../../assets/fonts/et-book/et-book-bold-line-figures.eot");
-  src: url("../../assets/fonts/et-book/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-bold-line-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-bold-line-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Noe Display";
   src: url("../../assets/fonts/noe/noe-display-bold.eot");
   src: url("../../assets/fonts/noe/noe-display-bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/noe/noe-display-bold.woff") format("woff"), url("../../assets/fonts/noe/noe-display-bold.ttf") format("truetype"), url("../../assets/fonts/noe/noe-display-bold.svg") format("svg");
@@ -70,14 +46,14 @@
   font-style: italic;
 }
 
-@mixin font-noe {
+@mixin font-primary {
   font-family: "Noe Display", serif;
 }
 
-@mixin font-bembo {
-  font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
+@mixin font-text {
+  font-family: "Athelas", Cambria, Times, serif;
 }
 
-@mixin font-cousine {
+@mixin font-secondary {
   font-family: "Cousine", "Menlo", monospace;
 }

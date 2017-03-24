@@ -5,12 +5,8 @@
 @import "_mixins";
 @import "_animations";
 
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
+html {
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -107,7 +103,7 @@ a.link:hover {
 }
 
 .subhead {
-  @include font-cousine;
+  @include font-secondary;
   text-transform: uppercase;
   font-size: 16px;
 

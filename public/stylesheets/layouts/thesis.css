@@ -48,27 +48,6 @@ figure {
   margin: 0; }
 
 @font-face {
-  font-family: "Bembo";
-  src: url("../../assets/fonts/et-book/et-book-roman-line-figures.eot");
-  src: url("../../assets/fonts/et-book/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-roman-line-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-roman-line-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Bembo";
-  src: url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.eot");
-  src: url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Bembo";
-  src: url("../../assets/fonts/et-book/et-book-bold-line-figures.eot");
-  src: url("../../assets/fonts/et-book/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/et-book/et-book-bold-line-figures.woff") format("woff"), url("../../assets/fonts/et-book/et-book-bold-line-figures.ttf") format("truetype"), url("../../assets/fonts/et-book/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
   font-family: "Noe Display";
   src: url("../../assets/fonts/noe/noe-display-bold.eot");
   src: url("../../assets/fonts/noe/noe-display-bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/noe/noe-display-bold.woff") format("woff"), url("../../assets/fonts/noe/noe-display-bold.ttf") format("truetype"), url("../../assets/fonts/noe/noe-display-bold.svg") format("svg");
@@ -170,11 +149,8 @@ figure {
   100% {
     opacity: 0; } }
 
-.pull-left {
-  float: left; }
-
-.pull-right {
-  float: right; }
+html {
+  -webkit-font-smoothing: antialiased; }
 
 .container {
   width: 100%; }
@@ -232,10 +208,9 @@ a.link:hover {
       max-width: 600px; } }
 
 .body {
-  font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
+  font-family: "Athelas", Cambria, Times, serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem;
   margin-top: 40px;
   position: relative;
   clear: both; }
@@ -624,8 +599,9 @@ a.link:hover {
       max-width: 992px; } }
 
 .about {
-  font-family: "Bembo", Cambria, "Times New Roman", Times, serif;
-  line-height: 1.5rem; }
+  font-family: "Athelas", Cambria, Times, serif;
+  font-size: 1.25rem;
+  line-height: 1.414rem; }
   .about p {
     max-width: 300px; }
   .about img {

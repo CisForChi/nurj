@@ -21,8 +21,9 @@
 }
 
 .about {
-  @include font-bembo;
-  line-height: 1.5rem;
+  @include font-text;
+  font-size: $fontSize-medium;
+  line-height: $lineHeight-large;
 
   p {
     max-width: 300px;
@@ -47,7 +48,7 @@
   }
 
   ul {
-    @include font-cousine;
+    @include font-secondary;
     font-size: 14px;
 
     li {

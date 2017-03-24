@@ -2,13 +2,13 @@
 @import "_variables";
 
 @mixin text-folio {
-  @include font-cousine;
+  @include font-secondary;
   text-transform: uppercase;
   font-size: $fontSize-small;
 }
 
 @mixin text-byline {
-  @include font-noe;
+  @include font-primary;
   font-style: italic;
   font-size: $fontSize-large;
 
@@ -18,7 +18,7 @@
 }
 
 @mixin text-headline {
-  @include font-noe;
+  @include font-primary;
   font-weight: bold;
   font-size: $fontSize-xlarge;
   line-height: $lineHeight-xlarge;
@@ -30,15 +30,14 @@
 }
 
 @mixin text-subtitle {
-  @include font-cousine;
+  @include font-secondary;
   font-weight: normal;
 }
 
 @mixin text-body {
-  @include font-bembo;
+  @include font-text;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  letter-spacing: .01rem;
 
   @include past($break-small) {
     font-size: 1.25rem;
@@ -47,20 +46,20 @@
 }
 
 @mixin text-sidebar {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-small;
   line-height: $lineHeight-medium;
 }
 
 @mixin text-caption {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-small;
   line-height: $lineHeight-medium;
   font-weight: normal;
 }
 
 @mixin text-attribution {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-xsmall;
   line-height: 0;
 
@@ -74,7 +73,7 @@
 }
 
 @mixin text-pullquote {
-  @include font-noe;
+  @include font-primary;
   font-weight: 700;
   font-size: $fontSize-large;
 
@@ -95,13 +94,13 @@
 }
 
 @mixin text-citation {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-smaller;
   line-height: $lineHeight-small;
 }
 
 @mixin text-superscript {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-xsmall;
   text-decoration: none;
   position: relative;
@@ -110,13 +109,13 @@
 }
 
 @mixin text-bibliography {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-small;
   line-height: $lineHeight-medium;
 }
 
 @mixin post-title {
-  @include font-noe;
+  @include font-primary;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 0;
@@ -130,7 +129,7 @@
 }
 
 @mixin post-subtitle {
-  @include font-cousine;
+  @include font-secondary;
   font-weight: normal;
   margin-top: 10px;
   font-size: $fontSize-small;
@@ -138,12 +137,12 @@
 }
 
 @mixin post-department {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-small;
   text-transform: uppercase;
 }
 
 @mixin post-meta {
-  @include font-cousine;
+  @include font-secondary;
   font-size: $fontSize-small;
 }

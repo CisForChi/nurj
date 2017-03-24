@@ -88,7 +88,7 @@
   z-index: -1;
 
   .header-navList {
-    @include font-cousine;
+    @include font-secondary;
     li a {
       text-decoration: none;
       line-height: 3rem;
@@ -134,7 +134,7 @@
 }
 
 .header label[for="is-open"] {
-  @include font-cousine;
+  @include font-secondary;
   position: relative;
   float: right;
   z-index: 4;

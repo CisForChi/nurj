@@ -90,7 +90,7 @@
 .post .post-lede {
   position: relative;
   font-weight: 300;
-  @include font-noe;
+  @include font-primary;
   font-size: $fontSize-large;
   line-height: $lineHeight-larger;
   margin-top: 10px;
