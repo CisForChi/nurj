@@ -149,9 +149,6 @@ figure {
   100% {
     opacity: 0; } }
 
-html {
-  -webkit-font-smoothing: antialiased; }
-
 .container {
   width: 100%; }
 
@@ -527,6 +524,7 @@ a.link:hover {
       display: none; } }
 
 .footer-container {
+  -webkit-font-smoothing: antialiased;
   background-color: #111111;
   padding: 40px 20px;
   color: #fbfbfb;
