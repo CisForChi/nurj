@@ -37,8 +37,10 @@ block body
                 p
                   != item.getText('faculty-advisor')
         div.meta-publishDate.js-detect-collision
+          p Published On
           != thesis.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         if thesis.getText('thesis.published')
+          p Originally Published
           div.meta-published
             != thesis.getText('thesis.published')
         if thesis.getText('thesis.type')

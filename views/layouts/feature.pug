@@ -1,0 +1,61 @@
+doctype html(lang='en')
+
+head
+  title
+    !=feature.getText('feature.subject')
+  link(rel="stylesheet", href="/stylesheets/layouts/feature.css")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  // Required for Previews and Experiments
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+  script
+    = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+  script(src="//static.cdn.prismic.io/prismic.min.js")
+  script(src="/javascript/vendors/highlight.min.js")
+
+block body
+  include ../components/header.pug
+  section.container
+    article.feature.content
+      div.headline
+        div.title.js-detect-collision
+          != feature.get('feature.subject').asHtml()
+        if feature.getText('feature.subtitle')
+          div.subtitle.js-detect-collision
+            != feature.get('feature.subtitle').asHtml()
+      div.meta
+        div.meta-author.js-detect-collision
+          p Interviewed By
+          != feature.getText('feature.author')
+        div.meta-publishDate.js-detect-collision
+          p Published On
+          != feature.getDate('feature.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        if feature.getText('feature.published')
+          p Originally Published
+          div.meta-published
+            != feature.getText('feature.published')
+      div.body
+        if feature.getGroup('feature.hero-image')
+          each hero in feature.getGroup('feature.hero-image').toArray()
+            figure.hero.js-detect-collision
+              img(src=hero.getImage('image').url)
+              if hero.get('attribution')
+                cite.hero-attribution !{hero.get('attribution').asHtml()}
+              if hero.get('caption')
+                figcaption.hero-caption !{hero.get('caption').asHtml()}
+
+        for slice in feature.getSliceZone('feature.body').slices
+          case slice.sliceType
+            when 'copy'
+              div.feature-copy !{slice.value.asHtml()}
+            when 'image-with-caption'
+              figure.figure.js-detect-collision
+                each imageWithCaption in slice.value.toArray()
+                  img(src=imageWithCaption.getImage('figure').url)
+                  if imageWithCaption.get('attribution')
+                    cite.figure-attribution !{imageWithCaption.get('attribution').asText()}
+                  if imageWithCaption.get('caption')
+                    figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
+
+  include ../components/footer.pug
+script(src="/javascript/script.js")

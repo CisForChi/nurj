@@ -118,6 +118,21 @@ app.get('/thesis/:uid', function(req, res) {
    });
 });
 
+app.get('/feature/:uid', function(req, res) {
+   var uid = req.params.uid
+   api(req, res).then(function(api) {
+       return api.getByUID('feature', uid)
+   }).then(function(feature) {
+     if (feature) {
+       res.render('layouts/feature', {
+           feature: feature
+       });
+     } else {
+       handleError({status: 404}, req, res)
+     }
+   });
+});
+
 app.get('/:uid', function(req, res) {
   var uid = req.params.uid
 

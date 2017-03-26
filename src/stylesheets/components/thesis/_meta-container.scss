@@ -1,4 +1,6 @@
 .meta {
+  @include text-sidebar;
+
   width: 100%;
   padding-left: 10%;
   vertical-align: top;
@@ -12,9 +14,14 @@
     float: left;
   }
 
+  p {
+    margin: 0;
+  }
+
   div {
     display: inline-block;
     width: 50%;
+    margin-bottom: 20px;
 
     @include past($break-small) {
       display: block;
@@ -37,7 +44,6 @@
 }
 
 .meta-advisor {
-  @include text-sidebar;
   display: inline-block;
   margin-bottom: 10px;
   width: 50%;
@@ -49,34 +55,4 @@
   p {
     margin: 0;
   }
-}
-
-.meta-publishDate {
-  &:before {
-    content: "Published On";
-    display: block;
-  }
-
-  @include text-sidebar;
-  margin-bottom: 20px;
-}
-
-.meta-published {
-  &:before {
-    content: "Originally Published";
-    display: block;
-  }
-
-  @include text-sidebar;
-  margin-bottom: 20px;
-}
-
-.meta-type {
-  &:before {
-    content: "";
-    display: block;
-  }
-
-  @include text-sidebar;
-  margin-bottom: 20px;
 }

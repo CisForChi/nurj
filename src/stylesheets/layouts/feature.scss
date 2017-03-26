@@ -1,0 +1,35 @@
+@import "../_base";
+@import "../components/thesis/_meta-container";
+@import "../components/feature/_copy";
+@import "../components/_header";
+@import "../components/_footer";
+@import "../components/_arrow";
+
+.feature {
+  padding-top: 100px;
+
+  @include past($break-medium) {
+    padding-top: 225px;
+  }
+}
+
+.headline {
+  margin-bottom: 20px;
+
+  @include past($break-small) {
+    display: inline-block;
+    width: $body-width;
+    float: right;
+    margin-bottom: 40px;
+  }
+}
+
+.pullquote {
+  @include text-pullquote;
+  margin-left: 0;
+  display: inline-block;
+
+  @include past($break-medium) {
+    max-width: 600px;
+  }
+}

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -305,101 +304,69 @@ a.link:hover {
       .hero .hero-caption {
         width: 50%; } }
 
-.post {
-  margin-bottom: 20px; }
-  .post:not(:first-child):before {
-    content: "";
-    margin-bottom: 20px;
-    height: 1px;
-    background-color: #95989A;
-    display: block; }
-  @media screen and (min-width: 480px) {
-    .post {
-      padding: 20px;
-      box-sizing: border-box;
-      width: 50%; }
-      .post:not(:first-child):before {
-        display: none; } }
-  @media screen and (min-width: 768px) {
-    .post {
-      box-sizing: content-box; }
-      .post.post-sm {
-        width: 33%; }
-      .post.post-lg {
-        width: 80%; }
-        .post.post-lg .post-department {
-          width: 30%;
-          padding-left: 20px; }
-        .post.post-lg .post-heroLink {
-          width: 60%;
-          float: left; }
-        .post.post-lg img {
-          max-width: 100%;
-          float: left; }
-        .post.post-lg .post-info {
-          display: inline-block;
-          width: 40%;
-          padding-left: 20px; }
-        .post.post-lg.post-reversed {
-          text-align: right; }
-          .post.post-lg.post-reversed .post-heroLink {
-            float: right; }
-          .post.post-lg.post-reversed .post-info,
-          .post.post-lg.post-reversed .post-department {
-            padding-right: 20px;
-            padding-left: 0; } }
-
-.post .post-heroLink {
-  display: inline-block; }
-
-.post .post-hero {
+.meta {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
+  line-height: 1.25rem;
   width: 100%;
-  margin: 5px 0; }
-
-.post .post-title {
-  font-family: "Noe Display", serif;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 0;
-  font-size: 1.999rem;
-  line-height: 1.999rem; }
-  @media screen and (min-width: 992px) {
-    .post .post-title {
-      font-size: 2.827rem;
-      line-height: 2.827rem; } }
-  .post .post-title a {
-    text-decoration: none; }
-
-.post .post-subtitle {
-  font-family: "Cousine", "Menlo", monospace;
-  font-weight: normal;
-  margin-top: 10px;
-  font-size: 0.707rem;
-  line-height: 1.25rem; }
-
-.post .post-lede {
-  position: relative;
-  font-weight: 300;
-  font-family: "Noe Display", serif;
-  font-size: 1.414rem;
-  line-height: 1.999rem;
-  margin-top: 10px; }
-  .post .post-lede a {
-    text-decoration: none; }
-  .post .post-lede:before {
-    content: "“";
-    position: absolute;
-    left: -10px; }
-
-.post .post-department {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.707rem;
-  text-transform: uppercase;
+  padding-left: 10%;
+  vertical-align: top;
   display: inline-block; }
+  @media screen and (min-width: 480px) {
+    .meta {
+      padding-left: 0;
+      padding-right: 10px;
+      width: 25%;
+      display: inline-block;
+      float: left; } }
+  .meta p {
+    margin: 0; }
+  .meta div {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 20px; }
+    @media screen and (min-width: 480px) {
+      .meta div {
+        display: block;
+        width: 100%; } }
 
-.post .post-meta {
-  font-family: "Cousine", "Menlo", monospace;
-  font-size: 0.707rem; }
+.meta-advisors {
+  margin-bottom: 10px;
+  margin-top: 0; }
+  .meta-advisors:after {
+    content: "";
+    border-bottom: 0.5px solid #111111;
+    display: block;
+    width: 30%;
+    min-width: 60px; }
+
+.meta-advisor {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 50%; }
+  @media screen and (min-width: 480px) {
+    .meta-advisor {
+      width: 100%; } }
+  .meta-advisor p {
+    margin: 0; }
+
+.feature-copy {
+  display: inline-block;
+  width: 100%; }
+  .feature-copy section[data-field="copy"],
+  .feature-copy section[data-field="question"],
+  .feature-copy section[data-field="answer"] {
+    width: 95%;
+    float: right; }
+    @media screen and (min-width: 480px) {
+      .feature-copy section[data-field="copy"],
+      .feature-copy section[data-field="question"],
+      .feature-copy section[data-field="answer"] {
+        width: 75%; }
+        .feature-copy section[data-field="copy"] p,
+        .feature-copy section[data-field="question"] p,
+        .feature-copy section[data-field="answer"] p {
+          margin-top: 0; } }
 
 .header {
   width: 100%;
@@ -601,47 +568,39 @@ a.link:hover {
 .arrow-polygon {
   fill: #861FFC; }
 
-.splash {
-  background-color: #111111;
-  height: 100vh;
+.feature {
   padding-top: 100px; }
+  @media screen and (min-width: 768px) {
+    .feature {
+      padding-top: 225px; } }
 
-.splash-link {
-  font-family: "Cousine", "Menlo", monospace;
-  color: #fbfbfb;
-  position: absolute;
-  text-decoration: none; }
-
-.splash-arrow {
-  transform: rotate(90deg);
-  width: 20px;
-  position: absolute;
-  right: -40px;
-  top: -10px; }
-  .splash-arrow polygon {
-    fill: #fbfbfb; }
-
-.features {
-  width: 80%;
-  padding-top: 50px;
-  padding-left: 15%; }
-
-.feature-department {
-  font-family: "Noe Display", serif;
-  text-decoration: none;
-  font-size: 1.999rem;
-  line-height: 1.999rem;
-  color: #fbfbfb;
-  display: block;
+.headline {
   margin-bottom: 20px; }
-
-.feed {
-  width: 100%;
-  padding: 0 20px; }
   @media screen and (min-width: 480px) {
-    .feed {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0 8%; } }
+    .headline {
+      display: inline-block;
+      width: 75%;
+      float: right;
+      margin-bottom: 40px; } }
+
+.pullquote {
+  font-family: "Noe Display", serif;
+  font-weight: 700;
+  font-size: 1.414rem;
+  margin-left: 0;
+  display: inline-block; }
+  .pullquote:before {
+    content: "";
+    display: block;
+    width: 30%;
+    max-width: 200px;
+    height: 5px;
+    background-color: #111111;
+    margin-bottom: 20px; }
+  @media screen and (min-width: 992px) {
+    .pullquote {
+      font-size: 1.999rem;
+      line-height: 2.827rem; } }
+  @media screen and (min-width: 768px) {
+    .pullquote {
+      max-width: 600px; } }

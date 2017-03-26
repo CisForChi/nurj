@@ -1,0 +1,19 @@
+.feature-copy {
+  display: inline-block;
+  width: 100%;
+
+  section[data-field="copy"],
+  section[data-field="question"],
+  section[data-field="answer"] {
+    width: 95%;
+    float: right;
+
+    @include past($break-small) {
+      width: $body-width;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}
