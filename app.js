@@ -3,6 +3,7 @@ var app = require('./config');
 var PORT = app.get('port');
 var PConfig = require('./prismic-configuration');
 var request = require('request');
+var injectCitations = require('./util/injectCitations')
 
 function handleError(err, req, res) {
   if (err.status == 404) {
@@ -107,6 +108,7 @@ app.get('/thesis/:uid', function(req, res) {
        return api.getByUID('thesis', uid)
    }).then(function(thesis) {
      if (thesis) {
+       injectCitations(thesis)
        res.render('layouts/thesis', {
            thesis: thesis
        });

@@ -47,7 +47,7 @@
   }
 }
 
-a[href^="http://["] {
+a[href^="["] {
   @include text-superscript;
   pointer-events: none;
   line-height: 0;

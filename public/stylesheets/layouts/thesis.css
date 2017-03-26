@@ -709,7 +709,7 @@ a.link:hover {
     .pullquote {
       max-width: 600px; } }
 
-a[href^="http://["] {
+a[href^="["] {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.354rem;
   text-decoration: none;
