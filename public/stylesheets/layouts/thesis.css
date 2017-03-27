@@ -325,7 +325,8 @@ a.link:hover {
   .meta div {
     display: inline-block;
     width: 50%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding-right: 10px; }
     @media screen and (min-width: 480px) {
       .meta div {
         display: block;
@@ -634,10 +635,10 @@ a.link:hover {
   fill: #861FFC; }
 
 .thesis {
-  padding-top: 150px; }
-  @media screen and (min-width: 480px) {
+  padding-top: 125px; }
+  @media screen and (min-width: 768px) {
     .thesis {
-      padding-top: 175px; } }
+      padding-top: 220px; } }
 
 .headline {
   margin-bottom: 20px; }
@@ -651,7 +652,8 @@ a.link:hover {
 .department {
   font-family: "Cousine", "Menlo", monospace;
   text-transform: uppercase;
-  font-size: 0.707rem; }
+  font-size: 0.707rem;
+  margin-bottom: 10px; }
 
 .thesis-author {
   font-family: "Noe Display", serif;

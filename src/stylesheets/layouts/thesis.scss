@@ -1,5 +1,5 @@
 @import "../_base";
-@import "../components/thesis/_meta-container";
+@import "../components/common/_meta-container";
 @import "../components/thesis/_copy";
 @import "../components/thesis/_bio-container";
 @import "../components/_header";
@@ -7,10 +7,10 @@
 @import "../components/_arrow";
 
 .thesis {
-  padding-top: 150px;
+  padding-top: 125px;
 
-  @include past($break-small) {
-    padding-top: 175px;
+  @include past($break-medium) {
+    padding-top: 220px;
   }
 }
 
@@ -27,6 +27,7 @@
 
 .department {
   @include text-folio;
+  margin-bottom: 10px;
 }
 
 .thesis-author {

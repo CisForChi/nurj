@@ -30,7 +30,7 @@ function hideHeaderOnCollision() {
 
   var colliding = false
   for (var el of $('.js-detect-collision')) {
-    if (collide($('.header-nav'), $(el), 20)) {
+    if (collide($('.header-nav'), $(el), 0)) {
       console.log(el);
       colliding = true
       break

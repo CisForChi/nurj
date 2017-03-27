@@ -18,30 +18,30 @@ block body
   section.container
     article.thesis.content
       div.headline
-        div.department.js-detect-collision
+        div.department
           !=thesis.getText('thesis.department')
         each item in thesis.getGroup('thesis.byline').toArray()
-          div.thesis-author.js-detect-collision
+          div.thesis-author
             !=item.getText('author')
-        div.title.js-detect-collision
+        div.title
           !=thesis.get('thesis.title').asHtml()
         if thesis.getText('thesis.subtitle')
-          div.subtitle.js-detect-collision
+          div.subtitle
             !=thesis.get('thesis.subtitle').asHtml()
-      div.meta
-        ul.meta-advisors
-          if thesis.getGroup('thesis.advisors')
+      div.meta.js-detect-collision
+        if thesis.getGroup('thesis.advisors')
+          ul.meta-advisors
             each item in thesis.getGroup('thesis.advisors').toArray()
               li.meta-advisor
                 p Faculty Advisor
                 p
                   != item.getText('faculty-advisor')
-        div.meta-publishDate.js-detect-collision
+        div.meta-publishDate
           p Published On
           != thesis.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         if thesis.getText('thesis.published')
-          p Originally Published
           div.meta-published
+            p Originally Published
             != thesis.getText('thesis.published')
         if thesis.getText('thesis.type')
           div.meta-type

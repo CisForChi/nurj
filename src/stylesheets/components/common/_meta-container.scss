@@ -22,6 +22,7 @@
     display: inline-block;
     width: 50%;
     margin-bottom: 20px;
+    padding-right: 10px;
 
     @include past($break-small) {
       display: block;
