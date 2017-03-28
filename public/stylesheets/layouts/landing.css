@@ -651,12 +651,16 @@ a.link:hover {
 
 .splash {
   background-color: #111111;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 200px;
   margin-bottom: 50px;
   background-image: url("/assets/images/upsidedown-johnlocke.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom; }
+  background-position: 25% 20%; }
+  @media screen and (min-width: 768px) {
+    .splash {
+      background-position: bottom; } }
 
 .splash-link {
   font-family: "Cousine", "Menlo", monospace;
@@ -674,9 +678,13 @@ a.link:hover {
     fill: #fbfbfb; }
 
 .features {
-  width: 40%;
-  margin-left: 50%;
-  padding-top: 50px; }
+  padding-top: 50px;
+  width: 80%;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .features {
+      width: 40%;
+      margin-left: 50%; } }
 
 .feature-department {
   font-family: "Noe Display", serif;

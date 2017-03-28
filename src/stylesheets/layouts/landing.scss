@@ -6,12 +6,18 @@
 
 .splash {
   background-color: $color-black;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 200px;
   margin-bottom: 50px;
   background-image: url("/assets/images/upsidedown-johnlocke.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+
+  background-position: 25% 20%;
+
+  @include past($break-medium) {
+    background-position: bottom;
+  }
 }
 
 .splash-link {
@@ -34,9 +40,14 @@
 }
 
 .features {
-  width: 40%;
-  margin-left: 50%;
   padding-top: 50px;
+  width: 80%;
+  margin: 0 auto;
+
+  @include past($break-medium) {
+    width: 40%;
+    margin-left: 50%;
+  }
 }
 
 .feature-department {
