@@ -15,7 +15,7 @@ head
 block body
   include ../components/header.pug
   section.container
-    div.splash
+    div.splash.js-invertHeaderColor
       div.features
         each feature in features
           a(href=ctx.linkResolver(feature) class="feature-department")
@@ -55,3 +55,4 @@ block body
                 span
                   != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
   include ../components/footer.pug
+script(src="/javascript/landing.js")

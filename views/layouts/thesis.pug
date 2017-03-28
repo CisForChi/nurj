@@ -28,7 +28,7 @@ block body
         if thesis.getText('thesis.subtitle')
           div.subtitle
             !=thesis.get('thesis.subtitle').asHtml()
-      div.meta.js-detect-collision
+      div.meta.js-detectCollision
         if thesis.getGroup('thesis.advisors')
           ul.meta-advisors
             each item in thesis.getGroup('thesis.advisors').toArray()
@@ -49,7 +49,7 @@ block body
       div.body
         if thesis.getGroup('thesis.hero-image')
           each hero in thesis.getGroup('thesis.hero-image').toArray()
-            figure.hero.js-detect-collision
+            figure.hero.js-detectCollision
               img(src=hero.getImage('image').url)
               if hero.get('attribution')
                 cite.hero-attribution !{hero.get('attribution').asHtml()}
@@ -63,9 +63,9 @@ block body
             when 'copy'
               div.thesis-copy !{slice.value.asHtml()}
             when 'pullquote'
-              blockquote.pullquote.js-detect-collision !{slice.value.asHtml()}
+              blockquote.pullquote.js-detectCollision !{slice.value.asHtml()}
             when 'image-with-caption'
-              figure.figure.js-detect-collision
+              figure.figure.js-detectCollision
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')
@@ -73,7 +73,7 @@ block body
                   if imageWithCaption.get('caption')
                     figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
       each item in thesis.getGroup('thesis.byline').toArray()
-        div.bio.js-detect-collision
+        div.bio.js-detectCollision
           div.bio-headshot
             if item.getImage('headshot')
               div
@@ -90,7 +90,7 @@ block body
               p
                 !=item.getText('acknowledgements')
       if thesis.getText('thesis.bibliography')
-        div.bibliography.js-detect-collision
+        div.bibliography.js-detectCollision
           strong BIBLIOGRAPHY
           !=thesis.get('thesis.bibliography').asHtml()
 

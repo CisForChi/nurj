@@ -18,16 +18,16 @@ block body
   section.container
     article.feature.content
       div.headline
-        div.title.js-detect-collision
+        div.title.js-detectCollision
           != feature.get('feature.subject').asHtml()
         if feature.getText('feature.subtitle')
-          div.subtitle.js-detect-collision
+          div.subtitle.js-detectCollision
             != feature.get('feature.subtitle').asHtml()
       div.meta
-        div.meta-author.js-detect-collision
+        div.meta-author.js-detectCollision
           p Interviewed By
           != feature.getText('feature.author')
-        div.meta-publishDate.js-detect-collision
+        div.meta-publishDate.js-detectCollision
           p Published On
           != feature.getDate('feature.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         if feature.getText('feature.published')
@@ -37,7 +37,7 @@ block body
       div.body
         if feature.getGroup('feature.hero-image')
           each hero in feature.getGroup('feature.hero-image').toArray()
-            figure.hero.js-detect-collision
+            figure.hero.js-detectCollision
               img(src=hero.getImage('image').url)
               if hero.get('attribution')
                 cite.hero-attribution !{hero.get('attribution').asHtml()}
@@ -49,7 +49,7 @@ block body
             when 'copy'
               div.feature-copy !{slice.value.asHtml()}
             when 'image-with-caption'
-              figure.figure.js-detect-collision
+              figure.figure.js-detectCollision
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')

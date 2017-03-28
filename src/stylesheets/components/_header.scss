@@ -61,9 +61,15 @@
 
 .header .header-masthead {
   display: inline-block;
+  background-image: url("/assets/images/masthead.svg");
+  width: 100px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @include past($break-medium) {
     display: block;
+    width: 150px;
   }
 
   img {
@@ -76,8 +82,8 @@
 }
 
 .header .header-nav {
-  background-color: rgba(241, 241, 241, 0);
   @include transition(.3s all ease);
+  background-color: rgba(241, 241, 241, 0);
   position: fixed;
   top: 0;
   left: 100%;
@@ -147,5 +153,18 @@
 
   @include past($break-medium) {
     display: none;
+  }
+}
+
+.header.inverted {
+  @include past($break-medium) {
+    .header-navList li a {
+      -webkit-font-smoothing: antialiased;
+      color: $color-white;
+    }
+
+    .header-masthead {
+      background-image: url("/assets/images/masthead-white.svg");
+    }
   }
 }

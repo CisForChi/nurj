@@ -485,10 +485,16 @@ a.link:hover {
     opacity: 1; } }
 
 .header .header-masthead {
-  display: inline-block; }
+  display: inline-block;
+  background-image: url("/assets/images/masthead.svg");
+  width: 100px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat; }
   @media screen and (min-width: 768px) {
     .header .header-masthead {
-      display: block; } }
+      display: block;
+      width: 150px; } }
   .header .header-masthead img {
     width: 100px; }
     @media screen and (min-width: 768px) {
@@ -496,11 +502,11 @@ a.link:hover {
         width: 150px; } }
 
 .header .header-nav {
-  background-color: rgba(241, 241, 241, 0);
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  background-color: rgba(241, 241, 241, 0);
   position: fixed;
   top: 0;
   left: 100%;
@@ -555,6 +561,13 @@ a.link:hover {
     .header label[for="is-open"] {
       display: none; } }
 
+@media screen and (min-width: 768px) {
+  .header.inverted .header-navList li a {
+    -webkit-font-smoothing: antialiased;
+    color: #fbfbfb; }
+  .header.inverted .header-masthead {
+    background-image: url("/assets/images/masthead-white.svg"); } }
+
 .footer-container {
   -webkit-font-smoothing: antialiased;
   background-color: #111111;
@@ -566,6 +579,9 @@ a.link:hover {
   .footer-container .about, .footer-container .links {
     vertical-align: top;
     display: inline-block; }
+  @media screen and (min-width: 768px) {
+    .footer-container {
+      padding: 40px; } }
   @media screen and (min-width: 992px) {
     .footer-container .footer {
       margin-left: auto;
@@ -636,7 +652,11 @@ a.link:hover {
 .splash {
   background-color: #111111;
   padding: 100px 0;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  background-image: url("/assets/images/upsidedown-johnlocke.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom; }
 
 .splash-link {
   font-family: "Cousine", "Menlo", monospace;
@@ -654,9 +674,9 @@ a.link:hover {
     fill: #fbfbfb; }
 
 .features {
-  width: 80%;
-  padding-top: 50px;
-  padding-left: 15%; }
+  width: 40%;
+  margin-left: 50%;
+  padding-top: 50px; }
 
 .feature-department {
   font-family: "Noe Display", serif;
@@ -669,11 +689,13 @@ a.link:hover {
 
 .feed {
   width: 100%;
-  padding: 0 20px; }
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 10%; }
   @media screen and (min-width: 480px) {
     .feed {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
-      padding: 0 8%; } }
+      padding: 0; } }

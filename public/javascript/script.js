@@ -3,7 +3,7 @@ $(window).scroll(fixArrowInBody)
 
 var lastScroll = 0;
 var metaBottom = $('.body').offset().top
-$('section[data-field="citation"]').addClass('js-detect-collision')
+$('section[data-field="citation"]').addClass('js-detectCollision')
 
 $('.arrow').click(function() {
   $('body').animate({scrollTop: 0}, '300')
@@ -29,9 +29,8 @@ function hideHeaderOnCollision() {
   }
 
   var colliding = false
-  for (var el of $('.js-detect-collision')) {
+  for (var el of $('.js-detectCollision')) {
     if (collide($('.header-nav'), $(el), 0)) {
-      console.log(el);
       colliding = true
       break
     }

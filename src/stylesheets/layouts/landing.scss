@@ -8,6 +8,10 @@
   background-color: $color-black;
   padding: 100px 0;
   margin-bottom: 50px;
+  background-image: url("/assets/images/upsidedown-johnlocke.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .splash-link {
@@ -30,9 +34,9 @@
 }
 
 .features {
-  width: 80%;
+  width: 40%;
+  margin-left: 50%;
   padding-top: 50px;
-  padding-left: 15%;
 }
 
 .feature-department {
@@ -47,13 +51,15 @@
 
 .feed {
   width: 100%;
-  padding: 0 20px;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 0 10%;
 
   @include past($break-small) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 0 8%;
+    padding: 0;
   }
 }
