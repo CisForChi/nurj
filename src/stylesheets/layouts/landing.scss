@@ -9,13 +9,19 @@
   padding-top: 100px;
   padding-bottom: 200px;
   margin-bottom: 50px;
-  background-image: url("/assets/images/upsidedown-johnlocke.png");
+  background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+      ),
+    url("/assets/images/upsidedown-johnlocke.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
   background-position: 25% 20%;
 
   @include past($break-medium) {
+    background: url("/assets/images/upsidedown-johnlocke.jpg");
+    background-size: cover;
     background-position: bottom;
   }
 }
