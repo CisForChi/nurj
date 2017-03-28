@@ -69,7 +69,7 @@ block body
                 each imageWithCaption in slice.value.toArray()
                   img(src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')
-                    cite.figure-attribution !{imageWithCaption.get('attribution').asText()}
+                    cite.figure-attribution !{imageWithCaption.get('attribution').asHtml()}
                   if imageWithCaption.get('caption')
                     figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
       each item in thesis.getGroup('thesis.byline').toArray()

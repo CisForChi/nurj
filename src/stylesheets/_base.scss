@@ -140,14 +140,22 @@ a.link:hover {
 
   .figure-attribution,
   .hero-attribution {
+    p, h1, h2, h3, h4, h5, h6, span {
+      margin: 0;
+    }
+
     @include text-attribution;
-    float: right;
-    transform-origin: 0% 0%;
-    -ms-transform-origin: 0% 0%;
-    -webkit-transform-origin: 0% 0%;
-    transform: translateX(100%) rotate(-90deg);
-    -ms-transform: translateX(100%) rotate(-90deg);
-    -webkit-transform: translateX(100%) rotate(-90deg);
+    margin-top: 10px;
+    display: inline-block;
+    color: $color-grey;
+    vertical-align: top;
+
+    @include past($break-small) {
+      margin-top: 12px;
+      padding-right: 10px;
+      width: $gutter-width;
+      float: left;
+    }
   }
 
   .figure-caption,

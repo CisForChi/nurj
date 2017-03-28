@@ -268,20 +268,52 @@ a.link:hover {
   .hero .hero-attribution {
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
-    line-height: 0;
-    float: right;
-    transform-origin: 0% 0%;
-    -ms-transform-origin: 0% 0%;
-    -webkit-transform-origin: 0% 0%;
-    transform: translateX(100%) rotate(-90deg);
-    -ms-transform: translateX(100%) rotate(-90deg);
-    -webkit-transform: translateX(100%) rotate(-90deg); }
+    line-height: 0.707rem;
+    margin-top: 10px;
+    display: inline-block;
+    color: #95989A;
+    vertical-align: top; }
+    .figure .figure-attribution p, .figure .figure-attribution h1, .figure .figure-attribution h2, .figure .figure-attribution h3, .figure .figure-attribution h4, .figure .figure-attribution h5, .figure .figure-attribution h6, .figure .figure-attribution span,
+    .figure .hero-attribution p,
+    .figure .hero-attribution h1,
+    .figure .hero-attribution h2,
+    .figure .hero-attribution h3,
+    .figure .hero-attribution h4,
+    .figure .hero-attribution h5,
+    .figure .hero-attribution h6,
+    .figure .hero-attribution span,
+    .hero .figure-attribution p,
+    .hero .figure-attribution h1,
+    .hero .figure-attribution h2,
+    .hero .figure-attribution h3,
+    .hero .figure-attribution h4,
+    .hero .figure-attribution h5,
+    .hero .figure-attribution h6,
+    .hero .figure-attribution span,
+    .hero .hero-attribution p,
+    .hero .hero-attribution h1,
+    .hero .hero-attribution h2,
+    .hero .hero-attribution h3,
+    .hero .hero-attribution h4,
+    .hero .hero-attribution h5,
+    .hero .hero-attribution h6,
+    .hero .hero-attribution span {
+      margin: 0; }
     @media screen and (min-width: 480px) {
       .figure .figure-attribution,
       .figure .hero-attribution,
       .hero .figure-attribution,
       .hero .hero-attribution {
         line-height: 1.25rem; } }
+    @media screen and (min-width: 480px) {
+      .figure .figure-attribution,
+      .figure .hero-attribution,
+      .hero .figure-attribution,
+      .hero .hero-attribution {
+        margin-top: 12px;
+        padding-right: 10px;
+        width: 25%;
+        float: left; } }
   .figure .figure-caption,
   .figure .hero-caption,
   .hero .figure-caption,
@@ -603,8 +635,8 @@ a.link:hover {
 
 .splash {
   background-color: #111111;
-  height: 100vh;
-  padding-top: 100px; }
+  padding: 100px 0;
+  margin-bottom: 50px; }
 
 .splash-link {
   font-family: "Cousine", "Menlo", monospace;

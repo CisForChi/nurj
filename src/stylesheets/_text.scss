@@ -61,7 +61,7 @@
 @mixin text-attribution {
   @include font-secondary;
   font-size: $fontSize-xsmall;
-  line-height: 0;
+  line-height: $lineHeight-small;
 
   @include past($break-small) {
     line-height: $lineHeight-medium;
