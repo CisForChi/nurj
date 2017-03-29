@@ -668,3 +668,11 @@ a.link:hover {
     .page-title {
       font-size: 2.827rem;
       line-height: 2.827rem; } }
+
+.page-description {
+  font-family: "Athelas", Cambria, Times, serif;
+  font-size: 1.414rem; }
+  @media screen and (min-width: 768px) {
+    .page-description {
+      width: 80%;
+      margin-left: 5%; } }

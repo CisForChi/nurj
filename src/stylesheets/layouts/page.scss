@@ -27,3 +27,13 @@
     line-height: $lineHeight-xlarge;
   }
 }
+
+.page-description {
+  @include font-text;
+  font-size: $fontSize-large;
+
+  @include past($break-medium) {
+    width: 80%;
+    margin-left: 5%;
+  }
+}
