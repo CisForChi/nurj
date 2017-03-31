@@ -1,0 +1,23 @@
+@import "../_base";
+@import "../components/landing/_post";
+@import "../components/_header";
+@import "../components/_footer";
+@import "../components/_arrow";
+
+.query {
+  @include font-secondary;
+  font-weight: normal;
+  font-size: $fontSize-medium;
+}
+
+.results {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0 auto;
+  max-width: $max-content-width;
+
+  @include past($break-small) {
+    padding-top: 150px;
+  }
+}
