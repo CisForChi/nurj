@@ -66,22 +66,33 @@ app.get('/', function(req, res) {
         ],
         {
           orderings : '[my.thesis.last_publication_date]',
-          pageSize: 10
+          // pageSize: 10
         }
       ).then(function(responses) {
         var posts = responses.results.reverse()
         prismicApi.query(
           [
-            Prismic.Predicates.at("document.tags", ["featured"]),
+            Prismic.Predicates.at("document.type", "feature"),
           ],
           {
             orderings : '[my.thesis.last_publication_date]',
-            pageSize: 6
+            // pageSize: 10
           }
         ).then(function(responses) {
-          res.render('layouts/landing', {
-            features: responses.results,
-            posts
+          posts = posts.concat(responses.results.reverse())
+          prismicApi.query(
+            [
+              Prismic.Predicates.at("document.tags", ["featured"]),
+            ],
+            {
+              orderings : '[my.thesis.last_publication_date]',
+              pageSize: 6
+            }
+          ).then(function(responses) {
+            res.render('layouts/landing', {
+              features: responses.results,
+              posts
+            })
           })
         })
       })

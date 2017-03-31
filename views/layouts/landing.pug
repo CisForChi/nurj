@@ -54,5 +54,16 @@ block body
                     != item.getText("author") + " | "
                 span
                   != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        if post.type == "feature"
+          div(class="post post-sm ")
+            div.post-info
+              h2.post-title
+                a(href=ctx.linkResolver(post))
+                  != post.getText("feature.subject")
+              h3.post-subtitle
+                != post.getText("feature.subtitle")
+              p.post-meta
+                span
+                  != post.getText("feature.author")
   include ../components/footer.pug
 script(src="/javascript/landing.js")
