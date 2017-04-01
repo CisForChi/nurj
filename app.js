@@ -79,7 +79,7 @@ app.get('/', function(req, res) {
             // pageSize: 10
           }
         ).then(function(responses) {
-          posts = posts.concat(responses.results.reverse())
+          var posts2 = posts.concat(responses.results.reverse())
           prismicApi.query(
             [
               Prismic.Predicates.at("document.tags", ["featured"]),
@@ -91,7 +91,7 @@ app.get('/', function(req, res) {
           ).then(function(responses) {
             res.render('layouts/landing', {
               features: responses.results,
-              posts
+              posts: posts2
             })
           })
         })

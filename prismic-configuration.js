@@ -9,11 +9,12 @@ module.exports = {
   // clientId: 'xxxxxx',
   // clientSecret: 'xxxxxx',
   linkResolver: function(doc, ctx) {
-    if (doc.type == 'blog') {
-      return '/blog';
-    }
     if (doc.type == 'thesis') {
       return '/thesis/' + encodeURIComponent(doc.uid);
+    }
+
+    if (doc.type == 'feature') {
+      return '/feature/' + encodeURIComponent(doc.uid);
     }
     return '/';
   }

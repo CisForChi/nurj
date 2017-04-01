@@ -55,11 +55,11 @@ block body
                 span
                   != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         if post.type == "feature"
-          div(class="post post-sm ")
+          div(class="post post-sm")
             div.post-info
               h2.post-title
                 a(href=ctx.linkResolver(post))
-                  != post.getText("feature.subject")
+                  != post.getText("feature.title")
               h3.post-subtitle
                 != post.getText("feature.subtitle")
               p.post-meta

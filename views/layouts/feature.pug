@@ -19,7 +19,7 @@ block body
     article.feature.content
       div.headline
         div.title.js-detectCollision
-          != feature.get('feature.subject').asHtml()
+          != feature.get('feature.title').asHtml()
         if feature.getText('feature.subtitle')
           div.subtitle.js-detectCollision
             != feature.get('feature.subtitle').asHtml()
