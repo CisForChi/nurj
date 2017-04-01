@@ -56,6 +56,7 @@ block body
                   != post.getDate('thesis.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
         if post.type == "feature"
           div(class="post post-sm")
+            a.post-department Feature
             div.post-info
               h2.post-title
                 a(href=ctx.linkResolver(post))
@@ -64,6 +65,8 @@ block body
                 != post.getText("feature.subtitle")
               p.post-meta
                 span
-                  != post.getText("feature.author")
+                  != post.getText("feature.author") + " | "
+                span
+                  != post.getDate('feature.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
   include ../components/footer.pug
 script(src="/javascript/landing.js")

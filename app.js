@@ -54,7 +54,6 @@ function api(req, res) {
 
 app.get('/', function(req, res) {
   var prismicApi
-
   api(req, res).then(api => {
     prismicApi = api
     return prismicApi.getSingle('landing')
@@ -66,7 +65,7 @@ app.get('/', function(req, res) {
         ],
         {
           orderings : '[my.thesis.last_publication_date]',
-          // pageSize: 10
+          pageSize: 5
         }
       ).then(function(responses) {
         var posts = responses.results.reverse()
@@ -75,11 +74,11 @@ app.get('/', function(req, res) {
             Prismic.Predicates.at("document.type", "feature"),
           ],
           {
-            orderings : '[my.thesis.last_publication_date]',
-            // pageSize: 10
+            orderings : '[my.feature.last_publication_date]',
+            pageSize: 5
           }
         ).then(function(responses) {
-          var posts2 = posts.concat(responses.results.reverse())
+          posts = posts.concat(responses.results.reverse())
           prismicApi.query(
             [
               Prismic.Predicates.at("document.tags", ["featured"]),
@@ -91,7 +90,7 @@ app.get('/', function(req, res) {
           ).then(function(responses) {
             res.render('layouts/landing', {
               features: responses.results,
-              posts: posts2
+              posts: posts
             })
           })
         })
