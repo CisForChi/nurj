@@ -4,7 +4,6 @@ var PORT = app.get('port');
 var PConfig = require('./prismic-configuration');
 var request = require('request');
 var injectCitations = require('./util/injectCitations')
-var isAlphaNumeric = require('./util/isAlphaNumeric')
 
 function handleError(err, req, res) {
   if (err.status == 404) {
@@ -162,8 +161,6 @@ app.get('/index', function(req, res) {
 
         sortedResults[firstChar].push(result)
       }
-
-      console.log(sortedResults);
 
       res.render('layouts/index', {
         results: sortedResults
