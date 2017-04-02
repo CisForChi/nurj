@@ -4,6 +4,7 @@ var PORT = app.get('port');
 var PConfig = require('./prismic-configuration');
 var request = require('request');
 var injectCitations = require('./util/injectCitations')
+var isAlphaNumeric = require('./util/isAlphaNumeric')
 
 function handleError(err, req, res) {
   if (err.status == 404) {
@@ -143,19 +144,31 @@ app.get('/feature/:uid', function(req, res) {
    });
 });
 
-app.get('/:uid', function(req, res) {
-  var uid = req.params.uid
-
+app.get('/index', function(req, res) {
   api(req, res).then(api => {
-    return api.getByUID('page', uid)
-  }).then(function(page) {
-    if (page) {
-      res.render('layouts/page', {
-        page: page
+    api.query(
+      Prismic.Predicates.at('document.type', 'thesis'),
+      { orderings: '[my.thesis.title]'}
+    ).then(function (response) {
+      var sortedResults = []
+
+      for (var result of response.results) {
+        var i = 0
+        var firstChar = result.getText('thesis.title')[i].toUpperCase()
+
+        if (sortedResults[firstChar] == undefined) {
+          sortedResults[firstChar] = []
+        }
+
+        sortedResults[firstChar].push(result)
+      }
+
+      console.log(sortedResults);
+
+      res.render('layouts/index', {
+        results: sortedResults
       })
-    } else {
-      handleError({status: 404}, req, res)
-    }
+    })
   })
 })
 
@@ -178,6 +191,23 @@ app.get('/search/:keyword', function(req, res) {
       })
     } else {
       handleError(404, req, res)
+    }
+  })
+})
+
+
+app.get('/:uid', function(req, res) {
+  var uid = req.params.uid
+
+  api(req, res).then(api => {
+    return api.getByUID('page', uid)
+  }).then(function(page) {
+    if (page) {
+      res.render('layouts/page', {
+        page: page
+      })
+    } else {
+      handleError({status: 404}, req, res)
     }
   })
 })

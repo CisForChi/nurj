@@ -1,0 +1,57 @@
+@import "../_base";
+@import "../components/landing/_post";
+@import "../components/_header";
+@import "../components/_footer";
+@import "../components/_arrow";
+
+.index {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0 auto;
+  max-width: $max-content-width;
+
+  @include past($break-small) {
+    padding-top: 150px;
+  }
+}
+
+.index-title {
+  @include font-primary;
+  font-weight: normal;
+}
+
+.index-letter {
+  position: relative;
+  margin-bottom: 40px;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: $color-black;
+    margin-bottom: 10px;
+  }
+}
+
+.index-key {
+  @include font-secondary;
+  position: absolute;
+  left: -20px;
+
+  @include past($break-medium) {
+    left: -50px;
+  }
+}
+
+.thesis-department,
+.thesis-title,
+.thesis-subtitle {
+  @include font-secondary;
+  font-weight: normal;
+}
+
+.thesis {
+  margin-bottom: 20px;
+}
