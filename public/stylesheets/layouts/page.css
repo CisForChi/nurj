@@ -357,6 +357,8 @@ a.link:hover {
       box-sizing: content-box; }
       .post.post-sm {
         width: 33%; }
+      .post.post-md {
+        width: 50%; }
       .post.post-lg {
         width: 80%; }
         .post.post-lg .post-department {
@@ -400,7 +402,13 @@ a.link:hover {
       font-size: 2.827rem;
       line-height: 2.827rem; } }
   .post .post-title a {
+    -moz-transition: color 0.3s 0s;
+    -o-transition: color 0.3s 0s;
+    -webkit-transition: color 0.3s 0s;
+    transition: color 0.3s 0s;
     text-decoration: none; }
+    .post .post-title a:hover {
+      color: #861FFC; }
 
 .post .post-subtitle {
   font-family: "Cousine", "Menlo", monospace;
@@ -450,7 +458,10 @@ a.link:hover {
   padding-top: 15px;
   background-color: #fffbf7;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: top .3s 0s;
+  -moz-transition: top 0.3s 0s;
+  -o-transition: top 0.3s 0s;
+  -webkit-transition: top 0.3s 0s;
+  transition: top 0.3s 0s;
   animation: fadeIn .3s 1; }
   .header.is-sticky.is-down {
     top: 0; }

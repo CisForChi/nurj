@@ -25,6 +25,10 @@
       width: 33%;
     }
 
+    &.post-md {
+      width: 50%;
+    }
+
     &.post-lg {
       width: 80%;
 
@@ -79,7 +83,12 @@
   @include post-title;
 
   a {
+    @include transition(color .3s 0s);
     text-decoration: none;
+
+    &:hover {
+      color: $color-purple;
+    }
   }
 }
 

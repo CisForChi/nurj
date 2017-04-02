@@ -31,7 +31,16 @@ block body
       each post in posts
         if post.type == "thesis"
           -
-            var size = (i % 3 == 0) && post.getGroup("thesis.hero-image") ? 'post-lg' : 'post-sm'
+            var size
+            
+            if ((i % 3 == 0) && post.getGroup("thesis.hero-image")) {
+              size = "post-lg"
+            } else if (i % 2 == 0) {
+              size = "post-md"
+            } else {
+              size = "post-sm"
+            }
+            
             var modifier = i % 6 == 0 ? 'post-reversed' : ''
             i += 1
 

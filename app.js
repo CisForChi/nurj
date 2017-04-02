@@ -18,7 +18,7 @@ function handleError(err, req, res) {
           Prismic.Predicates.at("document.type", "thesis"),
         ],
         {
-          orderings: '[my.thesis.last_publication_date]',
+          orderings: '[my.thesis.publish-date desc]',
           pageSize: 5
         }
       ).then(function(response) {
@@ -64,27 +64,27 @@ app.get('/', function(req, res) {
           Prismic.Predicates.at("document.type", "thesis"),
         ],
         {
-          orderings : '[my.thesis.last_publication_date]',
+          orderings : '[my.thesis.publish-date desc]',
           pageSize: 5
         }
       ).then(function(responses) {
-        var posts = responses.results.reverse()
+        var posts = responses.results
         prismicApi.query(
           [
             Prismic.Predicates.at("document.type", "feature"),
           ],
           {
-            orderings : '[my.feature.last_publication_date]',
+            orderings : '[my.feature.publish-date desc]',
             pageSize: 5
           }
         ).then(function(responses) {
-          posts = posts.concat(responses.results.reverse())
+          posts = posts.concat(responses.results)
           prismicApi.query(
             [
               Prismic.Predicates.at("document.tags", ["featured"]),
             ],
             {
-              orderings : '[my.thesis.last_publication_date]',
+              orderings : '[my.thesis.publish-date desc]',
               pageSize: 6
             }
           ).then(function(responses) {
