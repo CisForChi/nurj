@@ -6,31 +6,33 @@
 
 .splash {
   background-color: $color-black;
+  -webkit-font-smoothing: antialiased;
   padding-top: 100px;
-  padding-bottom: 200px;
+  height: 90vh;
   margin-bottom: 50px;
-  background:
-    linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-      ),
-    url("/assets/images/upsidedown-johnlocke.jpg");
+  background: $color-black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 20%;
 
   @include past($break-medium) {
-    background: url("/assets/images/upsidedown-johnlocke.jpg");
     background-size: cover;
     background-position: bottom;
   }
 }
 
 .splash-link {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 150px;
+}
+
+.splash-link a{
   @include font-secondary;
   color: $color-white;
-  position: absolute;
   text-decoration: none;
+  text-align: center;
 }
 
 .splash-arrow {
@@ -45,25 +47,60 @@
   }
 }
 
-.features {
-  padding-top: 50px;
-  width: 80%;
-  margin: 0 auto;
+.issue-vol {
+  @include font-primary;
+  color: $color-white;
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+  font-size: $fontSize-larger;
+  z-index: 1;
+  position: relative;
+}
 
-  @include past($break-medium) {
-    width: 40%;
-    margin-left: 50%;
-  }
+.feature-image {
+  position: absolute;
+  width: 100%;
+  top: 20vh;
+  z-index: 0;
+}
+
+.feature-image img {
+  max-height: 60vh;
+  width: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .feature-department {
+  text-transform: uppercase;
+}
+
+.feature-department,
+.feature-author {
+  @include font-secondary;
+  font-size: $fontSize-small;
+  margin: 32px 0;
+}
+
+.feature-department,
+.feature-title,
+.feature-author {
+  color: $color-white;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.feature-title {
   @include font-primary;
   text-decoration: none;
-  font-size: $fontSize-larger;
-  line-height: $lineHeight-larger;
-  color: $color-white;
+  font-size: $fontSize-xlarge;
+  line-height: $lineHeight-xlarge;
   display: block;
   margin-bottom: 20px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .feed {

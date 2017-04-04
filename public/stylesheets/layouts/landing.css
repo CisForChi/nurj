@@ -662,24 +662,30 @@ a.link:hover {
 
 .splash {
   background-color: #111111;
+  -webkit-font-smoothing: antialiased;
   padding-top: 100px;
-  padding-bottom: 200px;
+  height: 90vh;
   margin-bottom: 50px;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assets/images/upsidedown-johnlocke.jpg");
+  background: #111111;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 20%; }
   @media screen and (min-width: 768px) {
     .splash {
-      background: url("/assets/images/upsidedown-johnlocke.jpg");
       background-size: cover;
       background-position: bottom; } }
 
 .splash-link {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 150px; }
+
+.splash-link a {
   font-family: "Cousine", "Menlo", monospace;
   color: #fbfbfb;
-  position: absolute;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
 
 .splash-arrow {
   transform: rotate(90deg);
@@ -690,23 +696,54 @@ a.link:hover {
   .splash-arrow polygon {
     fill: #fbfbfb; }
 
-.features {
-  padding-top: 50px;
-  width: 80%;
-  margin: 0 auto; }
-  @media screen and (min-width: 768px) {
-    .features {
-      width: 40%;
-      margin-left: 50%; } }
+.issue-vol {
+  font-family: "Noe Display", serif;
+  color: #fbfbfb;
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.999rem;
+  z-index: 1;
+  position: relative; }
+
+.feature-image {
+  position: absolute;
+  width: 100%;
+  top: 20vh;
+  z-index: 0; }
+
+.feature-image img {
+  max-height: 60vh;
+  width: auto;
+  margin: 0 auto;
+  display: block; }
 
 .feature-department {
+  text-transform: uppercase; }
+
+.feature-department,
+.feature-author {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
+  margin: 32px 0; }
+
+.feature-department,
+.feature-title,
+.feature-author {
+  color: #fbfbfb;
+  text-align: center;
+  z-index: 1;
+  position: relative; }
+
+.feature-title {
   font-family: "Noe Display", serif;
   text-decoration: none;
-  font-size: 1.999rem;
-  line-height: 1.999rem;
-  color: #fbfbfb;
+  font-size: 2.827rem;
+  line-height: 2.827rem;
   display: block;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 50%;
+  margin: 0 auto; }
 
 .feed {
   width: 100%;

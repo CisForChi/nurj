@@ -85,7 +85,7 @@ app.get('/', function(req, res) {
             ],
             {
               orderings : '[my.thesis.publish-date desc]',
-              pageSize: 6
+              pageSize: 1
             }
           ).then(function(responses) {
             res.render('layouts/landing', {
