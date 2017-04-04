@@ -169,6 +169,35 @@ app.get('/index', function(req, res) {
   })
 })
 
+app.get('/issues/:uid', function(req, res) {
+  var uid = req.params.uid
+
+  api(req, res).then(api => {
+    return api.getByUID('issue', uid)
+  }).then(function(issue) {
+    if (issue) {
+      res.render('layouts/issue', {
+        issue: issue
+      })
+    } else {
+      handleError({status: 404}, req, res)
+    }
+  })
+})
+
+app.get('/issues', function(req, res) {
+  api(req, res).then(api => {
+    api.query(
+      Prismic.Predicates.at('document.type', 'issue'),
+      { orderings: '[my.issue.publish-date desc]'}
+    ).then(function (response) {
+      res.render('layouts/issues', {
+        results: response.results
+      })
+    })
+  })
+})
+
 app.get('/search/:keyword', function(req, res) {
   var prismicApi
   var keyword = req.params.keyword
