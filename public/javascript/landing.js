@@ -1,5 +1,6 @@
 invertHeaderOnCollision()
 $(window).scroll(invertHeaderOnCollision)
+$(".feature-title").hover(setActiveOnMouseEnter, removeActiveOnMouseLeave)
 
 function invertHeaderOnCollision() {
   var colliding = false
@@ -15,6 +16,14 @@ function invertHeaderOnCollision() {
   } else {
     $('.header').addClass('inverted')
   }
+}
+
+function setActiveOnMouseEnter(e) {
+  $(this).closest(".feature").addClass("is-active")
+}
+
+function removeActiveOnMouseLeave() {
+  $(this).closest(".feature").removeClass("is-active")
 }
 
 function collide(a, b, margin) {

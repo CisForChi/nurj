@@ -7,13 +7,14 @@
 .splash {
   background-color: $color-black;
   -webkit-font-smoothing: antialiased;
-  padding-top: 100px;
-  height: 90vh;
+  height: 95vh;
   margin-bottom: 50px;
   background: $color-black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 20%;
+  overflow-y: hidden;
+  position: relative;
 
   @include past($break-medium) {
     background-size: cover;
@@ -22,13 +23,14 @@
 }
 
 .splash-link {
-  position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 150px;
+  position: absolute;
+  bottom: 40px;
+  z-index: 2;
 }
 
-.splash-link a{
+.splash-link a {
   @include font-secondary;
   color: $color-white;
   text-decoration: none;
@@ -47,27 +49,56 @@
   }
 }
 
-.issue-vol {
+.splash-overlay {
+  @include transition(all .2s 0s);
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-black;
+  position: absolute;
+  opacity: .8;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.splash-issue {
   @include font-primary;
+  padding-top: 60px;
   color: $color-white;
   font-weight: normal;
   text-align: center;
   font-style: italic;
   font-size: $fontSize-larger;
-  z-index: 1;
+  z-index: 2;
   position: relative;
+}
+
+.feature {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.feature.is-active {
+  .feature-department,
+  .feature-title,
+  .feature-author {
+    opacity: .1;
+  }
+
+  .splash-overlay {
+    opacity: 0;
+  }
 }
 
 .feature-image {
   position: absolute;
   width: 100%;
-  top: 20vh;
-  z-index: 0;
+  top: 5vh;
+  left: 0;
 }
 
 .feature-image img {
-  max-height: 60vh;
-  width: auto;
+  max-height: 80vh;
   margin: 0 auto;
   display: block;
 }
@@ -86,20 +117,21 @@
 .feature-department,
 .feature-title,
 .feature-author {
+  @include transition(all .2s 0s);
+  opacity: 1;
   color: $color-white;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 
 .feature-title {
   @include font-primary;
   text-decoration: none;
-  font-size: $fontSize-xlarge;
-  line-height: $lineHeight-xlarge;
+  font-size: $fontSize-jumbo;
+  line-height: $lineHeight-jumbo;
   display: block;
   margin-bottom: 20px;
-  width: 50%;
   margin: 0 auto;
 }
 

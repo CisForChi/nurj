@@ -81,11 +81,10 @@ app.get('/', function(req, res) {
           posts = posts.concat(responses.results)
           prismicApi.query(
             [
-              Prismic.Predicates.at("document.tags", ["featured"]),
+              Prismic.Predicates.at("document.tags", ["vol-11"]),
             ],
             {
-              orderings : '[my.thesis.publish-date desc]',
-              pageSize: 1
+              orderings : '[my.thesis.publish-date desc]'
             }
           ).then(function(responses) {
             res.render('layouts/landing', {

@@ -663,23 +663,25 @@ a.link:hover {
 .splash {
   background-color: #111111;
   -webkit-font-smoothing: antialiased;
-  padding-top: 100px;
-  height: 90vh;
+  height: 95vh;
   margin-bottom: 50px;
   background: #111111;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 25% 20%; }
+  background-position: 25% 20%;
+  overflow-y: hidden;
+  position: relative; }
   @media screen and (min-width: 768px) {
     .splash {
       background-size: cover;
       background-position: bottom; } }
 
 .splash-link {
-  position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 150px; }
+  position: absolute;
+  bottom: 40px;
+  z-index: 2; }
 
 .splash-link a {
   font-family: "Cousine", "Menlo", monospace;
@@ -696,25 +698,51 @@ a.link:hover {
   .splash-arrow polygon {
     fill: #fbfbfb; }
 
-.issue-vol {
+.splash-overlay {
+  -moz-transition: all 0.2s 0s;
+  -o-transition: all 0.2s 0s;
+  -webkit-transition: all 0.2s 0s;
+  transition: all 0.2s 0s;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  position: absolute;
+  opacity: .8;
+  z-index: 1;
+  top: 0;
+  left: 0; }
+
+.splash-issue {
   font-family: "Noe Display", serif;
+  padding-top: 60px;
   color: #fbfbfb;
   font-weight: normal;
   text-align: center;
   font-style: italic;
   font-size: 1.999rem;
-  z-index: 1;
+  z-index: 2;
   position: relative; }
+
+.feature {
+  width: 50%;
+  margin: 0 auto; }
+
+.feature.is-active .feature-department,
+.feature.is-active .feature-title,
+.feature.is-active .feature-author {
+  opacity: .1; }
+
+.feature.is-active .splash-overlay {
+  opacity: 0; }
 
 .feature-image {
   position: absolute;
   width: 100%;
-  top: 20vh;
-  z-index: 0; }
+  top: 5vh;
+  left: 0; }
 
 .feature-image img {
-  max-height: 60vh;
-  width: auto;
+  max-height: 80vh;
   margin: 0 auto;
   display: block; }
 
@@ -730,19 +758,23 @@ a.link:hover {
 .feature-department,
 .feature-title,
 .feature-author {
+  -moz-transition: all 0.2s 0s;
+  -o-transition: all 0.2s 0s;
+  -webkit-transition: all 0.2s 0s;
+  transition: all 0.2s 0s;
+  opacity: 1;
   color: #fbfbfb;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
   position: relative; }
 
 .feature-title {
   font-family: "Noe Display", serif;
   text-decoration: none;
-  font-size: 2.827rem;
-  line-height: 2.827rem;
+  font-size: 3.998rem;
+  line-height: 3.998rem;
   display: block;
   margin-bottom: 20px;
-  width: 50%;
   margin: 0 auto; }
 
 .feed {

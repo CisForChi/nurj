@@ -16,9 +16,9 @@ block body
   include ../components/header.pug
   section.container
     div.splash.js-invertHeaderColor
-      h2.issue-vol Vol. 12
-      div.features
-        each feature in features
+      h2.splash-issue Vol. 12
+      div.splash-features
+        - var feature = features[1]
           div.feature
             p.feature-department
               != feature.getText("thesis.department")
@@ -27,8 +27,10 @@ block body
             p.feature-author
               each item in feature.getGroup("thesis.byline").toArray()
                 != item.getText("author")
-            div.feature-image
-              img(src="https://prismic-io.s3.amazonaws.com/nurj/a9d59970b03ea8c4f40233c24379c4263a3ccda6_vasilypukirevphoto.jpeg")
+            each hero in feature.getGroup('thesis.hero-image').toArray()
+              div.splash-overlay
+              div.feature-image
+                img(src=hero.getImage('image').url)
       p.splash-link
         a(href="/") Explore the Issue
           svg(class="splash-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 93" style="enable-background:new 0 0 51 93;" xml:space="preserve")
