@@ -18,8 +18,13 @@ block body
     div.splash.js-invertHeaderColor
       h2.splash-issue Vol. 12
       div.splash-features
-        - var feature = features[1]
-          div.feature
+        - var i = 0
+        each feature in features
+          - 
+            var classes = "feature feature-" + i
+            classes += (i == 0 ? "" : " is-shown")
+            i++
+          div(class=classes)
             p.feature-department
               != feature.getText("thesis.department")
             a(href=ctx.linkResolver(feature) class="feature-title")

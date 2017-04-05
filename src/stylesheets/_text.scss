@@ -4,28 +4,28 @@
 @mixin text-folio {
   @include font-secondary;
   text-transform: uppercase;
-  font-size: $fontSize-small;
+  font-size: $fontSize-3;
 }
 
 @mixin text-byline {
   @include font-primary;
   font-style: italic;
-  font-size: $fontSize-large;
+  font-size: $fontSize-5;
 
   @include past($break-large) {
-    font-size: $fontSize-xlarge;
+    font-size: $fontSize-7;
   }
 }
 
 @mixin text-headline {
   @include font-primary;
   font-weight: bold;
-  font-size: $fontSize-xlarge;
-  line-height: $lineHeight-xlarge;
+  font-size: $fontSize-7;
+  line-height: $lineHeight-7;
 
   @include past($break-large) {
-    line-height: $lineHeight-jumbo;
-    font-size: $fontSize-jumbo;
+    line-height: $lineHeight-8;
+    font-size: $fontSize-8;
   }
 }
 
@@ -47,24 +47,24 @@
 
 @mixin text-sidebar {
   @include font-secondary;
-  font-size: $fontSize-small;
-  line-height: $lineHeight-medium;
+  font-size: $fontSize-3;
+  line-height: $lineHeight-4;
 }
 
 @mixin text-caption {
   @include font-secondary;
-  font-size: $fontSize-small;
-  line-height: $lineHeight-medium;
+  font-size: $fontSize-3;
+  line-height: $lineHeight-4;
   font-weight: normal;
 }
 
 @mixin text-attribution {
   @include font-secondary;
-  font-size: $fontSize-xsmall;
-  line-height: $lineHeight-small;
+  font-size: $fontSize-1;
+  line-height: $lineHeight-3;
 
   @include past($break-small) {
-    line-height: $lineHeight-medium;
+    line-height: $lineHeight-4;
   }
 }
 
@@ -75,7 +75,7 @@
 @mixin text-pullquote {
   @include font-primary;
   font-weight: 700;
-  font-size: $fontSize-large;
+  font-size: $fontSize-5;
 
   &:before {
     content: "";
@@ -88,20 +88,20 @@
   }
 
   @include past($break-large) {
-    font-size: $fontSize-larger;
-    line-height: $lineHeight-xlarge;
+    font-size: $fontSize-6;
+    line-height: $lineHeight-7;
   }
 }
 
 @mixin text-citation {
   @include font-secondary;
-  font-size: $fontSize-smaller;
-  line-height: $lineHeight-small;
+  font-size: $fontSize-2;
+  line-height: $lineHeight-3;
 }
 
 @mixin text-superscript {
   @include font-secondary;
-  font-size: $fontSize-xsmall;
+  font-size: $fontSize-1;
   text-decoration: none;
   position: relative;
   top: -1em;
@@ -110,8 +110,8 @@
 
 @mixin text-bibliography {
   @include font-secondary;
-  font-size: $fontSize-small;
-  line-height: $lineHeight-medium;
+  font-size: $fontSize-3;
+  line-height: $lineHeight-4;
 }
 
 @mixin post-title {
@@ -119,12 +119,12 @@
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 0;
-  font-size: $fontSize-larger;
-  line-height: $lineHeight-larger;
+  font-size: $fontSize-6;
+  line-height: $lineHeight-6;
 
   @include past($break-large) {
-    font-size: $fontSize-xlarge;
-    line-height: $lineHeight-xlarge;
+    font-size: $fontSize-7;
+    line-height: $lineHeight-7;
   }
 }
 
@@ -132,17 +132,17 @@
   @include font-secondary;
   font-weight: normal;
   margin-top: 10px;
-  font-size: $fontSize-small;
-  line-height: $lineHeight-medium;
+  font-size: $fontSize-3;
+  line-height: $lineHeight-4;
 }
 
 @mixin post-department {
   @include font-secondary;
-  font-size: $fontSize-small;
+  font-size: $fontSize-3;
   text-transform: uppercase;
 }
 
 @mixin post-meta {
   @include font-secondary;
-  font-size: $fontSize-small;
+  font-size: $fontSize-3;
 }

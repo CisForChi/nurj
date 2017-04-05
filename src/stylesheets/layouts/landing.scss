@@ -22,6 +22,22 @@
   }
 }
 
+.splash-issue {
+  @include font-primary;
+  color: $color-white;
+  padding-top: 100px;
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+  font-size: $fontSize-6;
+  z-index: 2;
+  position: relative;
+
+  @include past($break-medium) {
+    padding-top: 60px;
+  };
+}
+
 .splash-link {
   text-align: center;
   width: 100%;
@@ -61,21 +77,25 @@
   left: 0;
 }
 
-.splash-issue {
-  @include font-primary;
-  padding-top: 60px;
-  color: $color-white;
-  font-weight: normal;
-  text-align: center;
-  font-style: italic;
-  font-size: $fontSize-larger;
-  z-index: 2;
-  position: relative;
+.feature {
+  @include transition(opacity .2s 0s);
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+  width: 90%;
+
+  @include past($break-medium) {
+    width: 80%;
+  }
+
+  @include past($break-xlarge) {
+    width: 50%;
+  }
 }
 
-.feature {
-  width: 50%;
-  margin: 0 auto;
+.feature.is-shown {
+  display: inherit;
+  opacity: 1;
 }
 
 .feature.is-active {
@@ -98,9 +118,13 @@
 }
 
 .feature-image img {
-  max-height: 80vh;
+  max-height: 100vh;
   margin: 0 auto;
   display: block;
+
+  @include past($break-medium) {
+    max-height: 80vh;
+  }
 }
 
 .feature-department {
@@ -110,14 +134,14 @@
 .feature-department,
 .feature-author {
   @include font-secondary;
-  font-size: $fontSize-small;
+  font-size: $fontSize-3;
   margin: 32px 0;
 }
 
 .feature-department,
 .feature-title,
 .feature-author {
-  @include transition(all .2s 0s);
+  @include transition(opacity .2s 0s);
   opacity: 1;
   color: $color-white;
   text-align: center;
@@ -127,12 +151,22 @@
 
 .feature-title {
   @include font-primary;
+  font-size: $fontSize-7;
+  line-height: $lineHeight-7;
   text-decoration: none;
-  font-size: $fontSize-jumbo;
-  line-height: $lineHeight-jumbo;
   display: block;
   margin-bottom: 20px;
   margin: 0 auto;
+
+  @include past($break-medium) {
+    font-size: $fontSize-8;
+    line-height: $lineHeight-8;
+  }
+
+  @include past($break-large) {
+    font-size: $fontSize-9;
+    line-height: $lineHeight-9;
+  }
 }
 
 .feed {

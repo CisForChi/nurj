@@ -27,8 +27,8 @@
 
 .about {
   @include font-text;
-  font-size: $fontSize-medium;
-  line-height: $lineHeight-large;
+  font-size: $fontSize-4;
+  line-height: $lineHeight-5;
 
   p {
     max-width: 300px;

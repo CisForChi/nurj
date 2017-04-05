@@ -18,19 +18,19 @@
 
 .page-title {
   @include font-primary;
-  font-size: $fontSize-larger;
-  line-height: $lineHeight-larger;
+  font-size: $fontSize-6;
+  line-height: $lineHeight-6;
   font-weight: normal;
 
   @include past($break-small) {
-    font-size: $fontSize-xlarge;
-    line-height: $lineHeight-xlarge;
+    font-size: $fontSize-7;
+    line-height: $lineHeight-7;
   }
 }
 
 .page-description {
   @include font-text;
-  font-size: $fontSize-large;
+  font-size: $fontSize-5;
 
   @include past($break-medium) {
     width: 80%;

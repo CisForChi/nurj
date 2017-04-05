@@ -676,6 +676,20 @@ a.link:hover {
       background-size: cover;
       background-position: bottom; } }
 
+.splash-issue {
+  font-family: "Noe Display", serif;
+  color: #fbfbfb;
+  padding-top: 100px;
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.999rem;
+  z-index: 2;
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    .splash-issue {
+      padding-top: 60px; } }
+
 .splash-link {
   text-align: center;
   width: 100%;
@@ -712,20 +726,25 @@ a.link:hover {
   top: 0;
   left: 0; }
 
-.splash-issue {
-  font-family: "Noe Display", serif;
-  padding-top: 60px;
-  color: #fbfbfb;
-  font-weight: normal;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.999rem;
-  z-index: 2;
-  position: relative; }
-
 .feature {
-  width: 50%;
-  margin: 0 auto; }
+  -moz-transition: opacity 0.2s 0s;
+  -o-transition: opacity 0.2s 0s;
+  -webkit-transition: opacity 0.2s 0s;
+  transition: opacity 0.2s 0s;
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+  width: 90%; }
+  @media screen and (min-width: 768px) {
+    .feature {
+      width: 80%; } }
+  @media screen and (min-width: 1200px) {
+    .feature {
+      width: 50%; } }
+
+.feature.is-shown {
+  display: inherit;
+  opacity: 1; }
 
 .feature.is-active .feature-department,
 .feature.is-active .feature-title,
@@ -742,9 +761,12 @@ a.link:hover {
   left: 0; }
 
 .feature-image img {
-  max-height: 80vh;
+  max-height: 100vh;
   margin: 0 auto;
   display: block; }
+  @media screen and (min-width: 768px) {
+    .feature-image img {
+      max-height: 80vh; } }
 
 .feature-department {
   text-transform: uppercase; }
@@ -758,10 +780,10 @@ a.link:hover {
 .feature-department,
 .feature-title,
 .feature-author {
-  -moz-transition: all 0.2s 0s;
-  -o-transition: all 0.2s 0s;
-  -webkit-transition: all 0.2s 0s;
-  transition: all 0.2s 0s;
+  -moz-transition: opacity 0.2s 0s;
+  -o-transition: opacity 0.2s 0s;
+  -webkit-transition: opacity 0.2s 0s;
+  transition: opacity 0.2s 0s;
   opacity: 1;
   color: #fbfbfb;
   text-align: center;
@@ -770,12 +792,20 @@ a.link:hover {
 
 .feature-title {
   font-family: "Noe Display", serif;
+  font-size: 2.827rem;
+  line-height: 2.827rem;
   text-decoration: none;
-  font-size: 3.998rem;
-  line-height: 3.998rem;
   display: block;
   margin-bottom: 20px;
   margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .feature-title {
+      font-size: 3.998rem;
+      line-height: 3.998rem; } }
+  @media screen and (min-width: 992px) {
+    .feature-title {
+      font-size: 5.653rem;
+      line-height: 5.653rem; } }
 
 .feed {
   width: 100%;
