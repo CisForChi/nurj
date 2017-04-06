@@ -679,16 +679,17 @@ a.link:hover {
 .splash-issue {
   font-family: "Noe Display", serif;
   color: #fbfbfb;
-  padding-top: 100px;
-  font-weight: normal;
+  padding-top: 60px;
+  position: absolute;
   text-align: center;
+  width: 100%;
+  font-weight: normal;
   font-style: italic;
-  font-size: 1.999rem;
-  z-index: 2;
-  position: relative; }
+  font-size: 1.25rem;
+  z-index: 2; }
   @media screen and (min-width: 768px) {
     .splash-issue {
-      padding-top: 60px; } }
+      font-size: 1.999rem; } }
 
 .splash-link {
   text-align: center;
@@ -726,25 +727,27 @@ a.link:hover {
   top: 0;
   left: 0; }
 
+.splash-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 95vh; }
+
 .feature {
   -moz-transition: opacity 0.2s 0s;
   -o-transition: opacity 0.2s 0s;
   -webkit-transition: opacity 0.2s 0s;
   transition: opacity 0.2s 0s;
   margin: 0 auto;
-  display: none;
   opacity: 0;
-  width: 90%; }
-  @media screen and (min-width: 768px) {
-    .feature {
-      width: 80%; } }
-  @media screen and (min-width: 1200px) {
-    .feature {
-      width: 50%; } }
+  width: 90%;
+  display: none; }
 
 .feature.is-shown {
-  display: inherit;
-  opacity: 1; }
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap; }
 
 .feature.is-active .feature-department,
 .feature.is-active .feature-title,
@@ -775,7 +778,8 @@ a.link:hover {
 .feature-author {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.707rem;
-  margin: 32px 0; }
+  margin: 32px 0;
+  flex-basis: 100%; }
 
 .feature-department,
 .feature-title,
@@ -799,10 +803,6 @@ a.link:hover {
   margin-bottom: 20px;
   margin: 0 auto; }
   @media screen and (min-width: 768px) {
-    .feature-title {
-      font-size: 3.998rem;
-      line-height: 3.998rem; } }
-  @media screen and (min-width: 992px) {
     .feature-title {
       font-size: 5.653rem;
       line-height: 5.653rem; } }

@@ -25,16 +25,17 @@
 .splash-issue {
   @include font-primary;
   color: $color-white;
-  padding-top: 100px;
-  font-weight: normal;
+  padding-top: 60px;
+  position: absolute;
   text-align: center;
+  width: 100%;
+  font-weight: normal;
   font-style: italic;
-  font-size: $fontSize-6;
+  font-size: $fontSize-4;
   z-index: 2;
-  position: relative;
 
   @include past($break-medium) {
-    padding-top: 60px;
+    font-size: $fontSize-6;
   };
 }
 
@@ -77,25 +78,26 @@
   left: 0;
 }
 
+.splash-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 95vh;
+}
+
 .feature {
   @include transition(opacity .2s 0s);
   margin: 0 auto;
-  display: none;
   opacity: 0;
   width: 90%;
-
-  @include past($break-medium) {
-    width: 80%;
-  }
-
-  @include past($break-xlarge) {
-    width: 50%;
-  }
+  display: none;
 }
 
 .feature.is-shown {
-  display: inherit;
   opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .feature.is-active {
@@ -136,6 +138,7 @@
   @include font-secondary;
   font-size: $fontSize-3;
   margin: 32px 0;
+  flex-basis: 100%;
 }
 
 .feature-department,
@@ -159,11 +162,6 @@
   margin: 0 auto;
 
   @include past($break-medium) {
-    font-size: $fontSize-8;
-    line-height: $lineHeight-8;
-  }
-
-  @include past($break-large) {
     font-size: $fontSize-9;
     line-height: $lineHeight-9;
   }
