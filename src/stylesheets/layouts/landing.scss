@@ -8,13 +8,19 @@
   background-color: $color-black;
   -webkit-font-smoothing: antialiased;
   height: 95vh;
+  min-height: 500px;
+  width: 100%;
   margin-bottom: 50px;
   background: $color-black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 20%;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @include past($break-medium) {
     background-size: cover;
@@ -25,7 +31,7 @@
 .splash-issue {
   @include font-primary;
   color: $color-white;
-  padding-top: 60px;
+  padding-top: 80px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -35,6 +41,7 @@
   z-index: 2;
 
   @include past($break-medium) {
+    padding-top: 60px;
     font-size: $fontSize-6;
   };
 }
@@ -49,6 +56,7 @@
 
 .splash-link a {
   @include font-secondary;
+  font-size: $fontSize-3;
   color: $color-white;
   text-decoration: none;
   text-align: center;
@@ -67,15 +75,15 @@
 }
 
 .splash-overlay {
-  @include transition(all .2s 0s);
-  width: 100vw;
-  height: 100vh;
+  @include transition(opacity .2s 0s);
   background-color: $color-black;
   position: absolute;
   opacity: .8;
   z-index: 1;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .splash-features {
@@ -92,12 +100,14 @@
   opacity: 0;
   width: 90%;
   display: none;
+  @include anim--fadeOutOnce300;
 }
 
 .feature.is-shown {
   opacity: 1;
   display: flex;
   flex-wrap: wrap;
+  @include anim--fadeInOnce300;
 }
 
 .feature.is-active {
@@ -115,7 +125,7 @@
 .feature-image {
   position: absolute;
   width: 100%;
-  top: 5vh;
+  top: 10vh;
   left: 0;
 }
 
@@ -154,12 +164,22 @@
 
 .feature-title {
   @include font-primary;
-  font-size: $fontSize-7;
-  line-height: $lineHeight-7;
+  font-size: $fontSize-5;
+  line-height: $lineHeight-5;
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
   margin: 0 auto;
+
+  @include past($break-xsmall) {
+    font-size: $fontSize-6;
+    line-height: $lineHeight-6;
+  }
+
+  @include past($break-small) {
+    font-size: $fontSize-7;
+    line-height: $lineHeight-7;
+  }
 
   @include past($break-medium) {
     font-size: $fontSize-9;

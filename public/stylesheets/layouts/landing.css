@@ -664,13 +664,19 @@ a.link:hover {
   background-color: #111111;
   -webkit-font-smoothing: antialiased;
   height: 95vh;
+  min-height: 500px;
+  width: 100%;
   margin-bottom: 50px;
   background: #111111;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 20%;
-  overflow-y: hidden;
-  position: relative; }
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap; }
   @media screen and (min-width: 768px) {
     .splash {
       background-size: cover;
@@ -679,7 +685,7 @@ a.link:hover {
 .splash-issue {
   font-family: "Noe Display", serif;
   color: #fbfbfb;
-  padding-top: 60px;
+  padding-top: 80px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -689,6 +695,7 @@ a.link:hover {
   z-index: 2; }
   @media screen and (min-width: 768px) {
     .splash-issue {
+      padding-top: 60px;
       font-size: 1.999rem; } }
 
 .splash-link {
@@ -700,6 +707,7 @@ a.link:hover {
 
 .splash-link a {
   font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
   color: #fbfbfb;
   text-decoration: none;
   text-align: center; }
@@ -714,18 +722,18 @@ a.link:hover {
     fill: #fbfbfb; }
 
 .splash-overlay {
-  -moz-transition: all 0.2s 0s;
-  -o-transition: all 0.2s 0s;
-  -webkit-transition: all 0.2s 0s;
-  transition: all 0.2s 0s;
-  width: 100vw;
-  height: 100vh;
+  -moz-transition: opacity 0.2s 0s;
+  -o-transition: opacity 0.2s 0s;
+  -webkit-transition: opacity 0.2s 0s;
+  transition: opacity 0.2s 0s;
   background-color: #111111;
   position: absolute;
   opacity: .8;
   z-index: 1;
   top: 0;
-  left: 0; }
+  left: 0;
+  bottom: 0;
+  right: 0; }
 
 .splash-features {
   display: flex;
@@ -742,12 +750,22 @@ a.link:hover {
   margin: 0 auto;
   opacity: 0;
   width: 90%;
-  display: none; }
+  display: none;
+  -webkit-animation: fadeOut .3s 1;
+  -moz-animation: fadeOut .3s 1;
+  -ms-animation: fadeOut .3s 1;
+  -o-animation: fadeOut .3s 1;
+  animation: fadeOut .3s 1; }
 
 .feature.is-shown {
   opacity: 1;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  -webkit-animation: fadeIn .3s 1;
+  -moz-animation: fadeIn .3s 1;
+  -ms-animation: fadeIn .3s 1;
+  -o-animation: fadeIn .3s 1;
+  animation: fadeIn .3s 1; }
 
 .feature.is-active .feature-department,
 .feature.is-active .feature-title,
@@ -760,7 +778,7 @@ a.link:hover {
 .feature-image {
   position: absolute;
   width: 100%;
-  top: 5vh;
+  top: 10vh;
   left: 0; }
 
 .feature-image img {
@@ -796,12 +814,20 @@ a.link:hover {
 
 .feature-title {
   font-family: "Noe Display", serif;
-  font-size: 2.827rem;
-  line-height: 2.827rem;
+  font-size: 1.414rem;
+  line-height: 1.414rem;
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
   margin: 0 auto; }
+  @media screen and (min-width: 320px) {
+    .feature-title {
+      font-size: 1.999rem;
+      line-height: 1.999rem; } }
+  @media screen and (min-width: 480px) {
+    .feature-title {
+      font-size: 2.827rem;
+      line-height: 2.827rem; } }
   @media screen and (min-width: 768px) {
     .feature-title {
       font-size: 5.653rem;

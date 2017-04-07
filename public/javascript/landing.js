@@ -1,6 +1,16 @@
 invertHeaderOnCollision()
 $(window).scroll(invertHeaderOnCollision)
-$(".feature-title").hover(setActiveOnMouseEnter, removeActiveOnMouseLeave)
+$('.feature-title').hover(setActiveOnMouseEnter, removeActiveOnMouseLeave)
+
+var numFeatures = $('.feature').length
+var currentFeature = numFeatures - 1
+function advanceFeature() {
+  $('.feature-' + currentFeature).removeClass('is-shown')
+  currentFeature = (currentFeature + 1) % numFeatures
+  $('.feature-' + currentFeature).addClass('is-shown')
+}
+
+setInterval(advanceFeature, 4000)
 
 function invertHeaderOnCollision() {
   var colliding = false
@@ -19,11 +29,11 @@ function invertHeaderOnCollision() {
 }
 
 function setActiveOnMouseEnter(e) {
-  $(this).closest(".feature").addClass("is-active")
+  $(this).closest('.feature').addClass('is-active')
 }
 
 function removeActiveOnMouseLeave() {
-  $(this).closest(".feature").removeClass("is-active")
+  $(this).closest('.feature').removeClass('is-active')
 }
 
 function collide(a, b, margin) {
