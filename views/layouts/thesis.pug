@@ -18,16 +18,17 @@ block body
   section.container
     article.thesis.content
       div.headline
-        div.department
-          !=thesis.getText('thesis.department')
+        if thesis.getText('thesis.department')
+          div.department
+            != thesis.getText('thesis.department')
         each item in thesis.getGroup('thesis.byline').toArray()
           div.thesis-author
-            !=item.getText('author')
+            != item.getText('author')
         div.title
-          !=thesis.get('thesis.title').asHtml()
+          != thesis.get('thesis.title').asHtml()
         if thesis.getText('thesis.subtitle')
           div.subtitle
-            !=thesis.get('thesis.subtitle').asHtml()
+            != thesis.get('thesis.subtitle').asHtml()
       div.meta.js-detectCollision
         if thesis.getGroup('thesis.advisors')
           ul.meta-advisors

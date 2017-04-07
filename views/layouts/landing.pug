@@ -22,20 +22,21 @@ block body
         each feature in features
           - 
             var classes = "feature feature-" + i
-            classes += (i == 0 ? "" : " is-shown")
+            classes += (i == 0 ? " is-shown" : "")
             i++
           div(class=classes)
             p.feature-department
-              != feature.getText("thesis.department")
+              != feature.getText("thesis.department") || ""
             a(href=ctx.linkResolver(feature) class="feature-title")
-              != feature.getText("thesis.title") + ": " + feature.getText("thesis.subtitle")
+              != feature.getText("thesis.title") + (feature.getText("thesis.subtitle") ? ": " + feature.getText("thesis.subtitle") : "")
             p.feature-author
               each item in feature.getGroup("thesis.byline").toArray()
-                != item.getText("author")
-            each hero in feature.getGroup('thesis.hero-image').toArray()
-              div.splash-overlay
-              div.feature-image
-                img(src=hero.getImage('image').url)
+                != item.getText("author") || ""
+            div.splash-overlay
+            if feature.getGroup('thesis.hero-image')
+              each hero in feature.getGroup('thesis.hero-image').toArray()
+                div.feature-image
+                  img(src=hero.getImage('image').url)
       p.splash-link
         a(href="/") Explore the Issue
           svg(class="splash-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 93" style="enable-background:new 0 0 51 93;" xml:space="preserve")
