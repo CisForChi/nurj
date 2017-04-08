@@ -66,11 +66,11 @@ block body
             when 'pullquote'
               blockquote.pullquote.js-detectCollision !{slice.value.asHtml()}
             when 'image-with-caption'
-              figure.figure.js-detectCollision
+              figure.figure
                 each imageWithCaption in slice.value.toArray()
-                  img(src=imageWithCaption.getImage('figure').url)
+                  img(class='js-detectCollision' src=imageWithCaption.getImage('figure').url)
                   if imageWithCaption.get('attribution')
-                    cite.figure-attribution !{imageWithCaption.get('attribution').asHtml()}
+                    cite.figure-attribution.js-detectCollision !{imageWithCaption.get('attribution').asHtml()}
                   if imageWithCaption.get('caption')
                     figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
       each item in thesis.getGroup('thesis.byline').toArray()
