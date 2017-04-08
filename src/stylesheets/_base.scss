@@ -116,12 +116,7 @@ a.link:hover {
 .hero {
   max-width: 100%;
   margin: 0 auto;
-  float: right;
   margin-bottom: 40px;
-
-  @include past($break-small) {
-    display: inline-block;
-  }
 }
 
 .figure {
