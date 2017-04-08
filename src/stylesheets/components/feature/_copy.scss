@@ -5,14 +5,42 @@
   section[data-field="copy"],
   section[data-field="question"],
   section[data-field="answer"] {
+    margin: 10px 0;
+
+    p {
+      display: inline;
+    }
+
     width: 95%;
     float: right;
 
     @include past($break-small) {
       width: $body-width;
+    }
+  }
 
-      p {
-        margin-top: 0;
+  section[data-field="question"] {
+    @include text-subtitle;
+    text-transform: uppercase;
+    color: $color-purple;
+
+    &:before {
+        content: "Q: ";
+
+      @include past($break-small) {
+        float: left;
+        margin-left: -28px;
+      }
+    }
+  }
+
+  section[data-field="answer"] {
+    &:before {
+      @include text-subtitle;
+      content: "A: ";
+      @include past($break-small) {
+        float: left;
+        margin-left: -28px;
       }
     }
   }

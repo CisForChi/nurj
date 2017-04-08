@@ -386,17 +386,37 @@ a.link:hover {
   .feature-copy section[data-field="copy"],
   .feature-copy section[data-field="question"],
   .feature-copy section[data-field="answer"] {
+    margin: 10px 0;
     width: 95%;
     float: right; }
+    .feature-copy section[data-field="copy"] p,
+    .feature-copy section[data-field="question"] p,
+    .feature-copy section[data-field="answer"] p {
+      display: inline; }
     @media screen and (min-width: 480px) {
       .feature-copy section[data-field="copy"],
       .feature-copy section[data-field="question"],
       .feature-copy section[data-field="answer"] {
-        width: 75%; }
-        .feature-copy section[data-field="copy"] p,
-        .feature-copy section[data-field="question"] p,
-        .feature-copy section[data-field="answer"] p {
-          margin-top: 0; } }
+        width: 75%; } }
+  .feature-copy section[data-field="question"] {
+    font-family: "Cousine", "Menlo", monospace;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #861FFC; }
+    .feature-copy section[data-field="question"]:before {
+      content: "Q: "; }
+      @media screen and (min-width: 480px) {
+        .feature-copy section[data-field="question"]:before {
+          float: left;
+          margin-left: -28px; } }
+  .feature-copy section[data-field="answer"]:before {
+    font-family: "Cousine", "Menlo", monospace;
+    font-weight: normal;
+    content: "A: "; }
+    @media screen and (min-width: 480px) {
+      .feature-copy section[data-field="answer"]:before {
+        float: left;
+        margin-left: -28px; } }
 
 .header {
   width: 100%;
