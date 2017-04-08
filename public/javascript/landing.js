@@ -3,11 +3,14 @@ $(window).scroll(invertHeaderOnCollision)
 $('.feature-title').hover(setActiveOnMouseEnter, removeActiveOnMouseLeave)
 
 var numFeatures = $('.feature').length
-var currentFeature = numFeatures - 1
+var currentFeature = 0
+var animating = true
 function advanceFeature() {
-  $('.feature-' + currentFeature).removeClass('is-shown')
-  currentFeature = (currentFeature + 1) % numFeatures
-  $('.feature-' + currentFeature).addClass('is-shown')
+  if (animating) {
+    $('.feature-' + currentFeature).removeClass('is-shown')
+    currentFeature = (currentFeature + 1) % numFeatures
+    $('.feature-' + currentFeature).addClass('is-shown')
+  }
 }
 
 setInterval(advanceFeature, 4000)
@@ -29,10 +32,12 @@ function invertHeaderOnCollision() {
 }
 
 function setActiveOnMouseEnter(e) {
+  animating = false
   $(this).closest('.feature').addClass('is-active')
 }
 
 function removeActiveOnMouseLeave() {
+  animating = true
   $(this).closest('.feature').removeClass('is-active')
 }
 

@@ -4,6 +4,7 @@ var PORT = app.get('port');
 var PConfig = require('./prismic-configuration');
 var request = require('request');
 var injectCitations = require('./util/injectCitations')
+var sortTheses = require('./util/sortTheses')
 
 function handleError(err, req, res) {
   if (err.status == 404) {
@@ -148,18 +149,7 @@ app.get('/index', function(req, res) {
       Prismic.Predicates.at('document.type', 'thesis'),
       { orderings: '[my.thesis.title]'}
     ).then(function (response) {
-      var sortedResults = []
-
-      for (var result of response.results) {
-        var i = 0
-        var firstChar = result.getText('thesis.title')[i].toUpperCase()
-
-        if (sortedResults[firstChar] == undefined) {
-          sortedResults[firstChar] = []
-        }
-
-        sortedResults[firstChar].push(result)
-      }
+      sortedResults = sortTheses(response.results)
 
       res.render('layouts/index', {
         results: sortedResults
