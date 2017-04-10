@@ -26,7 +26,7 @@ module.exports = function sortTheses(theses) {
     classifiedTheses[key] = classifiedTheses[key].sort(function(a, b) {
       let aTitle = cleanFront(a.getText('thesis.title'))
       let bTitle = cleanFront(b.getText('thesis.title'))
-      aTitle.localeCompare(bTitle)
+      return aTitle.localeCompare(bTitle)
     })
   }
 
