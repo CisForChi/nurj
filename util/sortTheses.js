@@ -1,5 +1,5 @@
 const fl = require('first-letter')
-const cleanFront = require('./cleanFront')
+const titleSort = require('title-sort')
 const isAlphanumeric = require('is-alphanumeric')
 const sortKeys = require('sort-keys')
 
@@ -24,9 +24,7 @@ module.exports = function sortTheses(theses) {
 
   for (let key of Object.keys(classifiedTheses)) {
     classifiedTheses[key] = classifiedTheses[key].sort(function(a, b) {
-      let aTitle = cleanFront(a.getText('thesis.title'))
-      let bTitle = cleanFront(b.getText('thesis.title'))
-      return aTitle.localeCompare(bTitle)
+      return titleSort(a.getText('thesis.title'), b.getText('thesis.title'))
     })
   }
 
