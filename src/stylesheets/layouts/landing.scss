@@ -23,6 +23,7 @@
   flex-wrap: wrap;
 
   @include past($break-medium) {
+    min-height: 680px;
     background-size: cover;
     background-position: bottom;
   }
@@ -136,6 +137,7 @@
 
   @include past($break-medium) {
     max-height: 80vh;
+    min-height: 580px;
   }
 }
 
@@ -181,7 +183,7 @@
     line-height: $lineHeight-7;
   }
 
-  @include past($break-medium) {
+  @include past($break-large) {
     font-size: $fontSize-9;
     line-height: $lineHeight-9;
   }

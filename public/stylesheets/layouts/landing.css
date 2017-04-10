@@ -675,6 +675,7 @@ a.link:hover {
   flex-wrap: wrap; }
   @media screen and (min-width: 768px) {
     .splash {
+      min-height: 680px;
       background-size: cover;
       background-position: bottom; } }
 
@@ -783,7 +784,8 @@ a.link:hover {
   display: block; }
   @media screen and (min-width: 768px) {
     .feature-image img {
-      max-height: 80vh; } }
+      max-height: 80vh;
+      min-height: 580px; } }
 
 .feature-department {
   text-transform: uppercase; }
@@ -824,7 +826,7 @@ a.link:hover {
     .feature-title {
       font-size: 2.827rem;
       line-height: 2.827rem; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     .feature-title {
       font-size: 5.653rem;
       line-height: 5.653rem; } }

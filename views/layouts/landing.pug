@@ -78,9 +78,9 @@ block body
               p.post-meta
                 span
                   each item in post.getGroup("thesis.byline").toArray()
-                    != item.getText("author") + " | "
+                    != item.getText("author")
                 span
-                  != post.getDate("thesis.publish-date").toLocaleDateString('en', {month: 'long', year: 'numeric'})
+                  != " | " + post.getDate("thesis.publish-date").toLocaleDateString('en', {month: 'long', year: 'numeric'}) || ""
         if post.type == "feature"
           div(class="post post-sm")
             a.post-department Feature

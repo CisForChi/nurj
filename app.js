@@ -149,10 +149,8 @@ app.get('/index', function(req, res) {
       Prismic.Predicates.at('document.type', 'thesis'),
       { orderings: '[my.thesis.title]'}
     ).then(function (response) {
-      sortedResults = sortTheses(response.results)
-
       res.render('layouts/index', {
-        results: sortedResults
+        results: sortTheses(response.results)
       })
     })
   })
@@ -180,8 +178,9 @@ app.get('/issues', function(req, res) {
       Prismic.Predicates.at('document.type', 'issue'),
       { orderings: '[my.issue.publish-date desc]'}
     ).then(function (response) {
+      console.log(response.results);
       res.render('layouts/issues', {
-        results: response.results
+        issues: response.results
       })
     })
   })
