@@ -47,21 +47,20 @@ block body
       -
         var i = 1
       each post in posts
+        -
+          var size
+          
+          if ((i % 3 == 0) && post.getGroup("thesis.hero-image")) {
+            size = "post-lg"
+          } else if (i % 2 == 0) {
+            size = "post-md"
+          } else {
+            size = "post-sm"
+          }
+          
+          var modifier = i % 6 == 0 ? 'post-reversed' : ''
+          i += 1
         if post.type == "thesis"
-          -
-            var size
-            
-            if ((i % 3 == 0) && post.getGroup("thesis.hero-image")) {
-              size = "post-lg"
-            } else if (i % 2 == 0) {
-              size = "post-md"
-            } else {
-              size = "post-sm"
-            }
-            
-            var modifier = i % 6 == 0 ? 'post-reversed' : ''
-            i += 1
-
           div(class="post " + size + " " + modifier)
             a.post-department
               != post.getText("thesis.department")
@@ -82,8 +81,12 @@ block body
                 span
                   != " | " + post.getDate("thesis.publish-date").toLocaleDateString('en', {month: 'long', year: 'numeric'}) || ""
         if post.type == "feature"
-          div(class="post post-sm")
+          div(class="post " + size + " " + modifier)
             a.post-department Feature
+            if post.getGroup("feature.hero-image")
+              each hero in post.getGroup('feature.hero-image').toArray()
+                a(href=ctx.linkResolver(post) class="post-heroLink")
+                  img(src=hero.getImage('image').url class="post-hero")
             div.post-info
               h2.post-title
                 a(href=ctx.linkResolver(post))

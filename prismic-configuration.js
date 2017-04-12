@@ -16,6 +16,10 @@ module.exports = {
     if (doc.type == 'feature') {
       return '/feature/' + encodeURIComponent(doc.uid);
     }
+
+    if (doc.type == 'issue') {
+      return '/issues/' + encodeURIComponent(doc.uid);
+    }
     return '/';
   }
 };

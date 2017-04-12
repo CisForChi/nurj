@@ -1,0 +1,51 @@
+@import "../_base";
+@import "../components/landing/_post";
+@import "../components/_header";
+@import "../components/_footer";
+@import "../components/_arrow";
+
+.issues {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0 auto;
+  max-width: $max-content-width;
+
+  @include past($break-small) {
+    padding-top: 150px;
+  }
+}
+
+.issues-title {
+  @include font-primary;
+  font-weight: normal;
+}
+
+.issue {
+  box-sizing: border-box;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.issue:not(:first-child) {
+  display: inline-block;
+  width: 50%;
+}
+
+.issue-title {
+  @include font-primary;
+  font-size: $fontSize-6;
+  font-weight: normal;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.issue-publishDate {
+  @include font-secondary;
+  margin-top: 0;
+  font-size: $fontSize-3;
+}
+
+.issue-cover img {
+  max-width: 100%;
+}

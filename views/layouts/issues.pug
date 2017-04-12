@@ -2,7 +2,7 @@ doctype html(lang='en')
 
 head
   title Northwestern Undergraduate Research Journal
-  link(rel="stylesheet", href="/stylesheets/layouts/index.css")
+  link(rel="stylesheet", href="/stylesheets/layouts/issues.css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
 
   // Required for Previews and Experiments
@@ -15,11 +15,21 @@ head
 block body
   include ../components/header.pug
   section.container
-    div.index
-      h2.index-title Index of Issues
+    div.issues
+      h2.issues-title Index of Issues
         each issue in issues
-          h2
-            != issue.getText("issue.title")
+          div.issue
+            a(href=ctx.linkResolver(issue) class='issue-title')
+              != issue.getText("issue.title")
+            p.issue-publishDate
+              != issue.getDate('issue.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+            if issue.getImage('issue.cover-photo')
+              div.issue-cover
+                img(src=issue.getImage('issue.cover-photo').url)
+            if issue.getText('issue.blurb')
+              div.issue-blurb
+                p
+                  != issue.get('issue.blurb').asHtml()
             
   include ../components/footer.pug
 script(src="/javascript/landing.js")
