@@ -250,12 +250,14 @@ a.link:hover {
 .figure {
   margin: 40px 0; }
 
+img {
+  max-width: 100%; }
+
 .figure,
 .hero {
   position: relative; }
   .figure img,
   .hero img {
-    max-width: 100%;
     display: block;
     margin: 0 auto; }
   .figure .figure-attribution,
@@ -690,6 +692,3 @@ a.link:hover {
   font-family: "Cousine", "Menlo", monospace;
   margin-top: 0;
   font-size: 0.707rem; }
-
-.issue-cover img {
-  max-width: 100%; }

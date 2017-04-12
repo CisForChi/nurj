@@ -2,7 +2,7 @@ doctype html(lang='en')
 
 head
   title Northwestern Undergraduate Research Journal
-  link(rel="stylesheet", href="/stylesheets/layouts/index.css")
+  link(rel="stylesheet", href="/stylesheets/layouts/issue.css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
 
   // Required for Previews and Experiments
@@ -15,7 +15,27 @@ head
 block body
   include ../components/header.pug
   section.container
-    div.index
-      h2.index-title Issues
+    div.issue
+      a(href=ctx.linkResolver(issue) class='issue-title')
+        != issue.getText("issue.title")
+      p.issue-publishDate
+        != issue.getDate('issue.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+      if issue.getImage('issue.cover-photo')
+        div.issue-cover
+          img(src=issue.getImage('issue.cover-photo').url)
+      if issue.getText('issue.blurb')
+        div.issue-blurb
+          p
+            != issue.get('issue.blurb').asHtml()
+      each post in content
+        if post.type == 'thesis'
+          div.post-thesis
+            p.feature-department
+              != post.getText("thesis.department") || ""
+            a(href=ctx.linkResolver(post) class="post-title")
+              != post.getText("thesis.title") + (post.getText("thesis.subtitle") ? ": " + post.getText("thesis.subtitle") : "")
+            p.post-author
+              each item in post.getGroup("thesis.byline").toArray()
+                != item.getText("author") || ""
   include ../components/footer.pug
 script(src="/javascript/landing.js")

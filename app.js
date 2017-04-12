@@ -99,7 +99,7 @@ app.get('/', function(req, res) {
       handleError(404, req, res)
     }
   })
-});
+})
 
 /**
 * preconfigured prismic preview
@@ -109,8 +109,8 @@ app.get('/preview', function(req, res) {
     return Prismic.preview(api, PConfig.linkResolver, req, res);
   }).catch(function(err) {
     handleError(err, req, res);
-  });
-});
+  })
+})
 
 app.get('/thesis/:uid', function(req, res) {
    var uid = req.params.uid
@@ -125,8 +125,8 @@ app.get('/thesis/:uid', function(req, res) {
      } else {
        handleError({status: 404}, req, res)
      }
-   });
-});
+   })
+})
 
 app.get('/feature/:uid', function(req, res) {
    var uid = req.params.uid
@@ -140,8 +140,8 @@ app.get('/feature/:uid', function(req, res) {
      } else {
        handleError({status: 404}, req, res)
      }
-   });
-});
+   })
+})
 
 app.get('/index', function(req, res) {
   api(req, res).then(api => {
@@ -158,13 +158,21 @@ app.get('/index', function(req, res) {
 
 app.get('/issues/:uid', function(req, res) {
   var uid = req.params.uid
+  var prismicApi
 
   api(req, res).then(api => {
-    return api.getByUID('issue', uid)
+    prismicApi = api
+    return prismicApi.getByUID('issue', uid)
   }).then(function(issue) {
     if (issue) {
-      res.render('layouts/issue', {
-        issue: issue
+      prismicApi.query(
+        [ Prismic.Predicates.at("document.tags", [uid]) ],
+        { orderings : '[my.thesis.publish-date desc]' }
+      ).then(function(responses) {
+        res.render('layouts/issue', {
+          issue: issue,
+          content: responses.results
+        })
       })
     } else {
       handleError({status: 404}, req, res)

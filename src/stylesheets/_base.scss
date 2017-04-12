@@ -123,12 +123,15 @@ a.link:hover {
   margin: 40px 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .figure,
 .hero {
   position: relative;
 
   img {
-    max-width: 100%;
     display: block;
     margin: 0 auto;
   }

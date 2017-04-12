@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -334,6 +335,110 @@ img {
       .hero .hero-caption {
         width: 50%; } }
 
+.post {
+  margin-bottom: 20px; }
+  .post:not(:first-child):before {
+    content: "";
+    margin-bottom: 20px;
+    height: 1px;
+    background-color: #95989A;
+    display: block; }
+  @media screen and (min-width: 480px) {
+    .post {
+      padding: 20px;
+      box-sizing: border-box;
+      width: 50%; }
+      .post:not(:first-child):before {
+        display: none; } }
+  @media screen and (min-width: 768px) {
+    .post {
+      box-sizing: content-box; }
+      .post.post-sm {
+        width: 33%; }
+      .post.post-md {
+        width: 50%; }
+      .post.post-lg {
+        width: 80%; }
+        .post.post-lg .post-department {
+          width: 30%;
+          padding-left: 20px; }
+        .post.post-lg .post-heroLink {
+          width: 60%;
+          float: left; }
+        .post.post-lg img {
+          max-width: 100%;
+          float: left; }
+        .post.post-lg .post-info {
+          display: inline-block;
+          width: 40%;
+          padding-left: 20px; }
+        .post.post-lg.post-reversed {
+          text-align: right; }
+          .post.post-lg.post-reversed .post-heroLink {
+            float: right; }
+          .post.post-lg.post-reversed .post-info,
+          .post.post-lg.post-reversed .post-department {
+            padding-right: 20px;
+            padding-left: 0; } }
+
+.post .post-heroLink {
+  display: inline-block; }
+
+.post .post-hero {
+  width: 100%;
+  margin: 5px 0; }
+
+.post .post-title {
+  font-family: "Noe Display", serif;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 1.999rem;
+  line-height: 1.999rem; }
+  @media screen and (min-width: 992px) {
+    .post .post-title {
+      font-size: 2.827rem;
+      line-height: 2.827rem; } }
+  .post .post-title a {
+    -moz-transition: color 0.3s 0s;
+    -o-transition: color 0.3s 0s;
+    -webkit-transition: color 0.3s 0s;
+    transition: color 0.3s 0s;
+    text-decoration: none; }
+    .post .post-title a:hover {
+      color: #861FFC; }
+
+.post .post-subtitle {
+  font-family: "Cousine", "Menlo", monospace;
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 0.707rem;
+  line-height: 1.25rem; }
+
+.post .post-lede {
+  position: relative;
+  font-weight: 300;
+  font-family: "Noe Display", serif;
+  font-size: 1.414rem;
+  line-height: 1.999rem;
+  margin-top: 10px; }
+  .post .post-lede a {
+    text-decoration: none; }
+  .post .post-lede:before {
+    content: "“";
+    position: absolute;
+    left: -10px; }
+
+.post .post-department {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem;
+  text-transform: uppercase;
+  display: inline-block; }
+
+.post .post-meta {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem; }
+
 .header {
   width: 100%;
   padding-left: 20px;
@@ -553,16 +658,12 @@ img {
 .arrow-polygon {
   fill: #861FFC; }
 
-.error {
-  width: 100vw; }
-
-.message {
-  max-width: 400px;
+.issue {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
   margin: 0 auto;
-  padding: 150px 20px; }
-  .message h1 {
-    font-family: "Noe Display", serif;
-    font-size: 3.998rem;
-    text-align: center; }
-  .message p {
-    font-family: "Athelas", Cambria, Times, serif; }
+  max-width: 990px; }
+  @media screen and (min-width: 480px) {
+    .issue {
+      padding-top: 150px; } }
