@@ -24,7 +24,8 @@
     "pug": "^2.0.0-alpha6",
     "request": "^2.76.0",
     "serve-favicon": "~2.3.0",
-    "sort-keys": "^1.1.2"
+    "sort-keys": "^1.1.2",
+    "title-sort": "^1.0.1"
   },
   "repository": {
     "type": "git",
