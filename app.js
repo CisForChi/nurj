@@ -147,7 +147,7 @@ app.get('/index', function(req, res) {
   api(req, res).then(api => {
     api.query(
       Prismic.Predicates.at('document.type', 'thesis'),
-      { orderings: '[my.thesis.title]'}
+      { orderings: '[my.thesis.title]', pageSize: 100 }
     ).then(function (response) {
       res.render('layouts/index', {
         results: sortTheses(response.results)
