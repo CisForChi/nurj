@@ -20,5 +20,6 @@ block body
         != page.getText("page.title")
       div.page-description
         != page.get("page.description").asHtml()
-  
+        
   include ../components/footer.pug
+  script(src="/javascript/thesis.js")

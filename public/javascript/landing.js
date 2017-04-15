@@ -53,3 +53,7 @@ function collide(a, b, margin) {
     (aPos.left > (bPos.left + b.width() + margin))
   );
 }
+
+$('.arrow').click(function() {
+  $('body').animate({scrollTop: 0}, '300')
+})

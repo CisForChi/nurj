@@ -698,11 +698,28 @@ img {
 .issue {
   box-sizing: border-box;
   vertical-align: top;
-  padding: 10px; }
+  margin-bottom: 80px; }
 
-.issue:not(:first-child) {
-  display: inline-block;
-  width: 50%; }
+@media screen and (min-width: 768px) {
+  .issue:first-child .issue-cover {
+    width: 60%;
+    display: inline-block; }
+  .issue:first-child .issue-blurb {
+    width: 40%;
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: top; }
+    .issue:first-child .issue-blurb p:first-child {
+      margin-top: 0; } }
+
+@media screen and (min-width: 768px) {
+  .issue:not(:first-child) {
+    display: inline-block;
+    width: 50%; }
+    .issue:not(:first-child):nth-child(odd) {
+      padding-left: 20px; }
+    .issue:not(:first-child):nth-child(even) {
+      padding-right: 20px; } }
 
 .issue-title {
   font-family: "Noe Display", serif;
@@ -715,3 +732,9 @@ img {
   font-family: "Cousine", "Menlo", monospace;
   margin-top: 0;
   font-size: 0.707rem; }
+
+.issue-blurb {
+  font-family: "Athelas", Cambria, Times, serif;
+  font-size: 1.25rem;
+  line-height: 1.414rem;
+  -webkit-font-smoothing: antialiased; }

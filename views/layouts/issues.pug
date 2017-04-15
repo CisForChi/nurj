@@ -25,11 +25,11 @@ block body
               != issue.getDate('issue.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
             if issue.getImage('issue.cover-photo')
               div.issue-cover
-                img(src=issue.getImage('issue.cover-photo').url)
+                a(href=ctx.linkResolver(issue))
+                  img(src=issue.getImage('issue.cover-photo').url)
             if issue.getText('issue.blurb')
               div.issue-blurb
-                p
-                  != issue.get('issue.blurb').asHtml()
+                != issue.get('issue.blurb').asHtml()
             
   include ../components/footer.pug
-script(src="/javascript/landing.js")
+script(src="/javascript/index.js")

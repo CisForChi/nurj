@@ -33,6 +33,7 @@
   font-size: $fontSize-5;
   line-height: $lineHeight-6;
   display: block;
+  -webkit-font-smoothing: antialiased;
 
   @include past($break-medium) {
     width: 80%;

@@ -711,7 +711,8 @@ img {
 .issue-blurb {
   font-family: "Athelas", Cambria, Times, serif;
   font-size: 1.25rem;
-  line-height: 1.999rem; }
+  line-height: 1.999rem;
+  -webkit-font-smoothing: antialiased; }
 
 @media screen and (min-width: 768px) {
   .issue-cover {
@@ -719,7 +720,8 @@ img {
     display: inline-block; } }
 
 .post-thesis {
-  margin: 40px auto; }
+  margin: 40px auto;
+  clear: both; }
   @media screen and (min-width: 768px) {
     .post-thesis {
       width: 75%; } }

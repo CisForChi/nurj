@@ -24,12 +24,42 @@
 .issue {
   box-sizing: border-box;
   vertical-align: top;
-  padding: 10px;
+  margin-bottom: 80px;
+}
+
+.issue:first-child {
+  @include past($break-medium) {
+    .issue-cover {
+      width: 60%;
+      display: inline-block;
+    }
+
+    .issue-blurb {
+      width: 40%;
+      display: inline-block;
+      padding-left: 20px;
+      vertical-align: top;
+
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .issue:not(:first-child) {
-  display: inline-block;
-  width: 50%;
+  @include past($break-medium) {
+    &:nth-child(odd) {
+      padding-left: 20px;
+    }
+
+    &:nth-child(even) {
+      padding-right: 20px;
+    }
+
+    display: inline-block;
+    width: 50%;
+  }
 }
 
 .issue-title {
@@ -44,4 +74,11 @@
   @include font-secondary;
   margin-top: 0;
   font-size: $fontSize-3;
+}
+
+.issue-blurb {
+  @include font-text;
+  font-size: $fontSize-4;
+  line-height: $lineHeight-5;
+  -webkit-font-smoothing: antialiased;
 }

@@ -41,6 +41,7 @@
   @include font-text;
   font-size: $fontSize-4;
   line-height: $lineHeight-6;
+  -webkit-font-smoothing: antialiased;
 }
 
 .issue-cover {
@@ -52,6 +53,7 @@
 
 .post-thesis {
   margin: 40px auto;
+  clear: both;
 
   @include past($break-medium) {
     width: 75%;
