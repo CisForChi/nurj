@@ -336,6 +336,9 @@ img {
       .hero .hero-caption {
         width: 50%; } }
 
+#filters {
+  height: 0; }
+
 .post {
   margin-bottom: 20px;
   -moz-transition: color 0.3s 0s;

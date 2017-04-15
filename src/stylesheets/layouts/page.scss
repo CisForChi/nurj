@@ -31,6 +31,8 @@
 .page-description {
   @include font-text;
   font-size: $fontSize-5;
+  line-height: $lineHeight-6;
+  display: block;
 
   @include past($break-medium) {
     width: 80%;

@@ -336,6 +336,9 @@ img {
       .hero .hero-caption {
         width: 50%; } }
 
+#filters {
+  height: 0; }
+
 .post {
   margin-bottom: 20px;
   -moz-transition: color 0.3s 0s;
@@ -700,7 +703,9 @@ img {
 
 .page-description {
   font-family: "Athelas", Cambria, Times, serif;
-  font-size: 1.414rem; }
+  font-size: 1.414rem;
+  line-height: 1.999rem;
+  display: block; }
   @media screen and (min-width: 768px) {
     .page-description {
       width: 80%;

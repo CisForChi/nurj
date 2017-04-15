@@ -15,7 +15,8 @@ head
 block body
   include ../components/header.pug
   section.container
-    h2.splash-issue Vol. 12
+    h2.splash-issue 
+      != landing.getText("landing.current-issue-title")
     div.splash.js-invertHeaderColor
       div.splash-features
         - var i = 0
@@ -38,7 +39,7 @@ block body
                 div.feature-image
                   img(src=hero.getImage('image').url)
       p.splash-link
-        a(href="/") Explore the Issue
+        a(href="/issues/" + landing.getText("landing.current-issue-id")) Explore the Issue
           svg(class="splash-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 93" style="enable-background:new 0 0 51 93;" xml:space="preserve")
           polygon(points="37.6,20.4 26,8.9 14.4,20.4 15.8,21.8 25,12.7 25,82 27,82 27,12.7 36.2,21.8 ")
 

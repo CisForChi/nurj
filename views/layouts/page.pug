@@ -18,7 +18,7 @@ block body
     div.page
       h1.page-title
         != page.getText("page.title")
-      p.page-description
-        != page.getText("page.description")
+      div.page-description
+        != page.get("page.description").asHtml()
   
   include ../components/footer.pug

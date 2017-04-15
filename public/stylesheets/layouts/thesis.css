@@ -336,6 +336,9 @@ img {
       .hero .hero-caption {
         width: 50%; } }
 
+#filters {
+  height: 0; }
+
 .meta {
   font-family: "Cousine", "Menlo", monospace;
   font-size: 0.707rem;

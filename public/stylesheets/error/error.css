@@ -335,6 +335,9 @@ img {
       .hero .hero-caption {
         width: 50%; } }
 
+#filters {
+  height: 0; }
+
 .header {
   width: 100%;
   padding-left: 20px;
