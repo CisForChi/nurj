@@ -15,3 +15,56 @@
     padding-top: 150px;
   }
 }
+
+.issue-info {
+  @include past($break-medium) {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    padding-left: 40px;
+  }
+}
+
+.issue-title {
+  text-decoration: none;
+  @include font-primary;
+  font-size: $fontSize-6;
+  margin: 0;
+}
+
+.issue-publishDate {
+  @include font-secondary;
+  font-size: $fontSize-3;
+}
+
+.issue-blurb {
+  @include font-text;
+  font-size: $fontSize-4;
+  line-height: $lineHeight-6;
+}
+
+.issue-cover {
+  @include past($break-medium) {
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+.post-thesis {
+  margin: 40px auto;
+
+  @include past($break-medium) {
+    width: 75%;
+  }
+}
+
+.post-department,
+.post-author {
+  @include font-secondary;
+  font-size: $fontSize-3;
+}
+
+.post-title {
+  @include font-text;
+  font-size: $fontSize-4;
+}

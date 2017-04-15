@@ -690,3 +690,45 @@ img {
   @media screen and (min-width: 480px) {
     .issue {
       padding-top: 150px; } }
+
+@media screen and (min-width: 768px) {
+  .issue-info {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    padding-left: 40px; } }
+
+.issue-title {
+  text-decoration: none;
+  font-family: "Noe Display", serif;
+  font-size: 1.999rem;
+  margin: 0; }
+
+.issue-publishDate {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem; }
+
+.issue-blurb {
+  font-family: "Athelas", Cambria, Times, serif;
+  font-size: 1.25rem;
+  line-height: 1.999rem; }
+
+@media screen and (min-width: 768px) {
+  .issue-cover {
+    width: 50%;
+    display: inline-block; } }
+
+.post-thesis {
+  margin: 40px auto; }
+  @media screen and (min-width: 768px) {
+    .post-thesis {
+      width: 75%; } }
+
+.post-department,
+.post-author {
+  font-family: "Cousine", "Menlo", monospace;
+  font-size: 0.707rem; }
+
+.post-title {
+  font-family: "Athelas", Cambria, Times, serif;
+  font-size: 1.25rem; }

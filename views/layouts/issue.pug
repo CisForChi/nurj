@@ -16,21 +16,22 @@ block body
   include ../components/header.pug
   section.container
     div.issue
-      a(href=ctx.linkResolver(issue) class='issue-title')
-        != issue.getText("issue.title")
-      p.issue-publishDate
-        != issue.getDate('issue.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+      div.issue-info
+        p.issue-title
+          != issue.get("issue.title").asHtml()
+        p.issue-publishDate
+          != issue.getDate('issue.publish-date').toLocaleDateString('en', {month: 'long', year: 'numeric'})
+        if issue.getText('issue.blurb')
+          div.issue-blurb
+            p
+              != issue.get('issue.blurb').asHtml()
       if issue.getImage('issue.cover-photo')
         div.issue-cover
           img(src=issue.getImage('issue.cover-photo').url)
-      if issue.getText('issue.blurb')
-        div.issue-blurb
-          p
-            != issue.get('issue.blurb').asHtml()
       each post in content
         if post.type == 'thesis'
           div.post-thesis
-            p.feature-department
+            p.post-department
               != post.getText("thesis.department") || ""
             a(href=ctx.linkResolver(post) class="post-title")
               != post.getText("thesis.title") + (post.getText("thesis.subtitle") ? ": " + post.getText("thesis.subtitle") : "")
