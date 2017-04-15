@@ -1,5 +1,6 @@
 .post {
   margin-bottom: 20px;
+  @include transition(color .3s 0s);
 
   &:not(:first-child):before {
     content: "";
@@ -70,8 +71,39 @@
   }
 }
 
+.post:hover {
+  .post-department {
+    color: $color-purple;
+  }
+
+  .post-heroLink {
+    -webkit-filter: grayscale(100%) url('#purple');
+    filter: grayscale(100%) url('#purple');
+  }
+
+  .post-info {
+    .post-title a,
+    .post-subtitle,
+    .post-meta {
+      color: $color-purple;
+    }
+  }
+}
+
 .post .post-heroLink {
   display: inline-block;
+
+  &:hover {
+    -webkit-filter: grayscale(100%) url('#purple');
+    filter: grayscale(100%) url('#purple');
+
+    & ~ .post-info .post-title a,
+    & ~ .post-info .post-title a,
+    & ~ .post-info .post-subtitle,
+    & ~ .post-info .post-meta, {
+      color: $color-purple;
+    }
+  }
 }
 
 .post .post-hero {
@@ -83,12 +115,7 @@
   @include post-title;
 
   a {
-    @include transition(color .3s 0s);
     text-decoration: none;
-
-    &:hover {
-      color: $color-purple;
-    }
   }
 }
 

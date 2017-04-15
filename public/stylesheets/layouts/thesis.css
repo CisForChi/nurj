@@ -264,6 +264,7 @@ img {
   .figure .hero-attribution,
   .hero .figure-attribution,
   .hero .hero-attribution {
+    word-wrap: break-word;
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
     line-height: 0.707rem;
@@ -446,6 +447,8 @@ img {
     .bio-headshot div img {
       width: auto;
       height: 100%; }
+    .bio-headshot div img {
+      max-width: none; }
 
 .bio-description {
   font-family: "Cousine", "Menlo", monospace;
@@ -616,7 +619,8 @@ img {
     display: inline-block; }
   @media screen and (min-width: 768px) {
     .footer-container {
-      padding: 40px; } }
+      padding: 40px;
+      padding-bottom: 120px; } }
   @media screen and (min-width: 992px) {
     .footer-container .footer {
       margin-left: auto;
@@ -746,3 +750,15 @@ a[href^="["] {
   color: #861FFC;
   pointer-events: none;
   line-height: 0; }
+
+.thesis-full {
+  font-family: "Cousine", "Menlo", monospace;
+  width: 75%;
+  margin-left: 25%;
+  text-transform: uppercase;
+  font-size: 0.707rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px; }
+  .thesis-full svg {
+    height: 20px; }

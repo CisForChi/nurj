@@ -263,6 +263,7 @@ img {
   .figure .hero-attribution,
   .hero .figure-attribution,
   .hero .hero-attribution {
+    word-wrap: break-word;
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
     line-height: 0.707rem;
@@ -485,7 +486,8 @@ img {
     display: inline-block; }
   @media screen and (min-width: 768px) {
     .footer-container {
-      padding: 40px; } }
+      padding: 40px;
+      padding-bottom: 120px; } }
   @media screen and (min-width: 992px) {
     .footer-container .footer {
       margin-left: auto;

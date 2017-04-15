@@ -142,6 +142,8 @@ img {
       margin: 0;
     }
 
+    word-wrap: break-word;
+
     @include text-attribution;
     margin-top: 10px;
     display: inline-block;

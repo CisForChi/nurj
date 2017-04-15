@@ -53,3 +53,18 @@ a[href^="["] {
   pointer-events: none;
   line-height: 0;
 }
+
+.thesis-full {
+  @include font-secondary;
+  width: $body-width;
+  margin-left: $gutter-width;
+  text-transform: uppercase;
+  font-size: $fontSize-3;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+
+  svg {
+    height: 20px;
+  }
+}

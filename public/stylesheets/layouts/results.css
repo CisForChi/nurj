@@ -264,6 +264,7 @@ img {
   .figure .hero-attribution,
   .hero .figure-attribution,
   .hero .hero-attribution {
+    word-wrap: break-word;
     font-family: "Cousine", "Menlo", monospace;
     font-size: 0.354rem;
     line-height: 0.707rem;
@@ -336,7 +337,11 @@ img {
         width: 50%; } }
 
 .post {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  -moz-transition: color 0.3s 0s;
+  -o-transition: color 0.3s 0s;
+  -webkit-transition: color 0.3s 0s;
+  transition: color 0.3s 0s; }
   .post:not(:first-child):before {
     content: "";
     margin-bottom: 20px;
@@ -381,8 +386,28 @@ img {
             padding-right: 20px;
             padding-left: 0; } }
 
+.post:hover .post-department {
+  color: #861FFC; }
+
+.post:hover .post-heroLink {
+  -webkit-filter: grayscale(100%) url("#purple");
+  filter: grayscale(100%) url("#purple"); }
+
+.post:hover .post-info .post-title a,
+.post:hover .post-info .post-subtitle,
+.post:hover .post-info .post-meta {
+  color: #861FFC; }
+
 .post .post-heroLink {
   display: inline-block; }
+  .post .post-heroLink:hover {
+    -webkit-filter: grayscale(100%) url("#purple");
+    filter: grayscale(100%) url("#purple"); }
+    .post .post-heroLink:hover ~ .post-info .post-title a,
+    .post .post-heroLink:hover ~ .post-info .post-title a,
+    .post .post-heroLink:hover ~ .post-info .post-subtitle,
+    .post .post-heroLink:hover ~ .post-info .post-meta {
+      color: #861FFC; }
 
 .post .post-hero {
   width: 100%;
@@ -400,13 +425,7 @@ img {
       font-size: 2.827rem;
       line-height: 2.827rem; } }
   .post .post-title a {
-    -moz-transition: color 0.3s 0s;
-    -o-transition: color 0.3s 0s;
-    -webkit-transition: color 0.3s 0s;
-    transition: color 0.3s 0s;
     text-decoration: none; }
-    .post .post-title a:hover {
-      color: #861FFC; }
 
 .post .post-subtitle {
   font-family: "Cousine", "Menlo", monospace;
@@ -590,7 +609,8 @@ img {
     display: inline-block; }
   @media screen and (min-width: 768px) {
     .footer-container {
-      padding: 40px; } }
+      padding: 40px;
+      padding-bottom: 120px; } }
   @media screen and (min-width: 992px) {
     .footer-container .footer {
       margin-left: auto;

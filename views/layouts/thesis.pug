@@ -73,6 +73,10 @@ block body
                     cite.figure-attribution.js-detectCollision !{imageWithCaption.get('attribution').asHtml()}
                   if imageWithCaption.get('caption')
                     figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
+      if thesis.getLink('thesis.full-thesis')
+        a(class='thesis-full' href=thesis.getLink('thesis.full-thesis').url(ctx.linkResolver) target='_blank') 
+          include ../components/download_arrow
+          span Download full thesis
       each item in thesis.getGroup('thesis.byline').toArray()
         div.bio.js-detectCollision
           div.bio-headshot

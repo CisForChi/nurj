@@ -1,8 +1,5 @@
 .bio {
   margin-bottom: 50px;
-  // max-width: 600px;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 
 .bio-headshot {
@@ -10,6 +7,7 @@
   margin: 20px auto;
   width: $gutter-width;
   vertical-align: top;
+
   @include past($break-small) {
     display: inline-block;
     margin: 0 auto;
@@ -18,6 +16,10 @@
   div {
     @include circular-photo($author-photo-size);
     margin: 0 auto;
+
+    img {
+      max-width: none;
+    }
   }
 }
 
