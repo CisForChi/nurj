@@ -1,55 +1,57 @@
 .thesis-copy {
   display: inline-block;
   width: 100%;
+}
 
-  section[data-field="copy"] {
-    width: 95%;
-    float: right;
+.thesis-copy section[data-field="copy"] {
+  width: 95%;
+  float: right;
 
-    @include past($break-small) {
-      width: $body-width;
-
-      p {
-        margin-top: 0;
-      }
-    }
+  @include past($break-small) {
+    width: $body-width;
   }
+}
 
-  section[data-field="citation"] {
-    @include text-citation;
-    float: left;
-    padding-left: 5%;
+.thesis-copy section[data-field="copy"] p {
+  @include past($break-small) {
+    margin-top: 0;
+  }
+}
+
+.thesis-copy section[data-field="citation"] {
+  @include text-citation;
+  float: left;
+  padding-left: 5%;
+  width: 100%;
+
+  @include past($break-small) {
+    display: block;
+    width: $gutter-width;
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
+.thesis-copy section[data-field="citation"] p {
+  word-wrap: break-word;
+
+  &:before {
+    display: inline-block;
+    content: "";
+    position: relative;
+    height: 1px;
+    margin-bottom: 5px;
     width: 100%;
-
-    p {
-      word-wrap: break-word;
-
-      &:before {
-        display: inline-block;
-        content: "";
-        position: relative;
-        height: 1px;
-        margin-bottom: 5px;
-        width: 100%;
-        background-color: $color-black;
-      }
-    }
-
-    @include past($break-small) {
-      display: block;
-      width: $gutter-width;
-      padding-left: 0;
-      padding-right: 20px;
-    }
+    background-color: $color-black;
   }
+}
 
-  section[data-field="quote"] {
-    @include text-inlineQuote;
+.thesis-copy section[data-field="quote"] {
+  @include text-inlineQuote;
 
-    @include past($break-small) {
-      float: right;
-      width: $body-width - 5%;
-      padding-right: 5%;
-    }
+  @include past($break-small) {
+    float: right;
+    width: $body-width - 5%;
+    padding-right: 5%;
   }
 }

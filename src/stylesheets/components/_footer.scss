@@ -7,37 +7,30 @@
   position: relative;
   margin-top: 120px;
 
-  .about, .links {
-    vertical-align: top;
-    display: inline-block;
-  }
-
   @include past($break-medium) {
     padding: 40px;
     padding-bottom: 120px;
   }
+}
 
+.footer {
   @include past($break-large) {
-    .footer {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 992px;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 992px;
   }
 }
 
-.about {
+.footer-about,
+.footer-links {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.footer-about {
   @include font-text;
   font-size: $fontSize-4;
   line-height: $lineHeight-5;
-
-  p {
-    max-width: 300px;
-  }
-
-  img {
-    width: 200px;
-  }
 
   @include past($break-medium) {
     width: 40%;
@@ -45,37 +38,45 @@
   }
 }
 
-.links {
-  div {
-    vertical-align: top;
-    display: inline-block;
-    width: 50%;
-    padding-right: 10px;
-  }
+.footer-about p {
+  max-width: 300px;
+}
 
-  ul {
-    @include font-secondary;
-    font-size: 14px;
+.footer-about img {
+  width: 200px;
+}
 
-    li {
-      margin-top: 10px;
-
-      a {
-        font-size: 12px;
-        color: $color-white;
-      }
-    }
-  }
-
+.footer-links {
   @include past($break-medium) {
     width: 50%;
   }
 
   @include past($break-large) {
     max-width: 500px;
-
-    div {
-      width: 25%;
-    }
   }
+}
+
+.footer-links div {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+  padding-right: 10px;
+
+  @include past($break-large) {
+    width: 25%;
+  }
+}
+
+.footer-links ul {
+  @include font-secondary;
+  font-size: 14px;
+}
+
+.footer-links ul li {
+  margin-top: 10px;
+}
+
+.footer-links ul li a {
+  font-size: 12px;
+  color: $color-white;
 }

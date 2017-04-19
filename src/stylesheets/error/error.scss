@@ -11,14 +11,14 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 150px 20px;
+}
 
-  h1 {
-    @include font-primary;
-    font-size: $fontSize-8;
-    text-align: center;
-  }
+.message h1 {
+  @include font-primary;
+  font-size: $fontSize-8;
+  text-align: center;
+}
 
-  p {
-    @include font-text;
-  }
+.message p {
+  @include font-text;
 }

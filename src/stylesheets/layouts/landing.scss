@@ -69,10 +69,10 @@
   position: absolute;
   right: -40px;
   top: -10px;
+}
 
-  polygon {
-    fill: $color-white;
-  }
+.splash-arrow polygon {
+  fill: $color-white;
 }
 
 .splash-overlay {
@@ -111,16 +111,14 @@
   @include anim--fadeInOnce300;
 }
 
-.feature.is-active {
-  .feature-department,
-  .feature-title,
-  .feature-author {
-    opacity: .1;
-  }
+.feature.is-active .feature-department,
+.feature.is-active .feature-title,
+.feature.is-active .feature-author {
+  opacity: .1;
+}
 
-  .splash-overlay {
-    opacity: 0;
-  }
+.feature.is-active .splash-overlay {
+  opacity: 0;
 }
 
 .feature-image {

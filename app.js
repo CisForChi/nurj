@@ -1,8 +1,8 @@
-var Prismic = require('prismic-nodejs');
-var app = require('./config');
-var PORT = app.get('port');
-var PConfig = require('./prismic-configuration');
-var request = require('request');
+var Prismic = require('prismic-nodejs')
+var app = require('./config')
+var PORT = app.get('port')
+var PConfig = require('./prismic-configuration')
+var request = require('request')
 var injectCitations = require('./util/injectCitations')
 var sortTheses = require('./util/sortTheses')
 

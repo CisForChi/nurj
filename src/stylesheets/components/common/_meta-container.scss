@@ -13,22 +13,22 @@
     display: inline-block;
     float: left;
   }
+}
 
-  p {
-    margin: 0;
-  }
+.meta p {
+  margin: 0;
+}
 
-  div {
-    display: inline-block;
-    width: 50%;
-    margin-bottom: 20px;
-    padding-right: 10px;
-    vertical-align: top;
+.meta div {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  vertical-align: top;
 
-    @include past($break-small) {
-      display: block;
-      width: 100%;
-    }
+  @include past($break-small) {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -53,8 +53,8 @@
   @include past($break-small) {
     width: 100%;
   }
+}
 
-  p {
-    margin: 0;
-  }
+.meta-advisor p {
+  margin: 0;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "nodejs-sdk",
-  "version": "2.0.0",
+  "name": "nurj",
+  "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
     "lint": "eslint app.js config.js prismic-configuration.js",
@@ -32,6 +32,7 @@
     "url": "http://github.com:nurj/nurj.git"
   },
   "devDependencies": {
-    "eslint": "^3.11.1"
+    "eslint": "^3.11.1",
+    "browserify": "^13.0.1"
   }
 }

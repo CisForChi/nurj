@@ -1,3 +1,4 @@
+// TODO: refactor this whole mess to not use nested styles
 .post {
   margin-bottom: 20px;
   @include transition(color .3s 0s);
@@ -14,6 +15,7 @@
     padding: 20px;
     box-sizing: border-box;
     width: 50%;
+
     &:not(:first-child):before {
       display: none;
     }
@@ -71,23 +73,19 @@
   }
 }
 
-.post:hover {
-  .post-department {
-    color: $color-purple;
-  }
+.post:hover .post-department {
+  color: $color-purple;
+}
 
-  .post-heroLink {
-    -webkit-filter: grayscale(100%) url('#purple');
-    filter: grayscale(100%) url('#purple');
-  }
+.post:hover .post-heroLink {
+  -webkit-filter: grayscale(100%) url('#purple');
+  filter: grayscale(100%) url('#purple');
+}
 
-  .post-info {
-    .post-title a,
-    .post-subtitle,
-    .post-meta {
-      color: $color-purple;
-    }
-  }
+.post:hover .post-info .post-title a,
+.post:hover .post-info .post-subtitle,
+.post:hover .post-info .post-meta {
+  color: $color-purple;
 }
 
 .post .post-heroLink {
@@ -96,14 +94,14 @@
   &:hover {
     -webkit-filter: grayscale(100%) url('#purple');
     filter: grayscale(100%) url('#purple');
-
-    & ~ .post-info .post-title a,
-    & ~ .post-info .post-title a,
-    & ~ .post-info .post-subtitle,
-    & ~ .post-info .post-meta, {
-      color: $color-purple;
-    }
   }
+}
+
+.post .post-heroLink:hover ~ .post-info .post-title a,
+.post .post-heroLink:hover ~ .post-info .post-title a,
+.post .post-heroLink:hover ~ .post-info .post-subtitle,
+.post .post-heroLink:hover ~ .post-info .post-meta, {
+  color: $color-purple;
 }
 
 .post .post-hero {
@@ -113,10 +111,10 @@
 
 .post .post-title {
   @include post-title;
+}
 
-  a {
-    text-decoration: none;
-  }
+.post .post-title a {
+  text-decoration: none;
 }
 
 .post .post-subtitle {
@@ -131,15 +129,15 @@
   line-height: $lineHeight-6;
   margin-top: 10px;
 
-  a {
-    text-decoration: none;
-  }
-
   &:before {
     content: "“";
     position: absolute;
     left: -10px;
   }
+}
+
+.post .post-lede a {
+  text-decoration: none;
 }
 
 .post .post-department {

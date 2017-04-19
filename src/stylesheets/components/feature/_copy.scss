@@ -1,47 +1,47 @@
 .feature-copy {
   display: inline-block;
   width: 100%;
+}
 
-  section[data-field="copy"],
-  section[data-field="question"],
-  section[data-field="answer"] {
-    margin: 10px 0;
+.feature-copy section[data-field="copy"],
+.feature-copy section[data-field="question"],
+.feature-copy section[data-field="answer"] {
+  margin: 10px 0;
+  width: 95%;
+  float: right;
 
-    p {
-      display: inline;
-    }
+  @include past($break-small) {
+    width: $body-width;
+  }
+}
 
-    width: 95%;
-    float: right;
+.feature-copy section[data-field="copy"] p,
+.feature-copy section[data-field="question"] p,
+.feature-copy section[data-field="answer"] p {
+  display: inline;
+}
+
+.feature-copy section[data-field="question"] {
+  @include text-subtitle;
+  text-transform: uppercase;
+  color: $color-purple;
+
+  &:before {
+    content: "Q: ";
 
     @include past($break-small) {
-      width: $body-width;
+      float: left;
+      margin-left: -28px;
     }
   }
+}
 
-  section[data-field="question"] {
-    @include text-subtitle;
-    text-transform: uppercase;
-    color: $color-purple;
-
-    &:before {
-        content: "Q: ";
-
-      @include past($break-small) {
-        float: left;
-        margin-left: -28px;
-      }
-    }
-  }
-
-  section[data-field="answer"] {
-    &:before {
-      @include text-subtitle;
-      content: "A: ";
-      @include past($break-small) {
-        float: left;
-        margin-left: -28px;
-      }
-    }
+.feature-copy section[data-field="answer"]:before {
+  @include text-subtitle;
+  content: "A: ";
+  
+  @include past($break-small) {
+    float: left;
+    margin-left: -28px;
   }
 }

@@ -12,15 +12,15 @@
     display: inline-block;
     margin: 0 auto;
   }
+}
 
-  div {
-    @include circular-photo($author-photo-size);
-    margin: 0 auto;
+.bio-headshot div {
+  @include circular-photo($author-photo-size);
+  margin: 0 auto;
+}
 
-    img {
-      max-width: none;
-    }
-  }
+.bio-headshot div img {
+  max-width: none;
 }
 
 .bio-description{

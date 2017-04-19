@@ -33,18 +33,18 @@
       width: 60%;
       display: inline-block;
     }
-
-    .issue-blurb {
-      width: 40%;
-      display: inline-block;
-      padding-left: 20px;
-      vertical-align: top;
-
-      p:first-child {
-        margin-top: 0;
-      }
-    }
   }
+}
+
+.issue:first-child .issue-blurb {
+  width: 40%;
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+.issue:first-child .issue-blurb p:first-child {
+  margin-top: 0;
 }
 
 .issue:not(:first-child) {
