@@ -401,9 +401,22 @@ img {
     .thesis-copy section[data-field="copy"] {
       width: 75%; } }
 
-@media screen and (min-width: 480px) {
-  .thesis-copy section[data-field="copy"] p {
-    margin-top: 0; } }
+.thesis-copy section[data-field="copy"] p {
+  margin-top: 0; }
+
+.thesis-copy section[data-field="copy"] h1 {
+  font-weight: normal;
+  font-size: 1.414rem;
+  font-style: italic; }
+
+.thesis-copy section[data-field="copy"] h2 {
+  font-weight: normal;
+  font-variant: small-caps;
+  font-size: 1.25rem; }
+
+.thesis-copy section[data-field="copy"] h3 {
+  font-weight: normal;
+  font-size: 1.25rem; }
 
 .thesis-copy section[data-field="citation"] {
   font-family: "Cousine", "Menlo", monospace;
