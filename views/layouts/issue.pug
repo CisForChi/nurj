@@ -28,6 +28,9 @@ block body
       if issue.getImage('issue.cover-photo')
         div.issue-cover
           img(src=issue.getImage('issue.cover-photo').url)
+      if issue.get('issue.issuu-embed')
+        div.issue-embed
+          != issue.get('issue.issuu-embed').asHtml()
       each post in content
         if post.type == 'thesis'
           div.post-thesis
