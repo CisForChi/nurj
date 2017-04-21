@@ -402,7 +402,7 @@ img {
   color: #861FFC; }
 
 .post .post-heroLink {
-  display: inline-block; }
+  display: block; }
 
 .post .post-heroLink:hover ~ .post-info .post-title a,
 .post .post-heroLink:hover ~ .post-info .post-title a,
