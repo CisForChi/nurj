@@ -5,6 +5,7 @@ var PConfig = require('./prismic-configuration')
 var request = require('request')
 var injectCitations = require('./util/injectCitations')
 var sortTheses = require('./util/sortTheses')
+var sortFeatures = require('./util/sortFeatures')
 
 function handleError(err, req, res) {
   if (err.status == 404) {
@@ -127,6 +128,19 @@ app.get('/thesis/:uid', function(req, res) {
        handleError({status: 404}, req, res)
      }
    })
+})
+
+app.get('/features', function(req, res) {
+  api(req, res).then(api => {
+    api.query(
+      Prismic.Predicates.at('document.type', 'feature'),
+      { orderings: '[my.feature.title]', pageSize: 100 }
+    ).then(function (response) {
+      res.render('layouts/features', {
+        results: sortFeatures(response.results)
+      })
+    })
+  })
 })
 
 app.get('/feature/:uid', function(req, res) {
