@@ -78,8 +78,8 @@
 }
 
 .post:hover .post-heroLink {
-  -webkit-filter: grayscale(100%) url('#purple');
-  filter: grayscale(100%) url('#purple');
+  -webkit-filter: grayscale(100%) url('/#purple');
+  filter: grayscale(100%) url('/#purple');
 }
 
 .post:hover .post-info .post-title a,
@@ -90,11 +90,6 @@
 
 .post .post-heroLink {
   display: inline-block;
-
-  &:hover {
-    -webkit-filter: grayscale(100%) url('#purple');
-    filter: grayscale(100%) url('#purple');
-  }
 }
 
 .post .post-heroLink:hover ~ .post-info .post-title a,

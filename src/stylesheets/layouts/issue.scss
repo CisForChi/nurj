@@ -66,6 +66,10 @@
   font-size: $fontSize-3;
 }
 
+.post-department {
+  text-transform: uppercase;
+}
+
 .post-title {
   @include font-text;
   font-size: $fontSize-4;
