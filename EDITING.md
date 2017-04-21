@@ -10,6 +10,8 @@ You can jump to more specific instructions on how to create a new post by clicki
 - [Thesis](#thesis)
 - [Feature](#feature)
 - [Page](#page)
+- [Issue](#issue)
+- [Landing](#landing)
 
 ### <a name="thesis">Thesis</a>
 
@@ -122,3 +124,13 @@ An issue page is a page where information about a specific issue of the NURJ is 
 - `blurb`
 
 Issues are reachable by going to `thenurj.com/issues/<issue.uid>`.
+
+### <a name="landing">Landing</a>
+
+The landing page is very simple. It is a singleton, which means there should only ever be one landing page as a time (e.g. you won't ever hit `New > landing`).
+
+- `uid`* (unique identifier)
+- `current-issue-id`* (in the format of `vol-*`, see [Issue](#issue) for how issues are identified)
+- `current-issue-title` (just the title of the issue, usually "Vol. `*`")
+
+The landing page is reachable by going to `thenurj.com`.

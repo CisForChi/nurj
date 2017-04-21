@@ -1,5 +1,4 @@
 module.exports = {
-
   apiEndpoint: 'https://nurj.prismic.io/api',
 
   // -- Access token if the Master is not open
@@ -10,11 +9,11 @@ module.exports = {
   // clientSecret: 'xxxxxx',
   linkResolver: function(doc, ctx) {
     if (doc.type == 'thesis') {
-      return '/thesis/' + encodeURIComponent(doc.uid);
+      return '/theses/' + encodeURIComponent(doc.uid);
     }
 
     if (doc.type == 'feature') {
-      return '/feature/' + encodeURIComponent(doc.uid);
+      return '/features/' + encodeURIComponent(doc.uid);
     }
 
     if (doc.type == 'issue') {
