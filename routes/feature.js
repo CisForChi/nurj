@@ -7,7 +7,7 @@ module.exports = function(app) {
      var uid = req.params.uid
      api(req, res).then(function(api) {
          return api.getByUID('feature', uid)
-     }).then(function(feature) {
+     }).then(feature => {
        if (feature) {
          res.render('layouts/feature', {
              feature: feature

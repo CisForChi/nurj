@@ -8,21 +8,18 @@ module.exports = function(app) {
     var keyword = req.params.keyword
 
     api(req, res).then(api => {
-      prismicApi = api
-      return prismicApi.getSingle('landing')
-    }).then(landing => {
-      if (landing) {
-        prismicApi.query(
-          [ Prismic.Predicates.fulltext("document", keyword) ]
-        ).then(function(posts) {
+      api.query(
+        [ Prismic.Predicates.fulltext("document", keyword) ]
+      ).then(posts => {
+        if (posts) {
           res.render('layouts/results', {
             query: keyword,
             results: posts.results
           })
-        })
-      } else {
-        handleError(404, req, res)
-      }
+        } else {
+          handleError({status: 404}, req, res)
+        }
+      })
     })
   })
 }

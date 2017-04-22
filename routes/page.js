@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     api(req, res).then(api => {
       return api.getByUID('page', uid)
-    }).then(function(page) {
+    }).then(page => {
       if (page) {
         res.render('layouts/page', {
           page: page

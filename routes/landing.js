@@ -18,7 +18,7 @@ module.exports = function(app) {
             orderings : '[my.thesis.publish-date desc]',
             pageSize: 5
           }
-        ).then(function(responses) {
+        ).then(responses => {
           var posts = responses.results
           prismicApi.query(
             [
@@ -28,7 +28,7 @@ module.exports = function(app) {
               orderings : '[my.feature.publish-date desc]',
               pageSize: 5
             }
-          ).then(function(responses) {
+          ).then(responses => {
             posts = posts.concat(responses.results)
             prismicApi.query(
               [
@@ -37,7 +37,7 @@ module.exports = function(app) {
               {
                 orderings : '[my.thesis.publish-date desc]'
               }
-            ).then(function(responses) {
+            ).then(responses => {
               res.render('layouts/landing', {
                 landing: landing,
                 features: responses.results,
@@ -47,7 +47,7 @@ module.exports = function(app) {
           })
         })
       } else {
-        handleError(404, req, res)
+        handleError({status: 404}, req, res)
       }
     })
   })

@@ -9,7 +9,7 @@ module.exports = function(app) {
       api.query(
         Prismic.Predicates.at('document.type', 'feature'),
         { orderings: '[my.feature.title]', pageSize: 100 }
-      ).then(function (response) {
+      ).then(response => {
         res.render('layouts/features', {
           results: sortPosts(response.results)
         })

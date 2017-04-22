@@ -9,7 +9,7 @@ module.exports = function(app) {
       api.query(
         Prismic.Predicates.at('document.type', 'thesis'),
         { orderings: '[my.thesis.title]', pageSize: 100 }
-      ).then(function (response) {
+      ).then(response => {
         res.render('layouts/index', {
           results: sortPosts(response.results)
         })

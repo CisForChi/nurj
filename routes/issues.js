@@ -8,7 +8,7 @@ module.exports = function(app) {
       api.query(
         Prismic.Predicates.at('document.type', 'issue'),
         { orderings: '[my.issue.publish-date desc]'}
-      ).then(function (response) {
+      ).then(response => {
         res.render('layouts/issues', {
           issues: response.results
         })
