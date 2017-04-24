@@ -81,9 +81,9 @@
   font-size: $fontSize-3;
 }
 
-.issue-blurb {
+.issue-blurb p {
   @include font-text;
   font-size: $fontSize-4;
-  line-height: $lineHeight-5;
+  line-height: $lineHeight-6;
   -webkit-font-smoothing: antialiased;
 }
