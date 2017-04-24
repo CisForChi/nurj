@@ -407,7 +407,8 @@ img {
 .thesis-copy section[data-field="copy"] h1 {
   font-weight: normal;
   font-size: 1.414rem;
-  font-style: italic; }
+  font-style: italic;
+  margin-top: 0; }
 
 .thesis-copy section[data-field="copy"] h2 {
   font-weight: normal;

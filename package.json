@@ -7,7 +7,8 @@
     "test": "npm run lint",
     "sass": "npm run build-sass && npm run watch-sass",
     "build-sass": "node-sass src/stylesheets -o public/stylesheets",
-    "watch-sass": "node-sass -w src/stylesheets -o public/stylesheets"
+    "watch-sass": "node-sass -w src/stylesheets -o public/stylesheets",
+    "heroku-postbuild": "npm run build-sass"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
