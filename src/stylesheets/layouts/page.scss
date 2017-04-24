@@ -29,9 +29,6 @@
 }
 
 .page-description {
-  @include font-text;
-  font-size: $fontSize-5;
-  line-height: $lineHeight-6;
   display: block;
   -webkit-font-smoothing: antialiased;
 
@@ -39,4 +36,23 @@
     width: 80%;
     margin-left: 5%;
   }
+}
+
+.page-description h1 {
+  @include font-secondary;
+  font-size: $fontSize-4;
+  font-weight: normal;
+}
+
+.page-description p,
+.page-description li {
+  @include font-text;
+  font-size: $fontSize-5;
+  line-height: $lineHeight-6;
+}
+
+.page-description ol,
+.page-description ul {
+  list-style: initial;
+  padding-left: 40px;
 }
