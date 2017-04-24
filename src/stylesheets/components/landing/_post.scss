@@ -104,12 +104,13 @@
   margin: 5px 0;
 }
 
-.post .post-title {
-  @include post-title;
-}
-
 .post .post-title a {
   text-decoration: none;
+}
+
+.post .post-title a h1,
+.post .post-title a span {
+  @include post-title;
 }
 
 .post .post-subtitle {

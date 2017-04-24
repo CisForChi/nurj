@@ -57,12 +57,15 @@ a[href^="["] {
 .thesis-full {
   @include font-secondary;
   width: $body-width;
-  margin-left: $gutter-width;
   text-transform: uppercase;
   font-size: $fontSize-3;
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
+
+  @include past($break-medium) {
+    margin-left: $gutter-width;
+  }
 }
 
 .thesis-full svg {

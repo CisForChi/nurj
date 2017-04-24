@@ -795,12 +795,14 @@ a[href^="["] {
 .thesis-full {
   font-family: "Cousine", "Menlo", monospace;
   width: 75%;
-  margin-left: 25%;
   text-transform: uppercase;
   font-size: 0.707rem;
   text-decoration: none;
   display: block;
   margin-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    .thesis-full {
+      margin-left: 25%; } }
 
 .thesis-full svg {
   height: 20px; }

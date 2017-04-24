@@ -37,10 +37,15 @@
 }
 
 .issue:first-child .issue-blurb {
-  width: 40%;
-  display: inline-block;
-  padding-left: 20px;
-  vertical-align: top;
+  margin-top: 20px;
+
+  @include past($break-medium) {
+    margin-top: 0;
+    width: 40%;
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: top;
+  }
 }
 
 .issue:first-child .issue-blurb p:first-child {

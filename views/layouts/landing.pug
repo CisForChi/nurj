@@ -73,7 +73,7 @@ block body
             div.post-info
               h2.post-title
                 a(href=ctx.linkResolver(post))
-                  != post.getText("thesis.title")
+                  != post.get("thesis.title").asHtml()
               h3.post-subtitle
                 != post.getText("thesis.subtitle")
               p.post-meta
@@ -92,7 +92,7 @@ block body
             div.post-info
               h2.post-title
                 a(href=ctx.linkResolver(post))
-                  != post.getText("feature.title")
+                  != post.get("feature.title").asHtml()
               h3.post-subtitle
                 != post.getText("feature.subtitle")
               p.post-meta

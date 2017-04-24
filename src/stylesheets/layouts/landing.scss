@@ -124,8 +124,12 @@
 .feature-image {
   position: absolute;
   width: 100%;
-  top: 10vh;
+  top: 30vh;
   left: 0;
+
+  @include past($break-medium) {
+    top: 10vh;
+  }
 }
 
 .feature-image img {

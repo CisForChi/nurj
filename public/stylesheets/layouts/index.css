@@ -414,7 +414,11 @@ img {
   width: 100%;
   margin: 5px 0; }
 
-.post .post-title {
+.post .post-title a {
+  text-decoration: none; }
+
+.post .post-title a h1,
+.post .post-title a span {
   font-family: "Noe Display", serif;
   font-weight: bold;
   margin-top: 20px;
@@ -422,12 +426,10 @@ img {
   font-size: 1.999rem;
   line-height: 1.999rem; }
   @media screen and (min-width: 992px) {
-    .post .post-title {
+    .post .post-title a h1,
+    .post .post-title a span {
       font-size: 2.827rem;
       line-height: 2.827rem; } }
-
-.post .post-title a {
-  text-decoration: none; }
 
 .post .post-subtitle {
   font-family: "Cousine", "Menlo", monospace;
