@@ -7,7 +7,7 @@ module.exports = function injectCitations(thesis) {
         for (var group of groups) {
           if (v.data[group] !== undefined) {
             for (var copy of v.data[group].value) {
-              var re = /\[\d*\]/g
+              var re = /\[(\d|,|\s)*\]/g
               if (copy.spans == undefined) {
                 copy.spans = []
               }

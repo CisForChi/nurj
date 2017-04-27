@@ -63,7 +63,7 @@ One thing to keep in mind is the difference between `subhead` fields and heading
 
 *Note:* for inline citations, you don't have to do anything special in the body to turn a [1] into the correct superscript. Just make sure that the citation is formatted exactly like that, with:
 - a starting square bracket `[`
-- any number
+- any combination of a number, space, or comma (`,`)
 - an ending square bracket `]`
 
 A citation done in a different format may not show up correctly.
