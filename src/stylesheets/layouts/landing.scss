@@ -150,13 +150,14 @@
 
 .feature-image {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 100%;
-  top: 30vh;
+  top: 0;
   left: 0;
-
-  @include past($break-medium) {
-    top: 10vh;
-  }
+  height: 95vh;
 }
 
 .feature-image img {
