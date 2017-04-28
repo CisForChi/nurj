@@ -16,7 +16,7 @@ module.exports = function(app) {
           ],
           {
             orderings : '[my.thesis.publish-date desc]',
-            pageSize: 5
+            pageSize: 10
           }
         ).then(responses => {
           var posts = responses.results

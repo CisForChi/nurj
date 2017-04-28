@@ -16,29 +16,47 @@ head
 block body
   include ../components/header.pug
   section.container
-    h2.splash-issue 
+    h2.splash-issue
       != landing.getText("landing.current-issue-title")
     div.splash.js-invertHeaderColor
       div.splash-features
         - var i = 0
         each feature in features
-          - 
-            var classes = "feature feature-" + i
-            classes += (i == 0 ? " is-shown" : "")
-            i++
-          div(class=classes)
-            p.feature-department
-              != feature.getText("thesis.department") || ""
-            a(href=ctx.linkResolver(feature) class="feature-title")
-              != feature.getText("thesis.title") + (feature.getText("thesis.subtitle") ? ": " + feature.getText("thesis.subtitle") : "")
-            p.feature-author
-              each item in feature.getGroup("thesis.byline").toArray()
-                != item.getText("author") || ""
-            div.splash-overlay
-            if feature.getGroup('thesis.hero-image')
-              each hero in feature.getGroup('thesis.hero-image').toArray()
-                div.feature-image
-                  img(src=hero.getImage('image').url)
+          if feature.type == "thesis"
+            -
+              var classes = "feature feature-" + i
+              classes += (i == 0 ? " is-shown" : "")
+              i++
+            div(class=classes)
+              p.feature-department
+                != feature.getText("thesis.department") || ""
+              a(href=ctx.linkResolver(feature) class="feature-title")
+                != feature.getText("thesis.title") + (feature.getText("thesis.subtitle") ? ": " + feature.getText("thesis.subtitle") : "")
+              p.feature-author
+                each item in feature.getGroup("thesis.byline").toArray()
+                  != item.getText("author") || ""
+              div.splash-overlay
+              if feature.getGroup('thesis.hero-image')
+                each hero in feature.getGroup('thesis.hero-image').toArray()
+                  div.feature-image
+                    img(src=hero.getImage('image').url)
+          if feature.type == "feature"
+            -
+              var classes = "feature feature-" + i
+              classes += (i == 0 ? " is-shown" : "")
+              i++
+            div(class=classes)
+              p.feature-department
+                != feature.getText("feature.department") || "Feature"
+              a(href=ctx.linkResolver(feature) class="feature-title")
+                != feature.getText("feature.title") + (feature.getText("feature.subtitle") ? ": " + feature.getText("feature.subtitle") : "")
+              p.feature-author
+                != feature.getText("feature.author") || ""
+              div.splash-overlay
+              if feature.getGroup('feature.hero-image')
+                each hero in feature.getGroup('feature.hero-image').toArray()
+                  div.feature-image
+                    img(src=hero.getImage('image').url)
       p.splash-link
         a(href="/issues/" + landing.getText("landing.current-issue-id")) Explore the Issue
           svg(class="splash-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 93" style="enable-background:new 0 0 51 93;" xml:space="preserve")
@@ -51,7 +69,7 @@ block body
       each post in posts
         -
           var size
-          
+
           if ((i % 3 == 0) && post.getGroup("thesis.hero-image")) {
             size = "post-lg"
           } else if (i % 2 == 0) {
@@ -59,7 +77,7 @@ block body
           } else {
             size = "post-sm"
           }
-          
+
           var modifier = i % 6 == 0 ? 'post-reversed' : ''
           i += 1
         if post.type == "thesis"
