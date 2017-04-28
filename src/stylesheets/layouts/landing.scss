@@ -47,6 +47,33 @@
   };
 }
 
+.shortcut {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 80px;
+  z-index: 2;
+}
+
+.circle {
+  @include transition(background .2s 0s);
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 100%;
+  border: 1px solid $color-white;
+  display: inline-block;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-white;
+  }
+}
+
+.circle.is-shown {
+  background-color: $color-white;
+}
+
 .splash-link {
   text-align: center;
   width: 100%;
@@ -134,6 +161,7 @@
 
 .feature-image img {
   max-height: 100vh;
+  max-width: none;
   margin: 0 auto;
   display: block;
 
@@ -186,6 +214,11 @@
   }
 
   @include past($break-large) {
+    font-size: $fontSize-8;
+    line-height: $lineHeight-8;
+  }
+
+  @include past($break-xlarge) {
     font-size: $fontSize-9;
     line-height: $lineHeight-9;
   }

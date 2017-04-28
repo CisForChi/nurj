@@ -49,7 +49,7 @@ block body
               p.feature-department
                 != feature.getText("feature.department") || "Feature"
               a(href=ctx.linkResolver(feature) class="feature-title")
-                != feature.getText("feature.title") + (feature.getText("feature.subtitle") ? ": " + feature.getText("feature.subtitle") : "")
+                != feature.getText("feature.title")
               p.feature-author
                 != feature.getText("feature.author") || ""
               div.splash-overlay
@@ -57,6 +57,14 @@ block body
                 each hero in feature.getGroup('feature.hero-image').toArray()
                   div.feature-image
                     img(src=hero.getImage('image').url)
+      - var i = 0
+      div.shortcut
+        each feature in features
+          -
+            var classes = "circle circle-" + i
+            classes += (i == 0 ? " is-shown" : "")
+            i++
+          div(class=classes)
       p.splash-link
         a(href="/issues/" + landing.getText("landing.current-issue-id")) Explore the Issue
           svg(class="splash-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 93" style="enable-background:new 0 0 51 93;" xml:space="preserve")
