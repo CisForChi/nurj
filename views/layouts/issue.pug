@@ -42,5 +42,12 @@ block body
             p.post-author
               each item in post.getGroup("thesis.byline").toArray()
                 != item.getText("author") || ""
+        if post.type == 'feature'
+          div.post-thesis
+            p.post-department Feature
+            a(href=ctx.linkResolver(post) class="post-title")
+              != post.getText("feature.title") + (post.getText("feature.subtitle") ? ": " + post.getText("feature.subtitle") : "")
+            p.post-author
+              != post.getText("feature.author") || ""
   include ../components/footer.pug
 script(src="/javascript/index.js")

@@ -70,7 +70,7 @@ block body
         -
           var size
 
-          if ((i % 3 == 0) && post.getGroup("thesis.hero-image")) {
+          if ((i % 3 == 0) && (post.getGroup("feature.hero-image") || post.getGroup("thesis.hero-image"))) {
             size = "post-lg"
           } else if (i % 2 == 0) {
             size = "post-md"
