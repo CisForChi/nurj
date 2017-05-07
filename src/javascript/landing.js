@@ -1,6 +1,21 @@
+var $ = require("jquery");
+var collide = require("./modules/_collide");
+var _ = require("./modules/_arrow")();
+
 invertHeaderOnCollision()
 $(window).scroll(invertHeaderOnCollision)
 $('.feature-title').hover(setActiveOnMouseEnter, removeActiveOnMouseLeave)
+
+$('.circle').click(function(e) {
+  animating = false
+  $('.feature-' + currentFeature).removeClass('is-shown')
+  $('.circle-' + currentFeature).removeClass('is-shown')
+  var i = parseInt($(this).attr('class').match(/circle-(\d*)/)[1])
+  currentFeature = i
+  $('.feature-' + currentFeature).addClass('is-shown')
+  $('.circle-' + currentFeature).addClass('is-shown')
+  setTimeout(function(){ animating = true }, 3000)
+})
 
 var numFeatures = $('.feature').length
 var currentFeature = 0
@@ -8,8 +23,10 @@ var animating = true
 function advanceFeature() {
   if (animating) {
     $('.feature-' + currentFeature).removeClass('is-shown')
+    $('.circle-' + currentFeature).removeClass('is-shown')
     currentFeature = (currentFeature + 1) % numFeatures
     $('.feature-' + currentFeature).addClass('is-shown')
+    $('.circle-' + currentFeature).addClass('is-shown')
   }
 }
 
@@ -40,20 +57,3 @@ function removeActiveOnMouseLeave() {
   animating = true
   $(this).closest('.feature').removeClass('is-active')
 }
-
-function collide(a, b, margin) {
-  margin = margin || 0
-  aPos = a.offset()
-  bPos = b.offset()
-
-  return !(
-    ((aPos.top + a.height() + margin) < (bPos.top)) ||
-    (aPos.top > (bPos.top + b.height() + margin)) ||
-    ((aPos.left + a.width() + margin) < bPos.left) ||
-    (aPos.left > (bPos.left + b.width() + margin))
-  );
-}
-
-$('.arrow').click(function() {
-  $('body').animate({scrollTop: 0}, '300')
-})

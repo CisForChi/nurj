@@ -1,4 +1,3 @@
-var Prismic = require('prismic-nodejs')
 var api = require('../api')
 var handleError = require('../util/handleError')
 

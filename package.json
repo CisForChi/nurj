@@ -8,7 +8,8 @@
     "sass": "npm run build-sass && npm run watch-sass",
     "build-sass": "node-sass src/stylesheets -o public/stylesheets",
     "watch-sass": "node-sass -w src/stylesheets -o public/stylesheets",
-    "heroku-postbuild": "npm run build-sass"
+    "build": "./node_modules/.bin/gulp && npm run build-sass",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
@@ -16,7 +17,11 @@
     "errorhandler": "~1.1.1",
     "express": "~4.13.4",
     "first-letter": "^1.0.2",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-transform": "^1.1.0",
     "is-alphanumeric": "^1.0.0",
+    "jquery": "^3.2.1",
     "method-override": "~2.1.1",
     "morgan": "~1.0.0",
     "node-sass": "^4.5.0",

@@ -126,3 +126,4 @@ jspm_packages
 *.tgz.log
 
 public/stylesheets
+public/javascript/*.js

@@ -1,13 +1,13 @@
+var $ = require("jquery");
+var collide = require("./modules/_collide");
+var _ = require("./modules/_arrow")();
+
 $(window).scroll(hideHeaderOnCollision)
 $(window).scroll(fixArrowInBody)
 
 var lastScroll = 0;
 var metaBottom = $('.body').offset().top
 $('section[data-field="citation"]').addClass('js-detectCollision')
-
-$('.arrow').click(function() {
-  $('body').animate({scrollTop: 0}, '300')
-})
 
 function fixArrowInBody() {
   if ($(window).scrollTop() > metaBottom) {
@@ -45,17 +45,4 @@ function hideHeaderOnCollision() {
   }
 
   lastScroll = $(window).scrollTop()
-}
-
-function collide(a, b, margin) {
-  margin = margin || 0
-  aPos = a.offset()
-  bPos = b.offset()
-
-  return !(
-    ((aPos.top + a.height() + margin) < (bPos.top)) ||
-    (aPos.top > (bPos.top + b.height() + margin)) ||
-    ((aPos.left + a.width() + margin) < bPos.left) ||
-    (aPos.left > (bPos.left + b.width() + margin))
-  );
 }
