@@ -13,7 +13,7 @@ module.exports = function injectCitations(thesis) {
               }
 
               while ((match = re.exec(copy.text)) != null) {
-                copy.spans.push({
+                let span = {
                   start: match.index,
                   end: match.index + match[0].length,
                   type: "hyperlink",
@@ -23,7 +23,11 @@ module.exports = function injectCitations(thesis) {
                       url: match[0]
                     }
                   }
-                })
+                }
+
+                if (copy.spans.find(x => x.url === match[0]) === undefined) {
+                  copy.spans.push(span)
+                }
               }
             }
           }
