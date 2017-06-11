@@ -2,7 +2,7 @@ doctype html(lang='en')
 
 head
   title
-    !=thesis.getText('thesis.title')
+    != thesis.getText('thesis.title')
   include ../components/favicon.pug
   link(rel="stylesheet", href="/stylesheets/layouts/thesis.css")
   meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -75,7 +75,7 @@ block body
                   if imageWithCaption.get('caption')
                     figcaption.figure-caption !{imageWithCaption.get('caption').asHtml()}
       if thesis.getLink('thesis.full-thesis')
-        a(class='thesis-full' href=thesis.getLink('thesis.full-thesis').url(ctx.linkResolver) target='_blank') 
+        a(class='thesis-full' href=thesis.getLink('thesis.full-thesis').url(ctx.linkResolver) target='_blank')
           include ../components/download_arrow
           span Download full thesis
       each item in thesis.getGroup('thesis.byline').toArray()
@@ -88,17 +88,17 @@ block body
             strong ABOUT THE AUTHOR
             p
               if item.getText('bio')
-                !=item.getText('bio')
+                != item.getText('bio')
               else
                 !=item.getText('author')
             if item.getText('acknowledgements')
               strong ACKNOWLEDGEMENTS
               p
-                !=item.getText('acknowledgements')
+                != item.getText('acknowledgements')
       if thesis.getText('thesis.bibliography')
         div.bibliography.js-detectCollision
           strong BIBLIOGRAPHY
-          !=thesis.get('thesis.bibliography').asHtml()
+          != thesis.get('thesis.bibliography').asHtml()
 
   include ../components/footer.pug
 script(src="/javascript/thesis.js")

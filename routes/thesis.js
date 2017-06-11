@@ -1,4 +1,5 @@
 var Prismic = require('prismic-nodejs')
+var PConfig = require('../prismic-configuration')
 var api = require('../api')
 var handleError = require('../util/handleError')
 var injectCitations = require('../util/injectCitations')
@@ -10,7 +11,7 @@ module.exports = function(app) {
       return api.getByUID('thesis', uid)
     }).then(thesis => {
       if (thesis) {
-        injectCitations(thesis)
+        injectCitations(thesis, PConfig.linkResolver)
         res.render('layouts/thesis', {
           thesis: thesis
         });
