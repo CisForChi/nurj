@@ -17,6 +17,7 @@
     "chokidar": "^1.7.0",
     "debug": "~0.7.4",
     "errorhandler": "~1.1.1",
+    "exit-hook": "^1.1.1",
     "express": "~4.13.4",
     "first-letter": "^1.0.2",
     "gulp": "^3.9.1",
