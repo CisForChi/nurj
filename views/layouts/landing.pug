@@ -94,8 +94,9 @@ block body
               != post.getText("thesis.department")
             if post.getGroup("thesis.hero-image")
               each hero in post.getGroup('thesis.hero-image').toArray()
-                a(href=ctx.linkResolver(post) class="post-heroLink")
-                  img(src=hero.getImage('image').url class="post-hero")
+                if hero.getImage('image')
+                  a(href=ctx.linkResolver(post) class="post-heroLink")
+                    img(src=hero.getImage('image').url class="post-hero")
             div.post-info
               h2.post-title
                 a(href=ctx.linkResolver(post))

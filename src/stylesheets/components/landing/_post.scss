@@ -50,9 +50,12 @@
         float: left;
       }
 
-      .post-info {
+      .post-heroLink ~ .post-info {
         display: inline-block;
         width: 40%;
+      }
+
+      .post-info {
         padding-left: 20px;
       }
 
