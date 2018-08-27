@@ -51,12 +51,13 @@ block body
       div.body
         if thesis.getGroup('thesis.hero-image')
           each hero in thesis.getGroup('thesis.hero-image').toArray()
-            figure.hero.js-detectCollision
-              img(src=hero.getImage('image').url)
-              if hero.get('attribution')
-                cite.hero-attribution !{hero.get('attribution').asHtml()}
-              if hero.get('caption')
-                figcaption.hero-caption !{hero.get('caption').asHtml()}
+            if hero.getImage('image')
+              figure.hero.js-detectCollision
+                img(src=hero.getImage('image').url)
+                if hero.get('attribution')
+                  cite.hero-attribution !{hero.get('attribution').asHtml()}
+                if hero.get('caption')
+                  figcaption.hero-caption !{hero.get('caption').asHtml()}
 
         for slice in thesis.getSliceZone('thesis.body').slices
           case slice.sliceType

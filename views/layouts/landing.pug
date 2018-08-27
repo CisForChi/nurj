@@ -38,8 +38,9 @@ block body
               div.splash-overlay
               if feature.getGroup('thesis.hero-image')
                 each hero in feature.getGroup('thesis.hero-image').toArray()
-                  div.feature-image
-                    img(src=hero.getImage('image').url)
+                  if hero.getImage('image')
+                    div.feature-image
+                      img(src=hero.getImage('image').url)
           if feature.type == "feature"
             -
               var classes = "feature feature-" + i
